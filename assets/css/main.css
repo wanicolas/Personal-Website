@@ -1,0 +1,9 @@
+/* Include Work Sans fonts from assets */
+@font-face {
+    font-family: 'WorkSans';
+    src: url('~/assets/fonts/WorkSans.ttf') format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
