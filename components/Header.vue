@@ -1,5 +1,5 @@
 <template>
-    <header class="max-w-6xl sm:mx-16 mx-auto px-4 text-gray-500 dark:text-gray-400 mt-16 mb-36">
+    <header class="max-w-6xl mx-auto px-4 text-gray-500 dark:text-gray-400 mt-16 mb-36">
         <nav class="flex justify-between">
             <NuxtLink to="/" title="Accueil" class="text-4xl font-medium text-gray-600 dark:text-gray-300"
                 style="letter-spacing: -0.440em;">NW

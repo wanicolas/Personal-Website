@@ -3,12 +3,23 @@
         <div class="bodyBackground" aria-hidden="true"></div>
         <Header />
         <main class=" max-w-4xl mb-16 mx-auto px-4">
-            <slot />
+            <NuxtPage />
         </main>
     </Body>
 </template>
 
 <style lang="css" scoped>
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.4s;
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+}
+
 .bodyBackground::before {
     content: "";
     position: fixed;
