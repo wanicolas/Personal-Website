@@ -1,10 +1,10 @@
 <template>
-    <header class="max-w-6xl mx-auto px-4 text-gray-500 dark:text-gray-400 mt-16 mb-36">
+    <header class="max-w-6xl sm:mx-16 mx-auto px-4 text-gray-500 dark:text-gray-400 mt-16 mb-36">
         <nav class="flex justify-between">
             <NuxtLink to="/" title="Accueil" class="text-4xl font-medium text-gray-600 dark:text-gray-300"
                 style="letter-spacing: -0.440em;">NW
             </NuxtLink>
-            <div class="flex gap-8 items-center">
+            <div class="flex gap-6 sm:gap-8 items-center">
                 <div class="space-x-4">
                     <NuxtLink to="/a-propos" title="À propos">À propos</NuxtLink>
                     <NuxtLink to="/projets" title="Blog">Projets</NuxtLink>
