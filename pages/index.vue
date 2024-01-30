@@ -11,12 +11,11 @@
       en pratique dans mes projets.
     </p>
     <p>Toujours enthousiasmé à l'idée de créer des pages web graphiquement plaisantes, l'accessibilité est au centre de
-      mon
-      développement afin de garantir une expérience juste et pratique pour quiconque navigue le web.</p>
+      mon développement afin de garantir une expérience juste et pratique pour quiconque navigue le web. </p>
     <NuxtLink to="a-propos" class="mt-10 flex w-fit">
       <span class="hover:underline">En apprendre plus sur moi</span>
-      <svg class="animateSVG" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-        clip-rule="evenodd">
+      <svg class="animateSVG fill-gray-600 dark:fill-gray-300" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+        fill-rule="evenodd" clip-rule="evenodd">
         <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
       </svg>
     </NuxtLink>
@@ -120,9 +119,9 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Nicolas Walter - Développeur web full-stack',
+  title: 'Nicolas Walter - Développeur web front-end',
   meta: [{
-    name: 'description', content: 'Nicolas Walter est un développeur web full-stack passionné par les interfaces agréables, ergonomiques et accessibles.'
+    name: 'description', content: 'Nicolas Walter est un développeur web front-end passionné par les interfaces agréables, ergonomiques et accessibles.'
   }]
 })
 </script>

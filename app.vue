@@ -1,5 +1,5 @@
 <template>
-    <Body class="bg-white dark:bg-black  ">
+    <Body class="bg-white dark:bg-black ">
         <div class="bodyBackground" aria-hidden="true"></div>
         <Header />
         <main class=" max-w-4xl mb-16 mx-auto px-4">
