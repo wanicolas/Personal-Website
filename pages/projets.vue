@@ -1,5 +1,7 @@
 <template>
-    <h1 class="text-5xl font-black text-gray-900 dark:text-white">Projets.</h1>
+    <div>
+        <h1 class="text-5xl font-black text-gray-900 dark:text-white">Projets.</h1>
+    </div>
 </template>
 
 <script setup lang="ts">
