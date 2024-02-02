@@ -13,7 +13,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['"WorkSans"', ...defaultTheme.fontFamily.sans],
+        'sans': ['"HankenGrotesk"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

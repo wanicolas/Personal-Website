@@ -1,9 +1,10 @@
-/* Include Work Sans fonts from assets */
 @font-face {
-    font-family: 'WorkSans';
-    src: url('~/assets/fonts/WorkSans.ttf') format('truetype');
+    font-family: 'HankenGrotesk';
+    src: url('~/assets/fonts/HankenGrotesk.woff2') format('woff2')
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('~/assets/fonts/HankenGrotesk-Italic.woff2') format('woff2');
+    font-style: italic;
+}
