@@ -49,7 +49,8 @@
           <div class="flex items-center justify-center size-4 bg-black rounded-full">
             <div class="size-3 bg-white rounded-full"></div>
           </div>
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">L'accessibilité, une nécessité.</h2>
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white" id="accessibilite">L'accessibilité, une
+            nécessité.</h2>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-3">
           Comme expliqué précédemment, je me suis découvert au fil de mes années d'études et de travail un véritable
