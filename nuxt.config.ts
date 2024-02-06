@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr',
       },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
+      ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
