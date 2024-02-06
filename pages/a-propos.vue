@@ -1,14 +1,14 @@
 <template>
   <div class="max-w-3xl mx-auto">
-    <h1 class="text-5xl font-black text-gray-900 dark:text-white mb-14">A propos de moi.</h1>
+    <h1 class="text-5xl font-black mb-14">A propos de moi.</h1>
     <div class="flex gap-8">
       <div class="w-px shrink-0 bg-black dark:bg-white"></div>
       <div>
         <div class="flex items-center -ml-10 gap-6 mb-3">
-          <div class="flex items-center justify-center size-4 bg-black rounded-full">
-            <div class="size-3 bg-white rounded-full"></div>
+          <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
+            <div class="size-3 bg-white dark:bg-black rounded-full"></div>
           </div>
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Mon parcours et ma passion.</h2>
+          <h2 class="text-lg font-semibold">Mon parcours et ma passion.</h2>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-12">
           Au lycée, j'ai découvert les bases du web. J'avoue que pour moi, c'était la révolution. Un pauvre site en local
@@ -22,10 +22,10 @@
         </p>
 
         <div class="flex items-center -ml-10 gap-6 mb-3">
-          <div class="flex items-center justify-center size-4 bg-black rounded-full">
-            <div class="size-3 bg-white rounded-full"></div>
+          <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
+            <div class="size-3 bg-white dark:bg-black rounded-full"></div>
           </div>
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Développer pour le web.</h2>
+          <h2 class="text-lg font-semibold">Développer pour le web.</h2>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-12">Faire un site web, ce n'est pas juste mettre du texte, des
           images
@@ -46,10 +46,10 @@
         </p>
 
         <div class="flex items-center -ml-10 gap-6 mb-3">
-          <div class="flex items-center justify-center size-4 bg-black rounded-full">
-            <div class="size-3 bg-white rounded-full"></div>
+          <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
+            <div class="size-3 bg-white dark:bg-black rounded-full"></div>
           </div>
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white" id="accessibilite">L'accessibilité, une
+          <h2 class="text-lg font-semibold" id="accessibilite">L'accessibilité, une
             nécessité.</h2>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-3">
