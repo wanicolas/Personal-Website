@@ -48,7 +48,7 @@
           </svg>
         </NuxtLink>
         <div class="order-first sm:order-last flex gap-8">
-          <NuxtLink to="https://linkedin.com/nicolaswalternw">
+          <NuxtLink to="https://www.linkedin.com/in/nicolas-walter-nw/">
             <svg class="fill-black dark:fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20"
               height="20" viewBox="0 0 24 24">
               <path
@@ -57,7 +57,7 @@
             </svg>
             <span class="sr-only">Accédez à mon profil LinkedIn.</span>
           </NuxtLink>
-          <NuxtLink to="https://linkedin.com/nicolaswalternw">
+          <NuxtLink to="https://github.com/NicolasWalterNW">
             <svg class="fill-black dark:fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20"
               height="20" viewBox="0 0 24 24">
               <path
