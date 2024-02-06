@@ -26,4 +26,18 @@ useHead({
     name: 'description', content: 'Nicolas Walter est un développeur web front-end passionné par les interfaces agréables, ergonomiques et accessibles.'
   }]
 })
+
+onMounted(() => {
+  // Get the custom cursor element
+  const cursor = document.getElementById('customCursor');
+
+  // Add an event listener for mousemove event
+  if (cursor) {
+    document.addEventListener('mousemove', e => {
+      // Update the position of the cursor
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    })
+  };
+});
 </script>
