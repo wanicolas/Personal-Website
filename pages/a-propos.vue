@@ -1,19 +1,22 @@
 <template>
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-5xl font-black mb-14">A propos de moi.</h1>
-    <div class="flex gap-4 sm:gap-8">
-      <div class="w-px shrink-0 bg-black dark:bg-white"></div>
-      <div class="space-y-12">
-        <div v-for="info in infos">
-          <div class="flex items-center -ml-6 sm:-ml-10 gap-3 sm:gap-6 mb-3">
-            <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
-              <div class="size-3 bg-white dark:bg-black rounded-full"></div>
+  <div>
+    <div aria-hidden="true" class="fixed -bottom-8 -left-16 text-[15rem] font-black text-gray-100">A propos</div>
+    <div class="relative max-w-3xl mx-auto">
+      <h1 class="text-5xl font-black mb-14">A propos de moi.</h1>
+      <div class="flex gap-4 sm:gap-8">
+        <div class="w-px shrink-0 bg-black dark:bg-white"></div>
+        <div class="space-y-12">
+          <div v-for="info in infos">
+            <div class="flex items-center -ml-6 sm:-ml-10 gap-3 sm:gap-6 mb-3">
+              <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
+                <div class="size-3 bg-white dark:bg-black rounded-full"></div>
+              </div>
+              <h2 class="text-lg font-semibold">{{ info.title }}</h2>
             </div>
-            <h2 class="text-lg font-semibold">{{ info.title }}</h2>
+            <p v-for="paragraph in info.content" class="text-gray-600 dark:text-gray-300 mb-3">
+              {{ paragraph }}
+            </p>
           </div>
-          <p v-for="paragraph in info.content" class="text-gray-600 dark:text-gray-300 mb-3">
-            {{ paragraph }}
-          </p>
         </div>
       </div>
     </div>
@@ -51,7 +54,7 @@ const infos = [
   {
     title: 'Trêve de blabla...',
     content: [
-      "C'est bien joli joli tout ça, mais j'ai pas que le développement web dans la vie. J'aime aussi la musique, je suis pianiste (je sais c'est la classe) et je joue du ukulele. Je suis cinéphile aussi, donc ne me proposez pas de regarder \"Taxi 2\" en streaming... J'aime aussi apprendre, et je suis toujours à l'affût de nouvelles technologies, de nouvelles méthodes de travail, de nouvelles pratiques."
+      "C'est bien joli joli tout ça, mais je n'ai pas que le développement web dans la vie. J'aime aussi la musique, je suis pianiste (je sais c'est la classe) et je joue du ukulele. Je suis cinéphile aussi, donc ne me proposez pas de regarder \"Taxi 2\" en streaming... J'aime aussi apprendre, et je suis toujours à l'affût de nouvelles technologies, de nouvelles méthodes de travail, de nouvelles pratiques."
     ]
   }
 ];

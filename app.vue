@@ -1,5 +1,8 @@
 <template>
   <Body>
+    <a href="#contenu"
+      class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">Aller
+      au contenu</a>
     <div
       class="min-h-screen flex flex-col justify-between bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black px-4 py-8 sm:px-12">
       <header class="mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
@@ -35,11 +38,11 @@
         </nav>
       </header>
 
-      <main class="mx-auto">
+      <main id="contenu" class="mx-auto">
         <NuxtPage />
       </main>
 
-      <footer class="mt-20 md:mt-32 lg:mt-40 flex flex-col gap-4 sm:flex-row justify-between items-end">
+      <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-col gap-4 sm:flex-row justify-between items-end">
         <NuxtLink to="a-propos" class="flex w-fit">
           <span class="hover:underline underline-offset-4">En apprendre plus sur moi</span>
           <svg class="animateSVG fill-black dark:fill-white" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
