@@ -2,25 +2,22 @@
     <div class="max-w-3xl mx-auto">
         <h1 class="text-4xl font-black mb-14">Projets.</h1>
         <div v-for="i in 5" class="flex flex-col md:flex-row odd:flex-row-reverse gap-4 peer mb-12 md:mb-20">
-            <img class="w-72 h-40 object-cover rounded shrink-0" src="https://picsum.photos/320/180" alt="">
+            <NuxtLink aria-disabled="true" to="#" class="shrink-0 h-fit">
+                <img class="w-72 h-40 object-cover rounded" src="https://picsum.photos/320/180" alt="">
+            </NuxtLink>
             <div>
-                <h2 class="md:-mt-1 text-lg font-semibold mb-1">Titre du projet</h2>
-                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                    eligendi eum blanditiis placeat quas
-                    deserunt officiis. Consectetur, repellendus dignissimos blanditiis quaerat consequuntur culpa! Voluptas
-                    iure
-                    inventore, similique facilis esse tempore!
-                </p>
-                <div class="flex items-center gap-6 mt-4">
-                    <NuxtLink class="flex gap-1 items-center underline group" to="#">
-                        <span aria-hidden="true">siteweb.com</span>
-                        <svg class="transition group-hover:translate-x-1 group-hover:-translate-y-1 size-4"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="sr-only">Lien du projet</span>
+                <div class="md:-mt-1 flex items-center gap-6 mb-3">
+                    <NuxtLink to="#">
+                        <h2 class="text-lg font-semibold flex gap-1 items-center group">
+                            Nom du projet
+                            <svg aria-hidden="true"
+                                class="transition group-hover:translate-x-1 group-hover:-translate-y-1 size-4"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </h2>
                     </NuxtLink>
                     <NuxtLink to="#">
                         <svg class="size-4 fill-black dark:fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +29,17 @@
                         <span class="sr-only">Lien du dépôt GitHub du projet</span>
                     </NuxtLink>
                 </div>
+                <div class="flex gap-2 mb-2">
+                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Nuxt</span>
+                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Vercel</span>
+                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Tailwind</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                    eligendi eum blanditiis placeat quas
+                    deserunt officiis. Consectetur, repellendus dignissimos blanditiis quaerat consequuntur culpa! Voluptas
+                    iure
+                    inventore, similique facilis esse tempore!
+                </p>
             </div>
         </div>
     </div>
