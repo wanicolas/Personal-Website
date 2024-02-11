@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Portfolio personnel",
+        "description": "Site web personnel pour présenter mes compétences et mes projets.",
+        "image": "portfolio.png",
+        "link": "nicolaswalter.vercel.app",
+        "github": "https://github.com/NicolasWalterNW/Personal-Website",
+        "technologies": [
+            "Nuxt",
+            "Tailwind",
+            "Vercel"
+        ]
+    }
+]
