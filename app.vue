@@ -1,5 +1,5 @@
 <template>
-  <Body>
+  <Body class="overflow-x-hidden">
     <a href="#contenu"
       class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">Aller
       au contenu</a>
