@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div aria-hidden="true" class="fixed -bottom-8 -left-16 select-none text-[15rem] font-black text-gray-100">
+    <div aria-hidden="true"
+      class="fixed -left-4 bottom-8 text-7xl sm:text-[8rem] sm:-left-8 md:text-[12rem] md:-left-12 lg:-left-16 lg:text-[15rem] select-none font-black text-gray-100 dark:text-gray-900">
       A propos
     </div>
     <section class="relative max-w-3xl mx-auto">
