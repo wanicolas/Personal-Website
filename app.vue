@@ -44,9 +44,9 @@
 
       <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-col gap-4 sm:flex-row justify-between items-end">
         <NuxtLink to="a-propos" class="flex w-fit">
-          <span class="hover:underline underline-offset-4">En apprendre plus sur moi</span>
-          <svg class="motion-safe:animateSVG fill-black dark:fill-white" width="24" height="24"
-            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+          <span class="hover:underline underline-offset-4 mr-2">En apprendre plus sur moi</span>
+          <svg class="animateSVG fill-black dark:fill-white" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd" clip-rule="evenodd">
             <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
           </svg>
         </NuxtLink>
@@ -120,15 +120,19 @@ export default {
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 }
 
 @keyframes forward {
   0% {
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
 
   100% {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 </style>
