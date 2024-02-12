@@ -1,10 +1,11 @@
 <template>
   <div>
-    <div aria-hidden="true" class="fixed -bottom-8 -left-16 select-none text-[15rem] font-black text-gray-100">
+    <div aria-hidden="true"
+      class="fixed -left-4 bottom-8 text-7xl sm:text-[8rem] sm:-left-8 md:text-[12rem] md:-left-12 lg:-left-16 lg:text-[15rem] select-none font-black text-gray-100 dark:text-gray-900">
       A propos
     </div>
     <section class="relative max-w-3xl mx-auto">
-      <h1 class="text-2xl md:text-5xl font-black mb-14">A propos de moi.</h1>
+      <h1 class="text-4xl font-black mb-14">A propos de moi.</h1>
       <div class="flex gap-4 sm:gap-8">
         <div class="w-px shrink-0 bg-black dark:bg-white"></div>
         <div class="space-y-12">

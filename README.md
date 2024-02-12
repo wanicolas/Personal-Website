@@ -1,75 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Nicolas Walter - Personal Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is my personal website, built with Nuxt and TailwindCSS, hosted with Vercel.
 
-## Setup
+## Forking this repo and using my code
 
-Make sure to install the dependencies:
+Yes, you can use my code for own projets! I love to share my work online and having my site open source, but pliagiarism is something I can't stand. It's always sad whenever someone simply copies ressources without giving credit. I spent a good amount of time and effort building and designing my website, and I am really proud of it! So if you use my code, feel free to credit in your project!
 
-```bash
-# npm
+## Installation & Set-up
+
+1. Install all dependencies
+```sh
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+2. Start the development server
+```sh
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
