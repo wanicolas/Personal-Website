@@ -31,7 +31,7 @@ onMounted(() => {
   const cursor = document.getElementById('customCursor');
 
   // Add an event listener for mousemove event
-  if (cursor) {
+  if (cursor && (window.screen.width >= 1024)) {
     document.addEventListener('mousemove', e => {
       // Update the position of the cursor
       cursor.style.left = e.pageX + 'px';
