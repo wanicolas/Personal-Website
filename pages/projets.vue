@@ -1,12 +1,13 @@
 <template>
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-5xl mx-auto">
         <h1 class="text-4xl font-black mb-14">Projets.</h1>
-        <div v-for="i in 5" class="flex flex-col md:flex-row odd:flex-row-reverse gap-4 peer mb-12 md:mb-20">
+        <div v-for="i in 5"
+            class="flex flex-col items-center max-w-lg lg:max-w-none lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28">
             <NuxtLink aria-disabled="true" to="#" class="shrink-0 h-fit">
-                <img class="w-72 h-40 object-cover rounded" src="https://picsum.photos/320/180" alt="">
+                <img class="w-full h-auto max-w-lg object-cover rounded" src="https://picsum.photos/600/350" alt="">
             </NuxtLink>
             <div>
-                <div class="md:-mt-1 flex items-center gap-6 mb-3">
+                <div class="lg:-mt-1 flex items-center gap-6 mb-3">
                     <NuxtLink to="#">
                         <h2 class="text-lg font-semibold flex gap-1 items-center group">
                             Nom du projet
