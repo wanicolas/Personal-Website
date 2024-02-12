@@ -2,10 +2,10 @@
     {
         "title": "Portfolio personnel",
         "description": "Site web personnel pour présenter mes compétences et mes projets. Il est open-source sous license MIT sur GitHub.",
-        "image": "portfolio.png",
-        "link": "nicolaswalter.vercel.app",
+        "img": "personal-website.png",
+        "link": "https://nicolaswalter.vercel.app",
         "github": "https://github.com/NicolasWalterNW/Personal-Website",
-        "technologies": [
+        "technos": [
             "Nuxt",
             "Tailwind"
         ]
