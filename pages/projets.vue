@@ -1,16 +1,17 @@
 <template>
     <div class="max-w-5xl mx-auto">
         <h1 class="text-4xl font-black mb-14">Projets.</h1>
-        <div v-for="i in 5"
+        <div v-for="project in projects" :key="project.id"
             class="flex flex-col items-center max-w-lg lg:max-w-none lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28">
-            <NuxtLink aria-disabled="true" to="#" class="shrink-0 h-fit">
-                <img class="w-full h-auto max-w-lg object-cover rounded" src="https://picsum.photos/600/350" alt="">
+            <NuxtLink aria-disabled="true" :to="project.link" target="blank" class="shrink-0 h-fit">
+                <img class="w-full h-auto max-w-lg object-cover rounded lg:grayscale lg:hover:grayscale-0 transition"
+                    :src="'/img/' + project.img" alt="">
             </NuxtLink>
             <div>
                 <div class="lg:-mt-1 flex items-center gap-6 mb-3">
-                    <NuxtLink to="#">
+                    <NuxtLink :to="project.link" target="blank">
                         <h2 class="text-lg font-semibold flex gap-1 items-center group">
-                            Nom du projet
+                            {{ project.title }}
                             <svg aria-hidden="true"
                                 class="transition group-hover:translate-x-1 group-hover:-translate-y-1 size-4"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -20,7 +21,7 @@
                             </svg>
                         </h2>
                     </NuxtLink>
-                    <NuxtLink to="#">
+                    <NuxtLink v-if="project.github" :to="project.github" title="GitHub" target="blank">
                         <svg class="size-4 fill-black dark:fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             width="20" height="20" viewBox="0 0 24 24" data-v-inspector="app.vue:64:13">
                             <path
@@ -30,19 +31,20 @@
                         <span class="sr-only">Lien du dépôt GitHub du projet</span>
                     </NuxtLink>
                 </div>
-                <div class="flex gap-2 mb-2">
-                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Nuxt</span>
-                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Vercel</span>
-                    <span class="bg-gray-100 rounded-full px-2 text-gray-700">Tailwind</span>
+                <div v-if="project.technos" class="flex gap-2 mb-2">
+                    <span v-for="techno in project.technos" :key="project.technos"
+                        class="bg-gray-100 rounded-full px-2 text-gray-700">
+                        {{ techno }}
+                    </span>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                    eligendi eum blanditiis placeat quas
-                    deserunt officiis. Consectetur, repellendus dignissimos blanditiis quaerat consequuntur culpa! Voluptas
-                    iure
-                    inventore, similique facilis esse tempore!
+                <p class="text-gray-600 dark:text-gray-300">
+                    {{ project.description }}
                 </p>
             </div>
         </div>
+        <h2 class="text-xl">
+            Plus de projets sont en cours d'ajout. N'hésitez pas à revenir plus tard !
+        </h2>
     </div>
 </template>
 
@@ -53,4 +55,7 @@ useHead({
         name: 'description', content: 'Mes projets personnels et universitaires.'
     }]
 })
+
+// projects are stored in assets/data/projects.json
+import projects from '~/assets/data/projects.json'
 </script>
