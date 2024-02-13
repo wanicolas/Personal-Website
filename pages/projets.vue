@@ -33,7 +33,7 @@
                 </div>
                 <div v-if="project.technos" class="flex gap-2 mb-2">
                     <span v-for="techno in project.technos" :key="project.technos"
-                        class="bg-gray-100 rounded-full px-2 text-gray-700">
+                        class="bg-gray-100 rounded-full px-2 text-gray-700 dark:bg-gray-800 dark:text-gray-200">
                         {{ techno }}
                     </span>
                 </div>

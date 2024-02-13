@@ -4,7 +4,7 @@
       class="fixed -left-4 bottom-8 text-7xl sm:text-[8rem] sm:-left-8 md:text-[12rem] md:-left-12 lg:-left-16 lg:text-[15rem] select-none font-black text-gray-100 dark:text-gray-900">
       A propos
     </div>
-    <section class="relative max-w-3xl mx-auto">
+    <section class="relative max-w-3xl mx-auto mb-10">
       <h1 class="text-4xl font-black mb-14">A propos de moi.</h1>
       <div class="flex gap-4 sm:gap-8">
         <div class="w-px shrink-0 bg-black dark:bg-white"></div>
@@ -14,7 +14,7 @@
               <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
                 <div class="size-3 bg-white dark:bg-black rounded-full"></div>
               </div>
-              <h2 class="text-lg font-semibold">{{ info.title }}</h2>
+              <h2 class="text-lg font-semibold" :id="info.id">{{ info.title }}</h2>
             </div>
             <p v-for="paragraph in info.content" class="leading-relaxed text-gray-600 dark:text-gray-300 mb-3">
               {{ paragraph }}
@@ -50,6 +50,7 @@ const infos = [
   },
   {
     title: 'L\'accessibilité, une nécessité.',
+    id: 'accessibilite',
     content: [
       "Comme expliqué précédemment, je me suis découvert au fil de mes années d'études et de travail un véritable engouement pour l'accessibilité du web. C'est pourquoi je m'efforce de rendre mes projets accessibles au plus grand nombre. Cela passe par une bonne sémantique, mais aussi par une bonne utilisation des technologies. Par exemple, j'utilise le plus possible des éléments natifs du navigateur, et je n'utilise des librairies que lorsque cela est nécessaire, en y ajoutant des propriétés \"aria\". Cela permet d'avoir un site web plus léger, plus rapide, et plus accessible. L'ajout ou le masquage d'information pour les personnes utilisant un lecteur d'écran ou la sémantique de la page sont des aspects bien souvent oubliés.",
       "Lors de mes travaux personnels, professionnels ou universitaires, je me suis formé à l'accessibilité du web, principalement par envie, en consultant les documentations officielles techniques en ligne comme le \"WCAG\", la plateforme de \"Mozilla\" et d'autres. J'ai aussi eu l'occasion de travailler sur des projets d'accessibilité professionnels, notamment la mise en conformité d'une application web complexe avec le RGAA. J'ai aussi eu l'occasion de vérifier officiellement mon niveau de compétences au travers de certifications reconnues."

@@ -1,10 +1,11 @@
 <template>
-  <Body class="overflow-x-hidden">
+  <Body
+    class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-blackselection:text-white dark:selection:bg-white dark:selection:text-black">
     <a href="#contenu"
-      class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">Aller
-      au contenu</a>
-    <div
-      class="min-h-screen flex flex-col justify-between bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black px-4 py-8 sm:px-12">
+      class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
+      Aller au contenu
+    </a>
+    <div class="min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
       <header class="mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
         <nav class="flex justify-between items-center">
           <NuxtLink to="/">
@@ -42,15 +43,15 @@
         <NuxtPage />
       </main>
 
-      <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-col gap-4 sm:flex-row justify-between items-end">
+      <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
         <NuxtLink to="a-propos" class="flex w-fit">
-          <span class="hover:underline underline-offset-4 mr-2">En apprendre plus sur moi</span>
-          <svg class="animateSVG fill-black dark:fill-white" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+          <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">En apprendre plus sur moi</span>
+          <svg class="hidden sm:block animateSVG fill-black dark:fill-white" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
             fill-rule="evenodd" clip-rule="evenodd">
             <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
           </svg>
         </NuxtLink>
-        <div class="order-first sm:order-last flex gap-8">
+        <div class="flex gap-8">
           <NuxtLink to="https://www.linkedin.com/in/nicolas-walter-nw/">
             <svg class="fill-black dark:fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20"
               height="20" viewBox="0 0 24 24">
@@ -75,13 +76,11 @@
   </Body>
 </template>
 
-<script>
-export default {
-  methods: {
-    toggleColorMode() {
-      this.$colorMode.preference = this.$colorMode.preference === 'dark' ? 'light' : 'dark';
-    },
-  },
+<script setup>
+const colorMode = useColorMode();
+
+const toggleColorMode = () => {
+  colorMode.value = colorMode.value === "light" ? "dark" : "light";
 };
 </script>
 
@@ -116,7 +115,7 @@ export default {
 
 
 .animateSVG {
-  animation-name: forward;
+  animation-name: backAndForth;
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -126,7 +125,7 @@ export default {
   }
 }
 
-@keyframes forward {
+@keyframes backAndForth {
   0% {
     margin-left: 0rem;
   }
