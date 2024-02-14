@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'A propos de moi | Nicolas Walter - Développeur web front-end',
+  title: 'A propos de moi - Nicolas Walter, développeur web front-end',
   meta: [{
     name: 'description', content: 'Découvrez mon parcours, ma passion pour le web et l\'accessibilité.'
   }]

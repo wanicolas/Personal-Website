@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Nicolas Walter - Développeur web front-end',
+  title: 'Nicolas Walter, développeur web front-end',
   meta: [{
     name: 'description', content: "Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales."
   }]

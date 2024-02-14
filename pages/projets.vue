@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 useHead({
-    title: 'Projets | Nicolas Walter - Développeur web front-end',
+    title: 'Projets - Nicolas Walter, développeur web front-end',
     meta: [{
         name: 'description', content: 'Mes projets personnels et universitaires.'
     }]
