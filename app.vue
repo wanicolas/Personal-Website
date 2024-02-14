@@ -6,7 +6,7 @@
       Aller au contenu
     </a>
     <div class="min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
-      <header class="mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
+      <header class=" max-w-6xl mx-auto w-full mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
         <nav class="flex justify-between items-center">
           <NuxtLink to="/">
             <svg aria-hidden="true" class="h-8 w-auto stroke-black dark:stroke-white" width="1210" height="664"
@@ -44,11 +44,11 @@
       </main>
 
       <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
-        <NuxtLink to="a-propos" class="flex w-fit">
+        <NuxtLink to="a-propos" class="flex items-center w-fit">
           <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">En apprendre plus sur moi</span>
-          <svg class="hidden sm:block animateSVG fill-black dark:fill-white" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd" clip-rule="evenodd">
-            <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
+          <svg class="hidden size-7 sm:block animateSVG fill-black dark:fill-white" aria-hidden="true"
+          fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
         </NuxtLink>
         <div class="flex gap-8">
@@ -80,7 +80,7 @@
 const colorMode = useColorMode();
 
 const toggleColorMode = () => {
-  colorMode.value = colorMode.value === "light" ? "dark" : "light";
+  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
 };
 </script>
 
