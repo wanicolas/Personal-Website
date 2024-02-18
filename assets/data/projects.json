@@ -7,7 +7,18 @@
         "github": "https://github.com/NicolasWalterNW/Personal-Website",
         "technos": [
             "Nuxt",
-            "Tailwind"
+            "TailwindCSS"
+        ]
+    },
+    {
+        "title": "MG_UI - Librairie de composants Nuxt",
+        "description": "Développée au sein de Logitud, elle comporte des composants dynamiques basés sur HeadlessUI et Flowbite. Elle est open-source sous license MIT et sera bientôt disponible sur GitHub.",
+        "img": "mg_ui.png",
+        "link": "https://numesia.github.io/MG_UI/docs/",
+        "technos": [
+            "Nuxt",
+            "Headless UI",
+            "TailwindCSS"
         ]
     }
 ]
