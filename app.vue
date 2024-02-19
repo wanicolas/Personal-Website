@@ -1,12 +1,11 @@
 <template>
   <Body
     class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-blackselection:text-white dark:selection:bg-white dark:selection:text-black">
-    <a href="#contenu"
-      class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
+    <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
       Aller au contenu
     </a>
     <div class="min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
-      <header class=" max-w-6xl mx-auto w-full mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
+      <header class="max-w-6xl mx-auto w-full mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
         <nav class="flex justify-between items-center">
           <NuxtLink to="/">
             <svg aria-hidden="true" class="h-8 w-auto stroke-black dark:stroke-white" width="1210" height="664"
@@ -21,8 +20,7 @@
             <span class="sr-only">Accueil</span>
           </NuxtLink>
           <div class="flex gap-8 items-center">
-            <NuxtLink to="/a-propos" title="À propos" class="menu-link relative">A
-              propos
+            <NuxtLink to="/a-propos" title="À propos" class="menu-link relative">A propos
             </NuxtLink>
             <NuxtLink to="/projets" title="Blog" class="menu-link relative">Projets
             </NuxtLink>
@@ -43,11 +41,14 @@
         <NuxtPage />
       </main>
 
-      <footer class="z-10 mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
+      <footer
+        class="max-w-6xl mx-auto w-full mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
         <NuxtLink to="a-propos" class="flex items-center w-fit">
-          <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">En apprendre plus sur moi</span>
-          <svg class="hidden size-7 sm:block animateSVG fill-black dark:fill-white" aria-hidden="true"
-          fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">
+            {{ route.name === "a-propos" ? 'Voir mes projets' : 'En apprendre plus sur moi' }}
+          </span>
+          <svg class="hidden size-7 sm:block animateSVG fill-black dark:fill-white" aria-hidden="true" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
         </NuxtLink>
@@ -82,6 +83,8 @@ const colorMode = useColorMode();
 const toggleColorMode = () => {
   colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
 };
+
+const route = useRoute();
 </script>
 
 <style>
@@ -112,7 +115,6 @@ const toggleColorMode = () => {
 .menu-link:hover::before {
   transform: scaleX(1);
 }
-
 
 .animateSVG {
   animation-name: backAndForth;

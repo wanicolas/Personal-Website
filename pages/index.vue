@@ -6,11 +6,11 @@
       <span class="md:ml-20">Nicolas Walter</span>
     </h1>
     <div id="customCursor" aria-hidden="true"
-      class="peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-40 absolute -top-80 -left-80 size-8 rounded-full bg-black dark:bg-white" />
+      class="z-10 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-40 absolute -top-80 -left-80 size-8 rounded-full bg-black dark:bg-white" />
     <h2 class="mt-8 lg:mt-0 text-xl sm:text-center text-gray-800 dark:text-gray-300 font-medium lg:mb-12">
       Développeur web d'interfaces pixel-perfect et
       <NuxtLink to="/a-propos#accessibilite"
-        class="relative link after:text-white hover:after:content-['accessibles.'] after:bg-black after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:transition-[height] hover:after:h-full">
+        class="relative link after:text-white hover:after:content-['accessibles.'] after:bg-gray-800 after:dark:bg-gray-300 after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:transition-[height] hover:after:h-full">
         accessibles.
       </NuxtLink>
       <!-- WIP hover effect -->
