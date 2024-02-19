@@ -42,8 +42,8 @@
       </main>
 
       <footer
-        class="max-w-6xl mx-auto w-full mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
-        <NuxtLink to="a-propos" class="flex items-center w-fit">
+        class="max-w-6xl mx-auto w-full z-10 mt-20 md:mt-32 lg:mt-40 flex flex-wrap gap-x-8 gap-y-4 justify-between items-center">
+        <NuxtLink :to="route.name === 'a-propos' ? '/projets' : '/a-propos'" class="flex items-center w-fit">
           <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">
             {{ route.name === "a-propos" ? 'Voir mes projets' : 'En apprendre plus sur moi' }}
           </span>
