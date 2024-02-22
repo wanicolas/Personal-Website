@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-black mb-14">Projets.</h1>
     <div
       v-for="project in projects"
-      class="group/whole flex flex-col items-center max-w-lg lg:max-w-none lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28"
+      class="group/whole flex flex-col items-center mx-auto max-w-lg lg:max-w-none lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28"
     >
       <NuxtLink
         aria-disabled="true"
@@ -12,7 +12,7 @@
         class="shrink-0 h-fit"
       >
         <img
-          class="w-full h-auto max-w-lg object-cover rounded lg:grayscale lg:group-hover/whole:grayscale-0 transition"
+          class="w-full h-auto max-w-lg object-cover rounded xl:grayscale xl:group-hover/whole:grayscale-0 transition"
           :src="'/img/' + project.img"
           alt=""
         />
