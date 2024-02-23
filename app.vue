@@ -114,7 +114,7 @@
             </svg>
             <span class="sr-only">Accédez à mon profil LinkedIn.</span>
           </NuxtLink>
-          <NuxtLink to="https://github.com/NicolasWalterNW">
+          <NuxtLink to="https://github.com/wanicolas">
             <svg
               class="fill-black dark:fill-white"
               aria-hidden="true"
