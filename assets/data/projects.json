@@ -2,7 +2,7 @@
     {
         "title": "MG_UI - Librairie de composants Nuxt",
         "description": "Développée au sein de Logitud, elle comporte des composants dynamiques basés sur HeadlessUI et Flowbite. Elle est open-source sous license MIT et sera bientôt disponible sur GitHub.",
-        "img": "mg_ui.png",
+        "img": "mg_ui.webp",
         "link": "https://www.npmjs.com/package/@numesia/mg_ui",
         "technos": [
             "Nuxt",
@@ -13,7 +13,7 @@
     {
         "title": "Portfolio personnel",
         "description": "Site web personnel pour présenter mes compétences et mes projets. Il est open-source sous license MIT sur GitHub.",
-        "img": "personal-website.png",
+        "img": "personal-website.webp",
         "link": "https://nicolaswalter.fr",
         "github": "https://github.com/wanicolas/Personal-Website",
         "technos": [
