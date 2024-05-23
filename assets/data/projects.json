@@ -12,7 +12,7 @@
     },
     {
         "title": "Portfolio personnel",
-        "description": "Site web personnel pour présenter mes compétences et mes projets. Il est open-source sous license MIT sur GitHub.",
+        "description": "Site web personnel pour présenter mes compétences et mes projets. Il est open-source (license MIT) et accessible sur GitHub.",
         "img": "personal-website.webp",
         "link": "https://nicolaswalter.fr",
         "github": "https://github.com/wanicolas/Personal-Website",
