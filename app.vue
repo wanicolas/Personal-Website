@@ -2,10 +2,18 @@
 
   <Body
     class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+    <!-- Custom cursor -->
+    <div id="outerCursor" aria-hidden="true"
+      class="innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white" />
+    <div id="innerCursor" aria-hidden="true"
+      class="absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white" />
+
+    <!-- Accessible link to go to the content -->
     <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
       Aller au contenu
     </a>
-    <div class="min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
+
+    <div class="z-10 min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
       <header class="max-w-6xl mx-auto w-full mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
         <nav class="flex justify-between items-center">
           <NuxtLink to="/">
@@ -101,9 +109,31 @@ const toggleColorMode = () => {
 };
 
 const route = useRoute();
+
+onMounted(() => {
+  // Get the custom cursor element
+  const innerCursor = document.getElementById("innerCursor");
+  const outerCursor = document.getElementById("outerCursor");
+
+  // Add an event listener for mousemove event
+  if (innerCursor && outerCursor) {
+    document.addEventListener("pointermove", (e) => {
+      innerCursor.style.left = e.pageX + "px";
+      innerCursor.style.top = e.pageY + "px";
+      outerCursor.style.left = e.pageX + "px";
+      outerCursor.style.top = e.pageY + "px";
+    });
+  }
+});
 </script>
 
 <style>
+/* Custom cursor */
+.innerCursorAnimation {
+  transition: all ease-out 200ms;
+}
+
+/* Transition between pages */
 .page-enter-active,
 .page-leave-active {
   transition: all 0.5s;
@@ -115,6 +145,7 @@ const route = useRoute();
   filter: blur(0.1rem);
 }
 
+/* SVG animation */
 .animateSVG {
   animation-name: backAndForth;
   animation-duration: 0.7s;
