@@ -6,14 +6,14 @@
     <div id="outerCursor" aria-hidden="true"
       class="innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white" />
     <div id="innerCursor" aria-hidden="true"
-      class="absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white" />
+      class="absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
 
     <!-- Accessible link to go to the content -->
     <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
       Aller au contenu
     </a>
 
-    <div class="z-10 min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
+    <div class="min-h-dvh flex flex-col justify-between px-4 pt-8 pb-6 sm:px-12">
       <header class="max-w-6xl mx-auto w-full mb-20 md:mb-32 lg:mb-40 text-black dark:text-white">
         <nav class="flex justify-between items-center">
           <NuxtLink to="/">
@@ -116,7 +116,7 @@ onMounted(() => {
   const outerCursor = document.getElementById("outerCursor");
 
   // Add an event listener for mousemove event
-  if (innerCursor && outerCursor) {
+  if (innerCursor && outerCursor && window.innerWidth > 1200) {
     document.addEventListener("pointermove", (e) => {
       innerCursor.style.left = e.pageX + "px";
       innerCursor.style.top = e.pageY + "px";
