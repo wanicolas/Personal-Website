@@ -1,7 +1,7 @@
 <template>
   <div class="w-fit mx-auto">
-    <h1
-      class="peer w-fit mx-auto lg:pt-12 lg:px-12 mb-8 lg:mb-12 uppercase text-5xl sm:text-7xl lg:text-[6rem] xl:text-[8rem] tracking-tight font-bold flex flex-col leading-none gap-4">
+    <h1 id="is-cursor-hovered"
+      class="w-fit mx-auto lg:pt-12 lg:px-12 mb-8 lg:mb-12 uppercase text-5xl sm:text-7xl lg:text-[6rem] xl:text-[8rem] tracking-tight font-bold flex flex-col leading-none gap-4">
       <span>Hey, je suis</span>
       <span class="md:ml-20">Nicolas Walter</span>
     </h1>

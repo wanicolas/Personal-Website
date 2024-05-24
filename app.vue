@@ -6,7 +6,7 @@
     <div id="outerCursor" aria-hidden="true"
       class="z-[9999] innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none" />
     <div id="innerCursor" aria-hidden="true"
-      class="z-[9999] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
+      class="z-[9998] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
 
     <!-- Accessible link to go to the content -->
     <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
@@ -61,10 +61,13 @@
                 : "En apprendre plus sur moi"
             }}
           </span>
-          <svg class="hidden size-7 sm:block animateSVG fill-black dark:fill-white" aria-hidden="true" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          <svg class="animateSVG hidden size-7 sm:block fill-black dark:fill-white" aria-hidden="true"
+            viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+              clip-rule="evenodd" />
           </svg>
+
         </NuxtLink>
         <div class="flex items-center gap-8">
           <NuxtLink to="https://www.linkedin.com/in/nicolas-walter-nw/">
@@ -88,10 +91,9 @@
           <NuxtLink to="mailto:contact@nicolaswalter.fr">
             <svg class="fill-black dark:fill-white size-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
               <path
-                d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z" />
-              <path
-                d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z" />
+                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
             <span class="sr-only">Contactez-moi par email !.</span>
           </NuxtLink>
@@ -124,6 +126,11 @@ onMounted(() => {
       outerCursor.style.top = e.pageY + "px";
     });
   }
+
+  let isCursorHovered = document.getElementById("is-cursor-hovered");
+  isCursorHovered.addEventListener("mouseover", () => {
+    innerCursor.classList.toggle("cursor-hover");
+  });
 });
 </script>
 
