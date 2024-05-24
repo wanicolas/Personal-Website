@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-5xl mx-auto">
-    <h1 class="text-4xl font-black mb-14">Projets.</h1>
+    <h1 class="text-3xl lg:text-4xl font-black mb-14">Projets.</h1>
     <div v-for="project in projects"
       class="group/project grid grid-cols-1 items-center mx-auto max-w-lg lg:max-w-none lg:grid-cols-2 gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28">
       <NuxtLink aria-disabled="true" :to="project.link" target="blank"

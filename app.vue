@@ -4,9 +4,9 @@
     class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
     <!-- Custom cursor -->
     <div id="outerCursor" aria-hidden="true"
-      class="innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white" />
+      class="z-[9999] innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none" />
     <div id="innerCursor" aria-hidden="true"
-      class="absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
+      class="z-[9999] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
 
     <!-- Accessible link to go to the content -->
     <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
