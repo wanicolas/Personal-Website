@@ -1,6 +1,6 @@
 <template>
   <div class="w-fit mx-auto">
-    <h1 id="is-cursor-hovered"
+    <h1 @mouseover="$emit('cursor-hovered')" @mouseleave="$emit('cursor-left')"
       class="w-fit mx-auto lg:p-4 mb-8 lg:mb-12 uppercase text-5xl sm:text-7xl lg:text-[6rem] xl:text-[8rem] tracking-tight font-bold flex flex-col leading-none gap-4">
       <span>Hey, je suis</span>
       <span class="md:ml-20">Nicolas Walter</span>

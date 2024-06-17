@@ -4,7 +4,8 @@
     class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
     <!-- Custom cursor -->
     <div id="outerCursor" aria-hidden="true"
-      class="z-[9999] innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none"
+      class="z-[9999] transition-all duration-[250ms] ease-out absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none"
+      :class="{ 'mix-blend-difference bg-white size-32': isHovered }"
       :style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }" />
     <div id="innerCursor" aria-hidden="true"
       class="z-[9998] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-black dark:bg-white pointer-events-none"
@@ -50,7 +51,7 @@
       </header>
 
       <main id="contenu" class="mx-auto">
-        <NuxtPage />
+        <NuxtPage @cursor-hovered="isHovered = true" @cursor-left="isHovered = false" />
       </main>
 
       <footer
@@ -116,6 +117,8 @@ const route = useRoute();
 
 const cursorPosition = ref({ x: 0, y: 0 });
 
+const isHovered = ref(false);
+
 onMounted(() => {
 
   // Add an event listener for mousemove event
@@ -123,26 +126,11 @@ onMounted(() => {
     document.addEventListener("pointermove", (e) => {
       cursorPosition.value = { x: e.pageX, y: e.pageY };
     });
-
-    const isCursorHovered = document.getElementById("is-cursor-hovered");
-    if (isCursorHovered) {
-      isCursorHovered.addEventListener("mouseover", () => {
-        outerCursor.classList.add("mix-blend-difference", "bg-white");
-      });
-      isCursorHovered.addEventListener("mouseleave", () => {
-        outerCursor.classList.remove("mix-blend-difference", "bg-white");
-      });
-    }
   }
 });
 </script>
 
 <style>
-/* Custom cursor */
-.innerCursorAnimation {
-  transition: all ease-out 200ms;
-}
-
 /* Transition between pages */
 .page-enter-active,
 .page-leave-active {
