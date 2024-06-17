@@ -4,9 +4,11 @@
     class="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
     <!-- Custom cursor -->
     <div id="outerCursor" aria-hidden="true"
-      class="z-[9999] innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none" />
+      class="z-[9999] innerCursorAnimation absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full border border-black dark:border-white pointer-events-none"
+      :style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }" />
     <div id="innerCursor" aria-hidden="true"
-      class="z-[9998] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 peer-hover:mix-blend-difference peer-hover:bg-white peer-hover:size-20 size-2 rounded-full bg-black dark:bg-white pointer-events-none" />
+      class="z-[9998] absolute -top-80 -left-80 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-black dark:bg-white pointer-events-none"
+      :style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }" />
 
     <!-- Accessible link to go to the content -->
     <a href="#contenu" class="absolute -top-80 -left-80 focus:top-0 focus:left-4 bg-black text-white rounded-b-md p-1">
@@ -56,9 +58,9 @@
         <NuxtLink :to="route.name === 'a-propos' ? '/projets' : '/a-propos'" class="flex items-center w-fit">
           <span class="underline sm:no-underline hover:underline underline-offset-4 mr-2">
             {{
-              route.name === "a-propos"
-                ? "Voir mes projets"
-                : "En apprendre plus sur moi"
+        route.name === "a-propos"
+          ? "Voir mes projets"
+          : "En apprendre plus sur moi"
             }}
           </span>
           <svg class="animateSVG hidden size-7 sm:block fill-black dark:fill-white" aria-hidden="true"
@@ -112,25 +114,26 @@ const toggleColorMode = () => {
 
 const route = useRoute();
 
+const cursorPosition = ref({ x: 0, y: 0 });
+
 onMounted(() => {
-  // Get the custom cursor element
-  const innerCursor = document.getElementById("innerCursor");
-  const outerCursor = document.getElementById("outerCursor");
 
   // Add an event listener for mousemove event
-  if (innerCursor && outerCursor && window.innerWidth > 1200) {
+  if (window.innerWidth > 1200) {
     document.addEventListener("pointermove", (e) => {
-      innerCursor.style.left = e.pageX + "px";
-      innerCursor.style.top = e.pageY + "px";
-      outerCursor.style.left = e.pageX + "px";
-      outerCursor.style.top = e.pageY + "px";
+      cursorPosition.value = { x: e.pageX, y: e.pageY };
     });
-  }
 
-  let isCursorHovered = document.getElementById("is-cursor-hovered");
-  isCursorHovered.addEventListener("mouseover", () => {
-    innerCursor.classList.toggle("cursor-hover");
-  });
+    const isCursorHovered = document.getElementById("is-cursor-hovered");
+    if (isCursorHovered) {
+      isCursorHovered.addEventListener("mouseover", () => {
+        outerCursor.classList.add("mix-blend-difference", "bg-white");
+      });
+      isCursorHovered.addEventListener("mouseleave", () => {
+        outerCursor.classList.remove("mix-blend-difference", "bg-white");
+      });
+    }
+  }
 });
 </script>
 
