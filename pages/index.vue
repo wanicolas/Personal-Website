@@ -27,4 +27,10 @@ useHead({
     },
   ],
 });
+
+const emit = defineEmits(['cursor-left'])
+
+onUnmounted(() => {
+  emit('cursor-left')
+});
 </script>
