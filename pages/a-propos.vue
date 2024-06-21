@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div aria-hidden="true"
-      class="fixed select-none font-black text-gray-100 dark:text-gray-900 -left-4 -bottom-4 text-7xl sm:text-[8rem] md:-left-8 md:bottom-8 md:text-[12rem] lg:-left-12 lg:-bottom-12 lg:text-[15rem] ">
+    <div aria-hidden="true" class="fixed select-none font-black text-[#EDEDED] dark:text-neutral-900 -left-4 bottom-12 text-7xl
+      sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem]">
       A propos.
     </div>
     <section class="relative max-w-3xl mx-auto mb-10">
@@ -19,7 +19,7 @@
               </h2>
             </div>
             <p v-for="paragraph in info.content" v-html="paragraph"
-              class="lg:text-lg leading-relaxed text-gray-600 dark:text-gray-300 mb-3">
+              class="lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 mb-3">
             </p>
           </div>
         </div>
