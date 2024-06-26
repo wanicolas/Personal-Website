@@ -1,20 +1,21 @@
 <template>
   <div>
     <div aria-hidden="true"
-      class="fixed -z-10 text-[30vmin] -left-[12vmin] bottom-0 select-none font-black text-[#EDEDED] dark:text-neutral-900"
+      class="hidden md:block fixed -z-10 text-[30vmin] -left-[12vmin] bottom-0 select-none font-black text-[#EDEDED] dark:text-neutral-900"
       style="writing-mode: vertical-lr;">
       Projets.
     </div>
     <div class="max-w-5xl mx-auto">
       <h1 class="text-3xl lg:text-4xl font-black mb-14">Projets.</h1>
-      <div v-for="project in projects"
-        class="group/project grid grid-cols-1 items-center mx-auto max-w-lg lg:max-w-none lg:grid-cols-2 gap-4 lg:gap-8 peer mb-12 md:mb-20 lg:mb-28">
-        <NuxtLink aria-disabled="true" :to="project.link" target="blank"
-          class="shrink-0 h-fit lg:group-odd/project:order-last">
-          <img class="w-full max-h-72 object-cover rounded xl:grayscale xl:group-hover/project:grayscale-0 transition"
-            :src="'/img/' + project.img" alt="" />
-        </NuxtLink>
+      <div v-for="(project, index) in projects" :key="index"
+        class="group/project grid grid-cols-1 items-center mx-auto max-w-lg lg:max-w-none lg:grid-cols-2 gap-4 lg:gap-8 peer mb-16 md:mb-24 lg:mb-32">
         <div>
+          <div class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">
+            <span class="sr-only">
+              Date :
+            </span>
+            {{ project.date }}
+          </div>
           <NuxtLink :to="project.link" target="blank" class="block mb-3 group/title">
             <h2 class="text-lg lg:text-xl font-semibold inline">
               {{ project.title }}
@@ -27,16 +28,16 @@
             </svg>
           </NuxtLink>
           <div class="flex flex-wrap gap-2 items-center mb-2">
-            <span v-if="project.technos" v-for="techno in project.technos"
+            <span v-for="(techno, index) in project.technos" :key="index"
               class="bg-neutral-200 rounded-full px-2 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
               {{ techno }}
             </span>
           </div>
-          <p v-if="project.description" class="lg:text-lg text-neutral-600 dark:text-neutral-300 mb-4">
+          <p class="lg:text-lg text-neutral-600 dark:text-neutral-300">
             {{ project.description }}
           </p>
           <NuxtLink v-if="project.github" :to="project.github" title="GitHub" target="blank"
-            class="flex items-center gap-2 lg:text-lg text-neutral-700 dark:text-neutral-200 hover:text-black hover:dark:text-white">
+            class="mt-4 flex items-center gap-2 lg:text-lg text-neutral-700 dark:text-neutral-200 hover:text-black hover:dark:text-white">
             <svg class="size-5 fill-neutral-700 dark:fill-neutral-200" aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
               data-v-inspector="app.vue:64:13">
@@ -47,6 +48,11 @@
             <span class="text-base">Visiter le dépôt GitHub</span>
           </NuxtLink>
         </div>
+        <NuxtLink aria-disabled="true" :to="project.link" target="blank" class="shrink-0 h-fit">
+          <img
+            class="w-full max-h-72 object-cover rounded border border-neutral-200 dark:border-neutral-800 xl:grayscale xl:group-hover/project:grayscale-0 transition"
+            :src="'/img/' + project.img" alt="" />
+        </NuxtLink>
       </div>
     </div>
   </div>
