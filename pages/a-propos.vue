@@ -71,7 +71,7 @@ const infos = [
   {
     title: "Vous êtes toujours là ?",
     content: [
-      "Bon, je vois que vous voulez vraiment tout savoir de moi. Alors jetez donc un coup d'oeil à <a href='/CV-Nicolas-Walter.pdf' target='_blank' class='underline underline-offset-4'>mon CV</a>, vous m'en direz des nouvelles !"
+      "Bon, je vois que vous voulez vraiment tout savoir de moi. Alors jetez donc un coup d'oeil à <a href='/CV_Nicolas-WALTER.pdf' target='_blank' class='underline underline-offset-4'>mon CV</a>, vous m'en direz des nouvelles !"
     ],
   }
 ];
