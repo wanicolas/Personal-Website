@@ -1,18 +1,18 @@
 [
   {
     "date": "2023-2024",
-    "title": "MG_UI - Librairie de composants Nuxt",
-    "description": "Développée au sein de Logitud, je participe au développement de cette librairie qui comporte des composants dynamiques. Elle est open-source sous license MIT et sera bientôt disponible sur GitHub.",
-    "img": "mg_ui.webp",
-    "link": "https://www.npmjs.com/package/@numesia/mg_ui",
-    "technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
-  },
-  {
-    "date": "2023-2024",
     "title": "Mon Guichet - nouvelle version",
     "description": "Développée au sein de Logitud, je participe au développement en cours de la nouvelle version front du produit Mon Guichet. Elle utilise notre librairie MG_UI pour les composants principaux.",
     "img": "mg.webp",
     "link": "https://mulhouse.staging.numesia.fr",
+    "technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
+  },
+  {
+    "date": "2023-2024",
+    "title": "MG_UI - Librairie de composants Nuxt",
+    "description": "Développée au sein de Logitud, je participe au développement de cette librairie qui comporte des composants dynamiques. Elle est open-source sous license MIT et sera bientôt disponible sur GitHub.",
+    "img": "mg_ui.webp",
+    "link": "https://www.npmjs.com/package/@numesia/mg_ui",
     "technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
   },
   {
