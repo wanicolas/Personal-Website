@@ -23,5 +23,14 @@
     "link": "https://nicolaswalter.fr",
     "github": "https://github.com/wanicolas/Personal-Website",
     "technos": ["Nuxt", "TailwindCSS"]
+  },
+  {
+    "date": "2024",
+    "title": "Bullet Ballet",
+    "description": "Jeu platformer de tir en 2D en cours de développement avec Phaser. Le but des deux joueurs est d'éliminer l'autre avec des armes et inclut la possibilité de récupérer des objets.",
+    "img": "bullet-ballet.webp",
+    "link": "https://github.com/wanicolas/Bullet-Ballet",
+    "github": "https://github.com/wanicolas/Bullet-Ballet",
+    "technos": ["Phaser", "Vite", "TypeScript"]
   }
 ]
