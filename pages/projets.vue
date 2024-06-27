@@ -48,7 +48,7 @@
             <span class="text-base">Visiter le dépôt GitHub</span>
           </NuxtLink>
         </div>
-        <NuxtLink aria-disabled="true" :to="project.link" target="blank" class="shrink-0 h-fit">
+        <NuxtLink aria-hidden="true" :to="project.link" target="blank" class="shrink-0 h-fit">
           <img
             class="w-full max-h-72 object-cover rounded border border-neutral-200 dark:border-neutral-800 xl:grayscale xl:group-hover/project:grayscale-0 transition"
             :src="'/img/' + project.img" alt="" />
