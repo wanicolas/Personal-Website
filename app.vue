@@ -73,7 +73,7 @@
 
         </NuxtLink>
         <div class="flex items-center gap-8">
-          <NuxtLink to="https://www.linkedin.com/in/nicolas-walter-nw/">
+          <NuxtLink to="https://www.linkedin.com/in/wanicolas/">
             <svg class="fill-black dark:fill-white size-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24">
               <path
