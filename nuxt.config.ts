@@ -1,23 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss'
-  ],
+  modules: ["@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
   colorMode: {
-    classSuffix: ''
+    classSuffix: "",
   },
   app: {
     head: {
       htmlAttrs: {
-        lang: 'fr',
+        lang: "fr",
       },
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
-      ]
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: { name: "page", mode: "out-in" },
   },
-  css: ['~/assets/css/main.css']
-})
+  css: ["~/assets/css/main.css"],
+});
