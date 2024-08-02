@@ -2,7 +2,7 @@
   {
     "date": "2023-2024",
     "title": "Mon Guichet - nouvelle version",
-    "description": "Développée au sein de Logitud, je participe au développement en cours de la nouvelle version front du produit Mon Guichet. Elle utilise notre librairie MG_UI pour les composants principaux.",
+    "description": "La nouvelle version front du produit \"Mon Guichet\" est en cours de développement au sein de Logitud. Elle utilise notre librairie MG_UI pour ses composants principaux.",
     "img": "mg.webp",
     "link": "https://mulhouse.staging.numesia.fr",
     "technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
@@ -10,15 +10,15 @@
   {
     "date": "2023-2024",
     "title": "MG_UI - Librairie de composants Nuxt",
-    "description": "Développée au sein de Logitud, je participe au développement de cette librairie qui comporte des composants dynamiques. Elle est open-source sous license MIT et sera bientôt disponible sur GitHub.",
+    "description": "Utilisée au sein de Logitud, cette librairie comporte des composants dynamiques, customisables et accessibles. Elle est accessible sur NPM et sera bientôt open-source sous license MIT et disponible sur GitHub.",
     "img": "mg_ui.webp",
     "link": "https://www.npmjs.com/package/@numesia/mg_ui",
     "technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
   },
   {
     "date": "2024",
-    "title": "Portfolio personnel",
-    "description": "Site web personnel pour me présenter ainsi que mes compétences et projets. Il est open-source sous license MIT.",
+    "title": "Site personnel",
+    "description": "Quoi de mieux qu'un site personnel pour se présenter et exposer ses projets et compétences ? Développé avec des technos que j'affectionne, il est open-source sous license MIT.",
     "img": "personal-website.webp",
     "link": "https://nicolaswalter.fr",
     "github": "https://github.com/wanicolas/Personal-Website",
