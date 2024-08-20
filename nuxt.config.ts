@@ -2,9 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
+
   colorMode: {
     classSuffix: "",
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -14,5 +16,7 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
   css: ["~/assets/css/main.css"],
+  compatibilityDate: "2024-08-20",
 });
