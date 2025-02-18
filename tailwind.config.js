@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 export default {
   content: [
@@ -13,11 +13,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['"HankenGrotesk"', ...defaultTheme.fontFamily.sans],
+        sans: ['"HankenGrotesk"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [],
-  darkMode: 'class',
-}
-
+  darkMode: "class",
+};
