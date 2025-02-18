@@ -1,14 +1,19 @@
 <template>
-  <div class="w-fit mx-auto">
-    <h1 @mouseover="$emit('cursor-hovered')" @mouseleave="$emit('cursor-left')"
-      class="w-fit mx-auto lg:p-4 mb-8 lg:mb-12 uppercase text-5xl sm:text-7xl lg:text-[6rem] xl:text-[8rem] tracking-tight font-bold flex flex-col leading-none gap-4">
+  <div class="mx-auto w-fit">
+    <h1
+      @mouseover="$emit('cursor-hovered')"
+      @mouseleave="$emit('cursor-left')"
+      class="mx-auto mb-8 flex w-fit flex-col gap-4 text-5xl font-bold uppercase leading-none tracking-tight sm:text-7xl lg:mb-12 lg:p-4 lg:text-[6rem] xl:text-[8rem]"
+    >
       <span>Hey, je suis</span>
       <span class="md:ml-20">Nicolas Walter</span>
     </h1>
-    <h2 class="text-xl sm:text-center font-medium">
+    <h2 class="text-xl font-medium sm:text-center">
       Développeur web d'interfaces pixel-perfect et
-      <NuxtLink to="/a-propos#accessibilite"
-        class="relative link after:text-white after:dark:text-black hover:after:content-['accessibles.'] after:bg-black after:dark:bg-white after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:transition-[height] hover:after:h-full">
+      <NuxtLink
+        to="/a-propos#accessibilite"
+        class="link relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-black after:text-white after:transition-[height] hover:after:h-full hover:after:content-['accessibles.'] after:dark:bg-white after:dark:text-black"
+      >
         accessibles.
       </NuxtLink>
       <!-- WIP hover effect -->
@@ -28,9 +33,9 @@ useHead({
   ],
 });
 
-const emit = defineEmits(['cursor-left'])
+const emit = defineEmits(["cursor-left", "cursor-hovered"]);
 
 onUnmounted(() => {
-  emit('cursor-left')
+  emit("cursor-left");
 });
 </script>
