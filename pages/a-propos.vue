@@ -1,26 +1,32 @@
 <template>
   <div>
-    <div aria-hidden="true" class="fixed select-none font-black text-[#EDEDED] dark:text-neutral-900 -left-4 bottom-12 text-7xl
-      sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem]">
+    <div
+      aria-hidden="true"
+      class="fixed -left-4 bottom-12 select-none text-7xl font-black text-[#EDEDED] dark:text-neutral-900 sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem]"
+    >
       A propos.
     </div>
-    <section class="relative max-w-3xl mx-auto mb-10">
-      <h1 class="text-3xl lg:text-4xl font-black mb-14">A propos de moi.</h1>
+    <section class="relative mx-auto mb-10 max-w-3xl">
+      <h1 class="mb-14 text-3xl font-black lg:text-4xl">A propos de moi.</h1>
       <div class="flex gap-4 sm:gap-8">
         <div class="w-px shrink-0 bg-black dark:bg-white"></div>
         <div class="space-y-12">
           <div v-for="(info, index) in infos" :key="index">
-            <div class="flex items-center -ml-6 sm:-ml-10 gap-3 sm:gap-6 mb-3">
-              <div class="flex items-center justify-center size-4 bg-black dark:bg-white rounded-full">
-                <div class="size-3 bg-white dark:bg-black rounded-full"></div>
+            <div class="-ml-6 mb-3 flex items-center gap-3 sm:-ml-10 sm:gap-6">
+              <div
+                class="flex size-4 items-center justify-center rounded-full bg-black dark:bg-white"
+              >
+                <div class="size-3 rounded-full bg-white dark:bg-black"></div>
               </div>
-              <h2 class="text-lg lg:text-xl font-semibold" :id="info.id">
+              <h2 class="text-lg font-semibold lg:text-xl" :id="info.id">
                 {{ info.title }}
               </h2>
             </div>
-            <p v-for="paragraph in info.content" v-html="paragraph"
-              class="lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 mb-3">
-            </p>
+            <p
+              v-for="paragraph in info.content"
+              v-html="paragraph"
+              class="mb-3 leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg"
+            ></p>
           </div>
         </div>
       </div>
@@ -51,7 +57,7 @@ const infos = [
     title: "Développer pour le web.",
     content: [
       "Faire un site web, ce n'est pas juste mettre du texte, des images et des vidéos puis animer un peu le tout et faire joli. C'est bien plus que cela. Malgré le changement constant des technologies, la base du web reste indifférente aux nouveaux \"frameworks\" et \"librairies\". On sous-estime souvent une bonne connaissance du HTML pur. Oui, vous avez bien entendu, je parle du HTML. Aujourd'hui, on cherche des développeurs qui maitrisent le JavaScript, pour faire des sites dynamiques et interactifs. Mais utiliser un framework front et écrire du code dans tous les sens c'est bien beau, mais ce qui compte vraiment, c'est ce qui va être généré et utilisé par le navigateur.",
-      "C'est là où un bon \"markup\" devient utile : la sémantique est extrêmement importante, tout d'abord pour une question de SEO, car un contenu bien balisé sera plus mis en avant, mais aussi pour une question d'accessibilité et de practicité. Un site bien balisé et correctement implémenté, c'est un site qui sera affiché correctement en mode lecture, qui pourra être exploité par certaines extensions de navigateur, mais c'est aussi un site qui sera rendu fidèlement aux personnes utilisatrices de technologies d'assistance. Avoir cette base saine est nécessaire, et je l'applique strictement dans mes projets.",
+      "C'est là où un bon \"markup\" devient utile : la sémantique est extrêmement importante, tout d'abord pour une question de SEO, car un contenu bien balisé sera plus mis en avant, mais aussi pour une question d'accessibilité et de practicité. Un site sémantiquement juste, c'est un site qui sera affiché correctement en mode lecture, qui pourra être exploité par certaines extensions de navigateur, mais c'est aussi un site qui sera rendu fidèlement aux personnes utilisatrices de technologies d'assistance. Avoir cette base saine est nécessaire, et je l'applique strictement dans mes projets.",
     ],
   },
   {
@@ -71,8 +77,8 @@ const infos = [
   {
     title: "Vous êtes toujours là ?",
     content: [
-      "Bon, je vois que vous voulez vraiment tout savoir de moi. Alors jetez donc un coup d'oeil à <a href='/CV_Nicolas-WALTER.pdf' target='_blank' class='underline underline-offset-4'>mon CV</a>, vous m'en direz des nouvelles !"
+      "Bon, je vois que vous voulez vraiment tout savoir de moi. Alors jetez donc un coup d'oeil à <a href='/CV_Nicolas-WALTER.pdf' target='_blank' class='underline underline-offset-4'>mon CV</a>, vous m'en direz des nouvelles !",
     ],
-  }
+  },
 ];
 </script>
