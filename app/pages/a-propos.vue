@@ -72,7 +72,8 @@ const infos = [
 							</h2>
 						</div>
 						<p
-							v-for="paragraph in info.content"
+							v-for="(paragraph, pIndex) in info.content"
+							:key="pIndex"
 							class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
 							v-html="paragraph"
 						></p>

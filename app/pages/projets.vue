@@ -60,8 +60,8 @@ useHead({
 					</NuxtLink>
 					<div class="mb-2 flex flex-wrap items-center gap-2">
 						<span
-							v-for="(techno, index) in project.technos"
-							:key="index"
+							v-for="(techno, tIndex) in project.technos"
+							:key="tIndex"
 							class="rounded-full bg-neutral-200 px-2 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"
 						>
 							{{ techno }}
