@@ -1,3 +1,2 @@
-cd front
 pnpm test run
 pnpm typecheck
