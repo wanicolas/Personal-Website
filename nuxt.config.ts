@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxtjs/i18n",
 		"@nuxtjs/color-mode",
+		"@nuxt/icon",
 	],
 	i18n: {
 		defaultLocale: "fr",
@@ -22,12 +23,5 @@ export default defineNuxtConfig({
 				file: "fr.json",
 			},
 		],
-	},
-	runtimeConfig: {
-		public: {
-			i18n: {
-				baseUrl: "",
-			},
-		},
 	},
 });
