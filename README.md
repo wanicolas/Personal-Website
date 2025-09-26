@@ -9,11 +9,13 @@ Yes, you can use my code for own projets! I love to share my work online and hav
 ## Installation & Set-up
 
 1. Install all dependencies
+
 ```sh
 npm install
 ```
 
 2. Start the development server
+
 ```sh
 npm run dev
 ```

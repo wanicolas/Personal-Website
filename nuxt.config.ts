@@ -1,22 +1,33 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ["@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
-
-  colorMode: {
-    classSuffix: "",
-  },
-
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: "fr",
-      },
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
-    },
-    pageTransition: { name: "page", mode: "out-in" },
-  },
-
-  css: ["~/assets/css/main.css"],
-  compatibilityDate: "2024-08-20",
+	app: {
+		pageTransition: { name: "page", mode: "out-in" },
+	},
+	compatibilityDate: "2025-07-15",
+	devtools: { enabled: true },
+	modules: [
+		"@nuxt/eslint",
+		"@nuxt/test-utils/module",
+		"@nuxtjs/tailwindcss",
+		"@nuxtjs/i18n",
+		"@nuxtjs/color-mode",
+	],
+	i18n: {
+		defaultLocale: "fr",
+		locales: [
+			{
+				code: "fr",
+				language: "fr-FR",
+				name: "Français",
+				file: "fr.json",
+			},
+		],
+	},
+	runtimeConfig: {
+		public: {
+			i18n: {
+				baseUrl: "",
+			},
+		},
+	},
 });
