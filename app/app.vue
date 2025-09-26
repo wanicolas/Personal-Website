@@ -93,7 +93,7 @@ onMounted(() => {
 							>
 								Projets
 							</NuxtLink>
-							<button class="flex" @click="toggleColorMode">
+							<button class="size-6" @click="toggleColorMode">
 								<Icon
 									v-if="colorMode.preference === 'system'"
 									class="size-6"
@@ -137,7 +137,7 @@ onMounted(() => {
 						</span>
 						<Icon
 							name="i-lucide:move-right"
-							class="animateSVG hidden size-7 sm:block"
+							class="animateSVG hidden size-6 sm:block"
 						></Icon>
 					</NuxtLink>
 					<div class="flex items-center gap-8">
