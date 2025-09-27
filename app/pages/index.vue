@@ -1,11 +1,10 @@
 <script setup lang="ts">
 useHead({
-	title: "Nicolas Walter, développeur web front-end",
+	title: $t("home.title"),
 	meta: [
 		{
 			name: "description",
-			content:
-				"Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
+			content: $t("home.description"),
 		},
 	],
 });
@@ -24,16 +23,16 @@ onUnmounted(() => {
 			@mouseover="$emit('cursor-hovered')"
 			@mouseleave="$emit('cursor-left')"
 		>
-			<span>Hey, je suis</span>
+			<span>Hey, {{ $t("iAm") }}</span>
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
 		<h2 class="text-xl font-medium sm:text-center">
-			Développeur web d'interfaces pixel-perfect et
+			{{ $t("home.text") }}
 			<NuxtLink
 				to="/a-propos#accessibilite"
 				class="link relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-black after:text-white after:transition-[height] hover:after:h-full hover:after:content-['accessibles.'] after:dark:bg-white after:dark:text-black"
 			>
-				accessibles.
+				{{ $t("accessible") }}.
 			</NuxtLink>
 			<!-- WIP hover effect -->
 		</h2>
