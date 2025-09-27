@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { locale } = useI18n();
+const head = useLocaleHead();
+
 const colorMode = useColorMode();
 
 const toggleColorMode = () => {
@@ -27,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<Html>
+	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 		>
@@ -61,7 +64,7 @@ onMounted(() => {
 					class="mx-auto mb-20 w-full max-w-6xl text-black md:mb-32 lg:mb-40 dark:text-white"
 				>
 					<nav class="flex items-center justify-between">
-						<NuxtLink to="/">
+						<NuxtLinkLocale to="/">
 							<svg
 								aria-hidden="true"
 								class="h-8 w-auto fill-black dark:fill-white"
@@ -77,22 +80,26 @@ onMounted(() => {
 								/>
 							</svg>
 							<span class="sr-only">Accueil</span>
-						</NuxtLink>
+						</NuxtLinkLocale>
 						<div class="flex items-center gap-6 sm:gap-8">
-							<NuxtLink
+							<NuxtLinkLocale
 								to="/a-propos"
 								title="À propos"
 								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
 								A propos
-							</NuxtLink>
-							<NuxtLink
+							</NuxtLinkLocale>
+							<NuxtLinkLocale
 								to="/projets"
 								title="Blog"
 								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
 								Projets
+							</NuxtLinkLocale>
+							<NuxtLink v-if="locale === 'en'" :to="$switchLocalePath('fr')">
+								FR
 							</NuxtLink>
+							<NuxtLink v-else :to="$switchLocalePath('en')">EN</NuxtLink>
 							<button class="size-6" @click="toggleColorMode">
 								<Icon
 									v-if="colorMode.preference === 'system'"
@@ -122,7 +129,7 @@ onMounted(() => {
 				<footer
 					class="z-10 mx-auto mt-20 flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-4 md:mt-32 lg:mt-40"
 				>
-					<NuxtLink
+					<NuxtLinkLocale
 						:to="route.name === 'a-propos' ? '/projets' : '/a-propos'"
 						class="flex w-fit items-center"
 					>
@@ -139,7 +146,7 @@ onMounted(() => {
 							name="i-lucide:move-right"
 							class="animateSVG hidden size-6 sm:block"
 						></Icon>
-					</NuxtLink>
+					</NuxtLinkLocale>
 					<div class="flex items-center gap-8">
 						<NuxtLink
 							class="size-6"
@@ -167,7 +174,7 @@ onMounted(() => {
 /* Transition between pages */
 .page-enter-active,
 .page-leave-active {
-	transition: all 0.5s;
+	transition: opacity 0.5s;
 }
 
 .page-enter-from,

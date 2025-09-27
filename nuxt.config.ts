@@ -22,6 +22,12 @@ export default defineNuxtConfig({
 				name: "Français",
 				file: "fr.json",
 			},
+			{
+				code: "en",
+				language: "en-US",
+				name: "English",
+				file: "en.json",
+			},
 		],
 	},
 });
