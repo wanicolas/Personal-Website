@@ -1,6 +1,7 @@
 <script setup lang="ts">
-// projects are stored in assets/data/projects.json
-import projects from "~/assets/data/projects.json";
+const { locale } = useI18n();
+const data = await import(`~/assets/data/projects/${locale.value}.json`);
+const projects = computed(() => data.default);
 
 useHead({
 	title: $t("projects.title"),
