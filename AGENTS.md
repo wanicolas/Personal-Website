@@ -4,6 +4,7 @@
 
 - **Framework**: Nuxt 4 (Vue 3 + TypeScript)
 - **Styling**: TailwindCSS
+- **Traductions**: Nuxt I18n
 - **Package Manager**: pnpm
 
 ## Particularités Nuxt 4
