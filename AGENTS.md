@@ -1,9 +1,9 @@
-# MG_SHOP Frontend - Guide pour Agents IA
+# Personal website - Guide pour Agents IA
 
 ## Stack Technique
 
 - **Framework**: Nuxt 4 (Vue 3 + TypeScript)
-- **UI Library**: TailwindCSS
+- **Styling**: TailwindCSS
 - **Package Manager**: pnpm
 
 ## Particularités Nuxt 4

@@ -6,14 +6,15 @@
 		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
+		"format": "prettier",
 		"lint": "eslint",
 		"preview": "nuxt preview",
 		"preinstall": "npx only-allow pnpm",
 		"postinstall": "nuxt prepare",
 		"prepare": "husky || true",
 		"test": "vitest",
-		"test run": "vitest run",
-		"typecheck": "nuxt typecheck"
+		"typecheck": "nuxt typecheck",
+		"check-quality": "pnpm lint && pnpm typecheck && pnpm format --check ."
 	},
 	"dependencies": {
 		"@iconify-json/lucide": "~1.2.68",
