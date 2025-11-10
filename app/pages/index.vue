@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHead({
-	title: $t("home.title"),
+	title: $t("index.title"),
 	meta: [
 		{
 			name: "description",
-			content: $t("home.description"),
+			content: $t("index.description"),
 		},
 	],
 });
@@ -23,18 +23,26 @@ onUnmounted(() => {
 			@mouseover="$emit('cursor-hovered')"
 			@mouseleave="$emit('cursor-left')"
 		>
-			<span>Hey, {{ $t("iAm") }}</span>
+			<span>{{ $t("iAm") }}</span>
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
-		<h2 class="text-xl font-medium sm:text-center">
-			{{ $t("home.text") }}
-			<NuxtLink
-				to="/a-propos#accessibilite"
-				class="link relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-black after:text-white after:transition-[height] hover:after:h-full hover:after:content-['accessibles.'] after:dark:bg-white after:dark:text-black"
-			>
-				{{ $t("accessible") }}.
-			</NuxtLink>
-			<!-- WIP hover effect -->
-		</h2>
+		<i18n-t
+			tag="h2"
+			keypath="index.text"
+			class="text-xl font-medium sm:text-center"
+		>
+			<template #accessible>
+				<NuxtLink
+					to="/a-propos#accessibilite"
+					class="group relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-black after:transition-[height] hover:after:h-full after:dark:bg-white"
+				>
+					<span
+						class="relative z-10 group-hover:text-white group-hover:dark:text-black"
+					>
+						{{ $t("index.accessible") }}
+					</span>
+				</NuxtLink>
+			</template>
+		</i18n-t>
 	</div>
 </template>

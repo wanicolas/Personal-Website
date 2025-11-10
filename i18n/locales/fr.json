@@ -1,9 +1,9 @@
 {
-	"iAm": "je suis",
-	"accessible": "accessibles",
-	"home": {
+	"iAm": "Hey, je suis",
+	"index": {
 		"title": "Nicolas Walter, développeur web front-end",
 		"description": "Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
-		"text": "Développeur web d'interfaces pixel-perfect et"
+		"text": "Développeur web d'interfaces pixel-perfect et {accessible}.",
+		"accessible": "accessibles"
 	}
 }
