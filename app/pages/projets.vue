@@ -3,11 +3,11 @@
 import projects from "~/assets/data/projects.json";
 
 useHead({
-	title: "Projets - Nicolas Walter, développeur web front-end",
+	title: $t("projects.title"),
 	meta: [
 		{
 			name: "description",
-			content: "Mes projets personnels et universitaires.",
+			content: $t("projects.description"),
 		},
 	],
 });
@@ -20,10 +20,12 @@ useHead({
 			class="fixed -left-[12vmin] bottom-0 -z-10 hidden select-none text-[30vmin] font-black text-[#EDEDED] md:block dark:text-neutral-900"
 			style="writing-mode: vertical-lr"
 		>
-			Projets.
+			{{ $t("projects.bgText") }}
 		</div>
 		<div class="mx-auto max-w-5xl">
-			<h1 class="mb-14 text-3xl font-black lg:text-4xl">Projets.</h1>
+			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
+				{{ $t("projects.h1") }}
+			</h1>
 			<div
 				v-for="(project, index) in projects"
 				:key="index"

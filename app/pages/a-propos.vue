@@ -1,11 +1,10 @@
 <script setup lang="ts">
 useHead({
-	title: "A propos de moi - Nicolas Walter, développeur web front-end",
+	title: $t("about.title"),
 	meta: [
 		{
 			name: "description",
-			content:
-				"Découvrez mon parcours, ma passion pour le web et l'accessibilité.",
+			content: $t("about.description"),
 		},
 	],
 });
@@ -53,10 +52,12 @@ const infos = [
 			aria-hidden="true"
 			class="fixed -left-4 bottom-12 select-none text-7xl font-black text-[#EDEDED] sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem] dark:text-neutral-900"
 		>
-			A propos.
+			{{ $t("about.bgText") }}
 		</div>
 		<section class="relative mx-auto mb-10 max-w-3xl">
-			<h1 class="mb-14 text-3xl font-black lg:text-4xl">A propos de moi.</h1>
+			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
+				{{ $t("about.h1") }}
+			</h1>
 			<div class="flex gap-4 sm:gap-8">
 				<div class="w-px shrink-0 bg-black dark:bg-white"></div>
 				<div class="space-y-12">

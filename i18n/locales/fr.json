@@ -7,5 +7,17 @@
 		"description": "Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
 		"text": "Développeur web d'interfaces pixel-perfect et {accessible}.",
 		"accessible": "accessibles"
+	},
+	"about": {
+		"title": "A propos de moi - Nicolas Walter, développeur web front-end",
+		"description": "Découvrez mon parcours, ma passion pour le web et l'accessibilité.",
+		"bgText": "A propos.",
+		"h1": "A propos de moi."
+	},
+	"projects": {
+		"title": "Projets - Nicolas Walter, développeur web front-end",
+		"description": "Mes projets personnels et universitaires.",
+		"bgText": "Projets.",
+		"h1": "Mes projets."
 	}
 }
