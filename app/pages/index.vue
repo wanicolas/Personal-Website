@@ -32,7 +32,7 @@ onUnmounted(() => {
 			class="text-xl font-medium sm:text-center"
 		>
 			<template #accessible>
-				<NuxtLink
+				<NuxtLinkLocale
 					to="/a-propos#accessibilite"
 					class="group relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-black after:transition-[height] hover:after:h-full after:dark:bg-white"
 				>
@@ -41,7 +41,7 @@ onUnmounted(() => {
 					>
 						{{ $t("index.accessible") }}
 					</span>
-				</NuxtLink>
+				</NuxtLinkLocale>
 			</template>
 		</i18n-t>
 	</div>
