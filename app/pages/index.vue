@@ -23,7 +23,7 @@ onUnmounted(() => {
 			@mouseover="$emit('cursor-hovered')"
 			@mouseleave="$emit('cursor-left')"
 		>
-			<span>{{ $t("iAm") }}</span>
+			<span>{{ $t("index.iAm") }}</span>
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
 		<i18n-t

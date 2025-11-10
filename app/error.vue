@@ -11,14 +11,14 @@ const error = useError();
 			class="flex min-h-dvh flex-col items-center justify-center gap-12"
 		>
 			<div>
-				<h1 class="mb-3 text-3xl">On dirait que quelque chose ne va pas...</h1>
+				<h1 class="mb-3 text-3xl">{{ $t("somethingIsWrong") }}</h1>
 				<p v-if="error" class="text-xl">{{ error.message }}</p>
 			</div>
 			<NuxtLink
 				to="/"
 				class="rounded-sm bg-black px-4 py-2 text-lg font-medium text-white"
 			>
-				Retourner à l'accueil
+				{{ $t("backToHome") }}
 			</NuxtLink>
 		</main>
 	</Body>
