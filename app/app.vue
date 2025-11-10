@@ -14,6 +14,11 @@ const toggleColorMode = () => {
 };
 
 const route = useRoute();
+const routeBaseName = useRouteBaseName();
+// Ensure route.name is defined before passing it to routeBaseName to satisfy TypeScript
+const baseRouteNameString = computed(() =>
+	route.name ? routeBaseName(route.name) : "",
+);
 
 const cursorPosition = ref({ x: -200, y: -200 });
 
@@ -27,6 +32,8 @@ onMounted(() => {
 		});
 	}
 });
+
+console.log(useLocalePath());
 </script>
 
 <template>
@@ -54,7 +61,7 @@ onMounted(() => {
 				href="#contenu"
 				class="absolute -left-80 -top-80 rounded-b-md bg-black p-1 text-white focus:left-4 focus:top-0"
 			>
-				Aller au contenu
+				{{ $t("goToContent") }}
 			</a>
 
 			<div
@@ -79,41 +86,45 @@ onMounted(() => {
 									fill="current"
 								/>
 							</svg>
-							<span class="sr-only">Accueil</span>
+							<span class="sr-only">{{ $t("index") }}</span>
 						</NuxtLinkLocale>
 						<div class="flex items-center gap-6 sm:gap-8">
 							<NuxtLinkLocale
 								to="/a-propos"
-								title="À propos"
 								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
-								A propos
+								{{ $t("about") }}
 							</NuxtLinkLocale>
 							<NuxtLinkLocale
 								to="/projets"
-								title="Blog"
 								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
-								Projets
+								{{ $t("projects") }}
 							</NuxtLinkLocale>
-							<NuxtLink v-if="locale === 'en'" :to="$switchLocalePath('fr')">
-								FR
+							<NuxtLink :to="$switchLocalePath(locale === 'en' ? 'fr' : 'en')">
+								{{ locale === "en" ? "FR" : "EN" }}
 							</NuxtLink>
-							<NuxtLink v-else :to="$switchLocalePath('en')">EN</NuxtLink>
 							<button class="size-6" @click="toggleColorMode">
 								<Icon
-									v-if="colorMode.preference === 'system'"
 									class="size-6"
-									name="i-lucide:sun-moon"
+									:name="
+										colorMode.preference === 'system'
+											? 'i-lucide:sun-moon'
+											: colorMode.preference === 'light'
+												? 'i-lucide:sun'
+												: 'i-lucide:moon'
+									"
 								></Icon>
-								<Icon
-									v-else-if="colorMode.preference === 'light'"
-									class="size-6"
-									name="i-lucide:sun"
-								></Icon>
-								<Icon v-else class="size-6" name="i-lucide:moon"></Icon>
 
-								<span class="sr-only">Activer/Désactiver le mode sombre</span>
+								<span class="sr-only">
+									{{
+										colorMode.preference === "system"
+											? $t("toggleLightMode")
+											: colorMode.preference === "light"
+												? $t("toggleDarkMode")
+												: $t("toggleSystemMode")
+									}}
+								</span>
 							</button>
 						</div>
 					</nav>
@@ -130,16 +141,16 @@ onMounted(() => {
 					class="z-10 mx-auto mt-20 flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-4 md:mt-32 lg:mt-40"
 				>
 					<NuxtLinkLocale
-						:to="route.name === 'a-propos' ? '/projets' : '/a-propos'"
+						:to="baseRouteNameString === 'a-propos' ? '/projets' : '/a-propos'"
 						class="flex w-fit items-center"
 					>
 						<span
 							class="mr-2 underline underline-offset-4 hover:underline sm:no-underline"
 						>
 							{{
-								route.name === "a-propos"
-									? "Voir mes projets"
-									: "En apprendre plus sur moi"
+								baseRouteNameString === "a-propos"
+									? $t("lookAtMyProjects")
+									: $t("learnMoreAboutMe")
 							}}
 						</span>
 						<Icon
@@ -153,15 +164,15 @@ onMounted(() => {
 							to="https://www.linkedin.com/in/wanicolas/"
 						>
 							<Icon name="i-lucide:linkedin" class="size-6"></Icon>
-							<span class="sr-only">Accédez à mon profil LinkedIn.</span>
+							<span class="sr-only">{{ $t("visitMyLinkedInProfile") }}</span>
 						</NuxtLink>
 						<NuxtLink class="size-6" to="https://github.com/wanicolas">
 							<Icon name="i-lucide:github" class="size-6"></Icon>
-							<span class="sr-only">Accédez à mon profil GitHub.</span>
+							<span class="sr-only">{{ $t("visitMyGitHubProfile") }}</span>
 						</NuxtLink>
 						<NuxtLink class="size-6" to="mailto:contact@nicolaswalter.fr">
 							<Icon name="i-lucide:mail" class="size-6"></Icon>
-							<span class="sr-only">Contactez-moi par email !.</span>
+							<span class="sr-only">{{ $t("contactMeByEmail") }}</span>
 						</NuxtLink>
 					</div>
 				</footer>
