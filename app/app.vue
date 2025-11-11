@@ -45,14 +45,14 @@ console.log(useLocalePath());
 			<div
 				id="outerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-[9999] size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black transition-all duration-[250ms] ease-out dark:border-white"
+				class="pointer-events-none fixed z-9999 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black transition-all duration-250 ease-out dark:border-white"
 				:class="{ 'size-32 bg-white mix-blend-difference': isHovered }"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 			<div
 				id="innerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-[9998] size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black dark:bg-white"
+				class="pointer-events-none fixed z-9998 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black dark:bg-white"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 
