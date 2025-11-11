@@ -29,8 +29,8 @@ useHead({
 			<div class="flex gap-4 sm:gap-8">
 				<div class="w-px shrink-0 bg-black dark:bg-white"></div>
 				<div class="space-y-12">
-					<div v-for="(info, index) in infos" :key="index">
-						<div class="mb-3 -ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
+					<div v-for="(info, index) in infos" :key="index" class="space-y-3">
+						<div class="-ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
 							<div
 								class="flex size-4 items-center justify-center rounded-full bg-black dark:bg-white"
 							>
@@ -42,7 +42,7 @@ useHead({
 						</div>
 						<template v-if="info.cvLink">
 							<p
-								class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
+								class="leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
 							>
 								{{ info.content[0] }}
 								<NuxtLink
@@ -59,7 +59,7 @@ useHead({
 							<p
 								v-for="(paragraph, pIndex) in info.content"
 								:key="pIndex"
-								class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
+								class="leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
 							>
 								{{ paragraph }}
 							</p>
