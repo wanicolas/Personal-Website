@@ -1,0 +1,35 @@
+[
+	{
+		"title": "My journey and passion.",
+		"content": [
+			"In high school, I discovered the basics of the web. I admit that for me, it was revolutionary. A small local site made with a classmate, and I already saw myself asking everyone to visit it. Well, it's true that at first I didn't understand it wasn't online, but it was a start! What I immediately liked was the style, well the UI I mean (let's be professional after all). An inspiration from the internet and there I was trying to reproduce it with CSS! That's how I wanted to do web development."
+		]
+	},
+	{
+		"title": "Developing for the web.",
+		"content": [
+			"Making a website is not just about putting text, images and videos, then animating everything a bit and making it pretty. It's much more than that. Despite the constant change in technologies, the web foundation remains indifferent to new \"frameworks\" and \"libraries\". We often underestimate a good knowledge of pure HTML. Yes, you heard me right, I'm talking about HTML. Today, we're looking for developers who master JavaScript, to make dynamic and interactive sites. But using a front-end framework and writing code all over the place is all well and good, but what really matters is what will be generated and used by the browser.",
+			"This is where good \"markup\" becomes useful: semantics are extremely important, first of all for SEO purposes, because well-tagged content will be more highlighted, but also for accessibility and practicality. A semantically correct site is a site that will be displayed correctly in reading mode, that can be exploited by certain browser extensions, but it's also a site that will be faithfully rendered to users of assistive technologies. Having this solid foundation is necessary, and I strictly apply it in my projects."
+		]
+	},
+	{
+		"title": "Accessibility, a necessity.",
+		"id": "accessibility",
+		"content": [
+			"As explained previously, I discovered throughout my years of study and work a real enthusiasm for web accessibility. I therefore strive to make my projects accessible: this involves good semantics, but also an adapted use of technologies. For example, I primarily use native HTML elements and only use JavaScript when necessary. This allows for a lighter, faster, and more accessible website. Adding or hiding information for screen reader users as well as adding \"aria\" properties are aspects too often neglected by developers, but which are nevertheless essential for good accessibility.",
+			"During my personal or academic work, I self-trained in web accessibility. I also had the opportunity to work on professional accessibility projects, including making a complex Single Page Application compliant with RGAA. I also had the opportunity to officially verify my skill level through recognized certifications."
+		]
+	},
+	{
+		"title": "Enough talk...",
+		"content": [
+			"That's all nice and dandy, but I don't only have web development in my life. I also love music, I'm a pianist (I know, how cool) and I play the ukulele. I'm also a film buff, so don't suggest watching \"Taxi 2\" streaming... I also love learning and I'm always on the lookout for new technologies, new working methods and new practices."
+		]
+	},
+	{
+		"title": "Are you still there?",
+		"content": [
+			"Well, I see you really want to know everything about me. So take a look at <a href='/CV_Nicolas-WALTER.pdf' target='_blank' class='underline underline-offset-4'>my resume</a>, you'll love it!"
+		]
+	}
+]
