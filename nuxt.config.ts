@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	app: {
@@ -11,11 +13,14 @@ export default defineNuxtConfig({
 	modules: [
 		"@nuxt/eslint",
 		"@nuxt/test-utils/module",
-		"@nuxtjs/tailwindcss",
 		"@nuxtjs/i18n",
 		"@nuxtjs/color-mode",
 		"@nuxt/icon",
 	],
+	vite: {
+		plugins: [tailwindcss()],
+	},
+	css: ["./app/assets/css/main.css"],
 	i18n: {
 		defaultLocale: "fr",
 		locales: [
