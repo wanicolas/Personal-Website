@@ -64,11 +64,9 @@ console.log(useLocalePath());
 				{{ $t("goToContent") }}
 			</a>
 
-			<div
-				class="flex min-h-dvh flex-col justify-between px-4 pt-8 pb-6 sm:px-12"
-			>
+			<div class="flex min-h-dvh flex-col justify-between">
 				<header
-					class="mx-auto mb-20 w-full max-w-6xl text-black md:mb-32 lg:mb-40 dark:text-white"
+					class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-8 pb-4 text-black backdrop-blur sm:px-12 md:mb-28 lg:mb-36 dark:bg-black/75 dark:text-white"
 				>
 					<nav class="flex items-center justify-between">
 						<NuxtLinkLocale to="/">
@@ -130,7 +128,7 @@ console.log(useLocalePath());
 					</nav>
 				</header>
 
-				<main id="contenu" class="mx-auto">
+				<main id="contenu" class="mx-auto px-4 sm:px-12">
 					<NuxtPage
 						@cursor-hovered="isHovered = true"
 						@cursor-left="isHovered = false"
@@ -138,7 +136,7 @@ console.log(useLocalePath());
 				</main>
 
 				<footer
-					class="z-10 mx-auto mt-20 flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-4 md:mt-32 lg:mt-40"
+					class="z-10 mx-auto mt-20 mb-8 flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-4 px-4 sm:px-12 md:mt-32 lg:mt-40"
 				>
 					<NuxtLinkLocale
 						:to="baseRouteNameString === 'a-propos' ? '/projets' : '/a-propos'"
