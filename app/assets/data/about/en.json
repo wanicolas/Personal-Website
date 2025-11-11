@@ -29,7 +29,10 @@
 	{
 		"title": "Are you still there?",
 		"content": [
-			"Well, I see you really want to know everything about me. So take a look at <a href='/CV_Nicolas-WALTER.pdf' target='_blank' class='underline underline-offset-4'>my resume</a>, you'll love it!"
-		]
+			"Well, I see you really want to know everything about me. So take a look at ",
+			"my resume",
+			", you'll love it!"
+		],
+		"cvLink": "/CV_Nicolas-WALTER-en.pdf"
 	}
 ]

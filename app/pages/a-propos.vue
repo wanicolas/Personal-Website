@@ -40,12 +40,30 @@ useHead({
 								{{ info.title }}
 							</h2>
 						</div>
-						<p
-							v-for="(paragraph, pIndex) in info.content"
-							:key="pIndex"
-							class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
-							v-html="paragraph"
-						></p>
+						<template v-if="info.cvLink">
+							<p
+								class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
+							>
+								{{ info.content[0] }}
+								<NuxtLink
+									:to="info.cvLink"
+									target="_blank"
+									class="underline underline-offset-4"
+								>
+									{{ info.content[1] }}
+								</NuxtLink>
+								{{ info.content[2] }}
+							</p>
+						</template>
+						<template v-else>
+							<p
+								v-for="(paragraph, pIndex) in info.content"
+								:key="pIndex"
+								class="mb-3 leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
+							>
+								{{ paragraph }}
+							</p>
+						</template>
 					</div>
 				</div>
 			</div>
