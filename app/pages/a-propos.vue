@@ -4,11 +4,11 @@ const data = await import(`~/assets/data/about/${locale.value}.json`);
 const infos = computed(() => data.default);
 
 useHead({
-	title: $t("about.title"),
+	title: $t("aboutPage.title"),
 	meta: [
 		{
 			name: "description",
-			content: $t("about.description"),
+			content: $t("aboutPage.description"),
 		},
 	],
 });
@@ -18,19 +18,19 @@ useHead({
 	<div>
 		<div
 			aria-hidden="true"
-			class="fixed -left-4 bottom-12 select-none text-7xl font-black text-[#EDEDED] sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem] dark:text-neutral-900"
+			class="fixed bottom-12 -left-4 text-7xl font-black text-[#EDEDED] select-none sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem] dark:text-neutral-900"
 		>
-			{{ $t("about.bgText") }}
+			{{ $t("aboutPage.bgText") }}
 		</div>
 		<section class="relative mx-auto mb-10 max-w-3xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
-				{{ $t("about.h1") }}
+				{{ $t("aboutPage.h1") }}
 			</h1>
 			<div class="flex gap-4 sm:gap-8">
 				<div class="w-px shrink-0 bg-black dark:bg-white"></div>
 				<div class="space-y-12">
 					<div v-for="(info, index) in infos" :key="index">
-						<div class="-ml-6 mb-3 flex items-center gap-3 sm:-ml-10 sm:gap-6">
+						<div class="mb-3 -ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
 							<div
 								class="flex size-4 items-center justify-center rounded-full bg-black dark:bg-white"
 							>

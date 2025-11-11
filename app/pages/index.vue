@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHead({
-	title: $t("index.title"),
+	title: $t("indexPage.title"),
 	meta: [
 		{
 			name: "description",
-			content: $t("index.description"),
+			content: $t("indexPage.description"),
 		},
 	],
 });
@@ -19,16 +19,16 @@ onUnmounted(() => {
 <template>
 	<div class="mx-auto w-fit">
 		<h1
-			class="mx-auto mb-8 flex w-fit flex-col gap-4 text-5xl font-bold uppercase leading-none tracking-tight sm:text-7xl lg:mb-12 lg:p-4 lg:text-[6rem] xl:text-[8rem]"
+			class="mx-auto mb-8 flex w-fit flex-col gap-4 text-5xl leading-none font-bold tracking-tight uppercase sm:text-7xl lg:mb-12 lg:p-4 lg:text-[6rem] xl:text-[8rem]"
 			@mouseover="$emit('cursor-hovered')"
 			@mouseleave="$emit('cursor-left')"
 		>
-			<span>{{ $t("index.iAm") }}</span>
+			<span>{{ $t("indexPage.iAm") }}</span>
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
 		<i18n-t
 			tag="h2"
-			keypath="index.text"
+			keypath="indexPage.text"
 			class="text-xl font-medium sm:text-center"
 		>
 			<template #accessible>
@@ -39,7 +39,7 @@ onUnmounted(() => {
 					<span
 						class="relative z-10 group-hover:text-white group-hover:dark:text-black"
 					>
-						{{ $t("index.accessible") }}
+						{{ $t("indexPage.accessible") }}
 					</span>
 				</NuxtLinkLocale>
 			</template>

@@ -4,11 +4,11 @@ const data = await import(`~/assets/data/projects/${locale.value}.json`);
 const projects = computed(() => data.default);
 
 useHead({
-	title: $t("projects.title"),
+	title: $t("projectsPage.title"),
 	meta: [
 		{
 			name: "description",
-			content: $t("projects.description"),
+			content: $t("projectsPage.description"),
 		},
 	],
 });
@@ -18,14 +18,14 @@ useHead({
 	<div>
 		<div
 			aria-hidden="true"
-			class="fixed -left-[12vmin] bottom-0 -z-10 hidden select-none text-[30vmin] font-black text-[#EDEDED] md:block dark:text-neutral-900"
+			class="fixed bottom-0 -left-[12vmin] -z-10 hidden text-[30vmin] font-black text-[#EDEDED] select-none md:block dark:text-neutral-900"
 			style="writing-mode: vertical-lr"
 		>
-			{{ $t("projects.bgText") }}
+			{{ $t("projectsPage.bgText") }}
 		</div>
 		<div class="mx-auto max-w-5xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
-				{{ $t("projects.h1") }}
+				{{ $t("projectsPage.h1") }}
 			</h1>
 			<div
 				v-for="(project, index) in projects"
@@ -47,7 +47,7 @@ useHead({
 						</h2>
 						<svg
 							aria-hidden="true"
-							class="mb-1 ml-2 inline size-4 shrink-0 stroke-2 transition motion-safe:group-hover/title:-translate-y-1 motion-safe:group-hover/title:translate-x-1"
+							class="mb-1 ml-2 inline size-4 shrink-0 stroke-2 transition motion-safe:group-hover/title:translate-x-1 motion-safe:group-hover/title:-translate-y-1"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
