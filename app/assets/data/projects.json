@@ -1,0 +1,44 @@
+[
+	{
+		"date": "2023-2024",
+		"fr_title": "Mon Guichet - nouvelle version",
+		"en_title": "Mon Guichet - new version",
+		"fr_description": "La nouvelle version front du produit \"Mon Guichet\" est en cours de développement au sein de Logitud. Elle utilise notre librairie MG_UI pour ses composants principaux.",
+		"en_description": "The new front-end version of the \"Mon Guichet\" product is currently being developed at Logitud. It uses our MG_UI library for its main components.",
+		"img": "mg.webp",
+		"link": "https://mulhouse.staging.numesia.fr",
+		"technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
+	},
+	{
+		"date": "2023-2024",
+		"fr_title": "MG_UI - Librairie de composants Nuxt",
+		"en_title": "MG_UI - Nuxt Component Library",
+		"fr_description": "Utilisée au sein de Logitud, cette librairie comporte des composants dynamiques, customisables et accessibles. Elle est accessible sur NPM et sera bientôt open-source sous license MIT et disponible sur GitHub.",
+		"en_description": "Used within Logitud, this library includes dynamic, customizable and accessible components. It is available on NPM and will soon be open-source under MIT license and available on GitHub.",
+		"img": "mg_ui.webp",
+		"link": "https://www.npmjs.com/package/@numesia/mg_ui",
+		"technos": ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"]
+	},
+	{
+		"date": "2024",
+		"fr_title": "Site personnel",
+		"en_title": "Personal website",
+		"fr_description": "Quoi de mieux qu'un site personnel pour se présenter et exposer ses projets et compétences ? Développé avec des technos que j'affectionne, il est open-source sous license MIT.",
+		"en_description": "What better than a personal website to introduce myself and showcase my projects and skills? Developed with technologies I love, it is open-source under MIT license.",
+		"img": "personal-website.webp",
+		"link": "https://nicolaswalter.fr",
+		"github": "https://github.com/wanicolas/Personal-Website",
+		"technos": ["Nuxt", "TailwindCSS"]
+	},
+	{
+		"date": "2024",
+		"fr_title": "Bullet Ballet",
+		"en_title": "Bullet Ballet",
+		"fr_description": "Jeu platformer de tir en 2D en cours de développement avec Phaser. Le but des deux joueurs est d'éliminer l'autre avec des armes et inclut la possibilité de récupérer des objets.",
+		"en_description": "A 2D shooting platformer game currently in development with Phaser. The goal for both players is to eliminate each other with weapons and includes the ability to pick up items.",
+		"img": "bullet-ballet.webp",
+		"link": "https://github.com/wanicolas/Bullet-Ballet",
+		"github": "https://github.com/wanicolas/Bullet-Ballet",
+		"technos": ["Phaser", "Vite", "TypeScript"]
+	}
+]

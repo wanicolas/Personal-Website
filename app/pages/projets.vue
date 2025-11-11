@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import projectsData from "~/assets/data/projects.json";
 const { locale } = useI18n();
-const data = await import(`~/assets/data/projects/${locale.value}.json`);
-const projects = computed(() => data.default);
+
+const projects = computed(() => {
+	return projectsData.map((project) => ({
+		...project,
+		title: project[`${locale.value}_title`],
+		description: project[`${locale.value}_description`],
+	}));
+});
 
 useHead({
 	title: $t("projectsPage.title"),
@@ -18,8 +25,12 @@ useHead({
 	<div>
 		<div
 			aria-hidden="true"
-			class="fixed bottom-0 -left-[12vmin] -z-10 hidden text-[30vmin] font-black text-[#EDEDED] select-none md:block dark:text-neutral-900"
-			style="writing-mode: vertical-lr"
+			class="fixed bottom-0 -z-10 hidden font-black text-[#EDEDED] select-none [writing-mode:vertical-lr] md:block dark:text-neutral-900"
+			:class="
+				locale === 'fr'
+					? '-left-[12vmin] text-[30vmin]'
+					: '-left-[11vmin] text-[26vmin]'
+			"
 		>
 			{{ $t("projectsPage.bgText") }}
 		</div>
