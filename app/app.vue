@@ -59,13 +59,13 @@ console.log(useLocalePath());
 			<!-- Accessible link to go to the content -->
 			<a
 				href="#contenu"
-				class="absolute -left-80 -top-80 rounded-b-md bg-black p-1 text-white focus:left-4 focus:top-0"
+				class="absolute -top-80 -left-80 rounded-b-md bg-black p-1 text-white focus:top-0 focus:left-4"
 			>
 				{{ $t("goToContent") }}
 			</a>
 
 			<div
-				class="flex min-h-dvh flex-col justify-between px-4 pb-6 pt-8 sm:px-12"
+				class="flex min-h-dvh flex-col justify-between px-4 pt-8 pb-6 sm:px-12"
 			>
 				<header
 					class="mx-auto mb-20 w-full max-w-6xl text-black md:mb-32 lg:mb-40 dark:text-white"
@@ -91,13 +91,13 @@ console.log(useLocalePath());
 						<div class="flex items-center gap-6 sm:gap-8">
 							<NuxtLinkLocale
 								to="/a-propos"
-								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
 								{{ $t("about") }}
 							</NuxtLinkLocale>
 							<NuxtLinkLocale
 								to="/projets"
-								class="relative before:absolute before:left-0 before:top-6 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
 							>
 								{{ $t("projects") }}
 							</NuxtLinkLocale>
