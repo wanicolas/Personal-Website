@@ -27,14 +27,14 @@ useHead({
 				{{ $t("aboutPage.h1") }}
 			</h1>
 			<div class="flex gap-4 sm:gap-8">
-				<div class="w-px shrink-0 bg-black dark:bg-white"></div>
+				<div class="w-px shrink-0 bg-black dark:bg-white" />
 				<div class="space-y-12">
 					<div v-for="(info, index) in infos" :key="index" class="space-y-3">
 						<div class="-ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
 							<div
 								class="flex size-4 items-center justify-center rounded-full bg-black dark:bg-white"
 							>
-								<div class="size-3 rounded-full bg-white dark:bg-black"></div>
+								<div class="size-3 rounded-full bg-white dark:bg-black" />
 							</div>
 							<h2 :id="info.id" class="text-lg font-semibold lg:text-xl">
 								{{ info.title }}
@@ -48,7 +48,7 @@ useHead({
 								<NuxtLink
 									:to="info.cvLink"
 									target="_blank"
-									class="underline underline-offset-4"
+									class="underline underline-offset-4 hover:no-underline"
 								>
 									{{ info.content[1] }}
 								</NuxtLink>

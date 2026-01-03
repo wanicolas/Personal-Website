@@ -9,10 +9,10 @@ useHead({
 	],
 });
 
-const emit = defineEmits(["cursor-left", "cursor-hovered"]);
+const emit = defineEmits(["cursorLeft", "cursorHovered"]);
 
 onUnmounted(() => {
-	emit("cursor-left");
+	emit("cursorLeft");
 });
 </script>
 
@@ -20,10 +20,11 @@ onUnmounted(() => {
 	<div class="mx-auto w-fit">
 		<h1
 			class="mx-auto mb-8 flex w-fit flex-col gap-4 text-5xl leading-none font-bold tracking-tight uppercase sm:text-7xl lg:mb-12 lg:p-4 lg:text-[6rem] xl:text-[8rem]"
-			@mouseover="$emit('cursor-hovered')"
-			@mouseleave="$emit('cursor-left')"
+			@mouseover="emit('cursorHovered')"
+			@mouseleave="emit('cursorLeft')"
 		>
 			<span>{{ $t("indexPage.iAm") }}</span>
+			<!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
 		<i18n-t

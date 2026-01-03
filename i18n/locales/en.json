@@ -1,36 +1,38 @@
 {
-	"somethingIsWrong": "Looks like something went wrong...",
+	"about": "About",
+	"aboutPage": {
+		"bgText": "About.",
+		"description": "Discover my journey, my passion for the web and accessibility.",
+		"h1": "About me.",
+		"title": "About me - Nicolas Walter, front-end web developer"
+	},
 	"backToHome": "Back to home",
+	"contact": "Contact",
+	"contactMeByEmail": "Contact me by email.",
 	"goToContent": "Skip to content",
 	"index": "Home",
-	"about": "About",
-	"projects": "Projects",
-	"lookAtMyProjects": "View my projects",
-	"learnMoreAboutMe": "Learn more about me",
-	"visitMyLinkedInProfile": "Visit my LinkedIn profile.",
-	"visitMyGitHubProfile": "Visit my GitHub profile.",
-	"contactMeByEmail": "Contact me by email.",
-	"toggleLightMode": "Enable light mode",
-	"toggleDarkMode": "Enable dark mode",
-	"toggleSystemMode": "Make the theme follow system preferences",
-
 	"indexPage": {
-		"iAm": "Hey, I'm",
-		"title": "Nicolas Walter, front-end web developer",
+		"accessible": "accessible",
 		"description": "Nicolas Walter is a web developer specializing in pixel-perfect and accessible interfaces, creator of inclusive products and digital experiences.",
+		"iAm": "Hey, I'm",
 		"text": "Web developer of pixel-perfect and {accessible} interfaces.",
-		"accessible": "accessible"
+		"title": "Nicolas Walter, front-end web developer"
 	},
-	"aboutPage": {
-		"title": "About me - Nicolas Walter, front-end web developer",
-		"description": "Discover my journey, my passion for the web and accessibility.",
-		"bgText": "About.",
-		"h1": "About me."
-	},
+	"learnMoreAboutMe": "Learn more about me",
+	"lookAtMyProjects": "View my projects",
+	"projects": "Projects",
 	"projectsPage": {
-		"title": "Projects - Nicolas Walter, front-end web developer",
-		"description": "My personal and academic projects.",
 		"bgText": "Projects.",
-		"h1": "My projects."
-	}
+		"date": "Date:",
+		"description": "My personal and academic projects.",
+		"h1": "My projects.",
+		"title": "Projects - Nicolas Walter, front-end web developer"
+	},
+	"somethingIsWrong": "Looks like something went wrong...",
+	"toggleDarkMode": "Enable dark mode",
+	"toggleLightMode": "Enable light mode",
+	"toggleSystemMode": "Make the theme follow system preferences",
+	"visitGithubRepo": "Visit the GitHub repository",
+	"visitMyGitHubProfile": "Visit my GitHub profile.",
+	"visitMyLinkedInProfile": "Visit my LinkedIn profile."
 }

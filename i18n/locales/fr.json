@@ -1,36 +1,44 @@
 {
-	"somethingIsWrong": "On dirait que quelque chose ne va pas...",
+	"about": "À propos",
+	"aboutPage": {
+		"bgText": "A propos.",
+		"description": "Découvrez mon parcours, ma passion pour le web et l'accessibilité.",
+		"h1": "A propos de moi.",
+		"title": "A propos de moi - Nicolas Walter, développeur web front-end"
+	},
 	"backToHome": "Retourner à l'accueil",
+	"contact": "Contact",
+	"contactMeByEmail": "Contactez-moi par email.",
+	"contactPage": {
+		"bgText": "Contact.",
+		"description": "N'hésitez pas à me contacter pour toute question ou opportunité.",
+		"h1": "On discute ?",
+		"title": "Contact - Nicolas Walter, développeur web front-end"
+	},
 	"goToContent": "Aller au contenu",
 	"index": "Accueil",
-	"about": "À propos",
-	"projects": "Projets",
-	"lookAtMyProjects": "Voir mes projets",
-	"learnMoreAboutMe": "En savoir plus sur moi",
-	"visitMyLinkedInProfile": "Accédez à mon profil LinkedIn.",
-	"visitMyGitHubProfile": "Accédez à mon profil GitHub.",
-	"contactMeByEmail": "Contactez-moi par email.",
-	"toggleLightMode": "Activer le mode clair",
-	"toggleDarkMode": "Activer le mode sombre",
-	"toggleSystemMode": "Faire en sorte que le thème suive les préférences système",
-
 	"indexPage": {
-		"iAm": "Hey, je suis",
-		"title": "Nicolas Walter, développeur web front-end",
+		"accessible": "accessibles",
 		"description": "Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
+		"iAm": "Hey, je suis",
 		"text": "Développeur web d'interfaces pixel-perfect et {accessible}.",
-		"accessible": "accessibles"
+		"title": "Nicolas Walter, développeur web front-end"
 	},
-	"aboutPage": {
-		"title": "A propos de moi - Nicolas Walter, développeur web front-end",
-		"description": "Découvrez mon parcours, ma passion pour le web et l'accessibilité.",
-		"bgText": "A propos.",
-		"h1": "A propos de moi."
-	},
+	"learnMoreAboutMe": "En savoir plus sur moi",
+	"lookAtMyProjects": "Voir mes projets",
+	"projects": "Projets",
 	"projectsPage": {
-		"title": "Projets - Nicolas Walter, développeur web front-end",
-		"description": "Mes projets personnels et universitaires.",
 		"bgText": "Projets.",
-		"h1": "Mes projets."
-	}
+		"date": "Date :",
+		"description": "Mes projets personnels et universitaires.",
+		"h1": "Mes projets.",
+		"title": "Projets - Nicolas Walter, développeur web front-end"
+	},
+	"somethingIsWrong": "On dirait que quelque chose ne va pas...",
+	"toggleDarkMode": "Activer le mode sombre",
+	"toggleLightMode": "Activer le mode clair",
+	"toggleSystemMode": "Faire en sorte que le thème suive les préférences système",
+	"visitGithubRepo": "Visiter le dépôt GitHub",
+	"visitMyGitHubProfile": "Accédez à mon profil GitHub.",
+	"visitMyLinkedInProfile": "Accédez à mon profil LinkedIn."
 }

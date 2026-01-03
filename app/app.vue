@@ -99,7 +99,14 @@ console.log(useLocalePath());
 							>
 								{{ $t("projects") }}
 							</NuxtLinkLocale>
+							<NuxtLinkLocale
+								to="/contact"
+								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+							>
+								{{ $t("contact") }}
+							</NuxtLinkLocale>
 							<NuxtLink :to="$switchLocalePath(locale === 'en' ? 'fr' : 'en')">
+								<!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
 								{{ locale === "en" ? "FR" : "EN" }}
 							</NuxtLink>
 							<button class="size-6" @click="toggleColorMode">
@@ -112,7 +119,7 @@ console.log(useLocalePath());
 												? 'i-lucide:sun'
 												: 'i-lucide:moon'
 									"
-								></Icon>
+								/>
 
 								<span class="sr-only">
 									{{
@@ -154,23 +161,19 @@ console.log(useLocalePath());
 						<Icon
 							name="i-lucide:move-right"
 							class="animateSVG hidden size-6 sm:block"
-						></Icon>
+						/>
 					</NuxtLinkLocale>
 					<div class="flex items-center gap-8">
 						<NuxtLink
 							class="size-6"
 							to="https://www.linkedin.com/in/wanicolas/"
 						>
-							<Icon name="i-lucide:linkedin" class="size-6"></Icon>
+							<Icon name="i-lucide:linkedin" class="size-6" />
 							<span class="sr-only">{{ $t("visitMyLinkedInProfile") }}</span>
 						</NuxtLink>
 						<NuxtLink class="size-6" to="https://github.com/wanicolas">
-							<Icon name="i-lucide:github" class="size-6"></Icon>
+							<Icon name="i-lucide:github" class="size-6" />
 							<span class="sr-only">{{ $t("visitMyGitHubProfile") }}</span>
-						</NuxtLink>
-						<NuxtLink class="size-6" to="mailto:contact@nicolaswalter.fr">
-							<Icon name="i-lucide:mail" class="size-6"></Icon>
-							<span class="sr-only">{{ $t("contactMeByEmail") }}</span>
 						</NuxtLink>
 					</div>
 				</footer>
