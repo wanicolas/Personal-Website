@@ -8,6 +8,8 @@ useHead({
 		},
 	],
 });
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -24,24 +26,39 @@ useHead({
 				{{ $t("contactPage.h1") }}
 			</h1>
 
-			<form action="" class="space-y-4">
+			<form
+				action="https://formsubmit.co/contact@nicolaswalter.fr"
+				method="POST"
+				class="space-y-4"
+			>
 				<div class="flex flex-col gap-4 md:flex-row">
 					<FormInput
-						id="nom"
+						id="Nom"
 						:label="$t('firstname')"
 						type="text"
 						class="grow"
 					/>
 					<FormInput
-						id="prenom"
+						id="Prenom"
 						:label="$t('lastname')"
 						type="text"
 						class="grow"
 					/>
 				</div>
 
-				<FormInput id="email" :label="$t('email')" type="email" />
-				<FormInput id="message" :label="$t('message')" textarea />
+				<FormInput id="Email" :label="$t('email')" type="email" />
+				<FormInput id="Message" :label="$t('message')" textarea />
+
+				<!-- Utilisation du template "box" pour le mail de soumission -->
+				<input type="hidden" name="_template" value="box" />
+				<!-- Redirige vers la page de remerciement après envoi -->
+				<input
+					type="hidden"
+					name="_next"
+					:value="'https://nicolaswalter.fr' + localePath('/merci')"
+				/>
+				<!-- Permet d'éviter le spam -->
+				<input type="text" name="_honey" class="hidden" />
 
 				<button
 					type="submit"
