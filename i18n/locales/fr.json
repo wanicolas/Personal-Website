@@ -29,6 +29,13 @@
 	"lastname": "Nom",
 	"learnMoreAboutMe": "En savoir plus sur moi",
 	"lookAtMyProjects": "Voir mes projets",
+	"merciPage": {
+		"bgText": "Merci.",
+		"description": "Merci pour votre message ! Je vous répondrai dès que possible.",
+		"h1": "Merci pour votre message",
+		"p": "Avec un soupçon de chance et de patience, je vous répondrai dès que possible.",
+		"title": "Merci - Nicolas Walter, développeur web front-end"
+	},
 	"message": "Message",
 	"projects": "Projets",
 	"projectsPage": {
