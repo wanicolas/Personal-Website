@@ -29,6 +29,7 @@
 		"title": "Projects - Nicolas Walter, front-end web developer"
 	},
 	"somethingIsWrong": "Looks like something went wrong...",
+	"submit": "Submit",
 	"toggleDarkMode": "Enable dark mode",
 	"toggleLightMode": "Enable light mode",
 	"toggleSystemMode": "Make the theme follow system preferences",

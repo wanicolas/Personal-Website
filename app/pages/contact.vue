@@ -18,10 +18,28 @@ useHead({
 		>
 			{{ $t("contactPage.bgText") }}
 		</div>
+
 		<div class="mx-auto max-w-5xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("contactPage.h1") }}
 			</h1>
+
+			<form action="" class="space-y-4">
+				<div class="flex gap-4">
+					<FormInput id="nom" label="Nom" type="text" />
+					<FormInput id="prenom" label="Prénom" type="text" />
+				</div>
+
+				<FormInput id="email" label="Email" type="email" />
+				<FormInput id="message" label="Message" textarea />
+
+				<button
+					type="submit"
+					class="mt-2 rounded bg-black px-3 py-1 font-bold text-white dark:bg-white dark:text-black"
+				>
+					{{ $t("submit") }}
+				</button>
+			</form>
 		</div>
 	</div>
 </template>
