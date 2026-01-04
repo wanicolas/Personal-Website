@@ -38,6 +38,23 @@ console.log(useLocalePath());
 
 <template>
 	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+		<Head>
+			<template v-for="link in head.link" :key="link.key">
+				<Link
+					:id="link.key"
+					:rel="link.rel"
+					:href="link.href"
+					:hreflang="link.hreflang"
+				/>
+			</template>
+			<template v-for="meta in head.meta" :key="meta.key">
+				<Meta
+					:id="meta.key"
+					:property="meta.property"
+					:content="meta.content"
+				/>
+			</template>
+		</Head>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 		>
@@ -107,7 +124,7 @@ console.log(useLocalePath());
 							</NuxtLinkLocale>
 							<NuxtLink :to="$switchLocalePath(locale === 'en' ? 'fr' : 'en')">
 								<!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-								{{ locale === "en" ? "FR" : "EN" }}
+								{{ locale === "en" ? "EN" : "FR" }}
 							</NuxtLink>
 							<button class="size-6" @click="toggleColorMode">
 								<Icon
@@ -135,7 +152,7 @@ console.log(useLocalePath());
 					</nav>
 				</header>
 
-				<main id="contenu" class="mx-auto px-4 sm:px-12">
+				<main id="contenu" class="mx-4 sm:mx-12">
 					<NuxtPage
 						@cursor-hovered="isHovered = true"
 						@cursor-left="isHovered = false"

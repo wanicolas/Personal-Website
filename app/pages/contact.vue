@@ -19,19 +19,29 @@ useHead({
 			{{ $t("contactPage.bgText") }}
 		</div>
 
-		<div class="mx-auto max-w-5xl">
+		<div class="mx-auto max-w-xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("contactPage.h1") }}
 			</h1>
 
 			<form action="" class="space-y-4">
-				<div class="flex gap-4">
-					<FormInput id="nom" label="Nom" type="text" />
-					<FormInput id="prenom" label="Prénom" type="text" />
+				<div class="flex flex-col gap-4 md:flex-row">
+					<FormInput
+						id="nom"
+						:label="$t('firstname')"
+						type="text"
+						class="grow"
+					/>
+					<FormInput
+						id="prenom"
+						:label="$t('lastname')"
+						type="text"
+						class="grow"
+					/>
 				</div>
 
-				<FormInput id="email" label="Email" type="email" />
-				<FormInput id="message" label="Message" textarea />
+				<FormInput id="email" :label="$t('email')" type="email" />
+				<FormInput id="message" :label="$t('message')" textarea />
 
 				<button
 					type="submit"
