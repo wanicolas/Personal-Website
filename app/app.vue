@@ -149,7 +149,6 @@ onMounted(() => {
 												: 'lucide:moon'
 									"
 								/>
-
 								<span class="sr-only">
 									{{
 										colorMode.preference === "system"
@@ -162,7 +161,6 @@ onMounted(() => {
 							</button>
 							<button class="size-6" @click="openMenu()">
 								<Icon class="size-6" name="lucide:menu" />
-
 								<span class="sr-only">
 									{{ $t("openNavigationMenu") }}
 								</span>
@@ -175,16 +173,31 @@ onMounted(() => {
 					<dialog
 						ref="dialog"
 						closedby="any"
-						class="fixed inset-0 size-full max-h-dvh max-w-dvw"
+						class="size-full max-h-dvh max-w-dvw"
 					>
-						<button class="size-6" @click="closeMenu()">
-							<Icon class="size-6" name="lucide:x" />
-
-							<span class="sr-only">
-								{{ $t("openNavigationMenu") }}
-							</span>
-						</button>
-						<nav>Test</nav>
+						<div class="flex h-full flex-col">
+							<div class="flex justify-end p-4">
+								<button class="size-6" @click="closeMenu()">
+									<Icon class="size-6" name="lucide:x" />
+									<span class="sr-only">
+										{{ $t("closeNavigationMenu") }}
+									</span>
+								</button>
+							</div>
+							<nav
+								class="flex flex-1 flex-col items-center justify-center gap-6 text-3xl"
+							>
+								<NuxtLinkLocale to="/a-propos" @close="closeMenu()">
+									{{ $t("about") }}
+								</NuxtLinkLocale>
+								<NuxtLinkLocale to="/projets" @close="closeMenu()">
+									{{ $t("projects") }}
+								</NuxtLinkLocale>
+								<NuxtLinkLocale to="/contact" @close="closeMenu()">
+									{{ $t("contact") }}
+								</NuxtLinkLocale>
+							</nav>
+						</div>
 					</dialog>
 					<NuxtPage
 						@cursor-hovered="isHovered = true"
