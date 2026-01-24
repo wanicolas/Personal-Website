@@ -20,6 +20,20 @@ const baseRouteNameString = computed(() =>
 	route.name ? routeBaseName(route.name) : "",
 );
 
+const dialog = ref<HTMLDialogElement | null>(null);
+
+function openMenu() {
+	if (dialog.value) {
+		dialog.value.showModal();
+	}
+}
+
+function closeMenu() {
+	if (dialog.value) {
+		dialog.value.close();
+	}
+}
+
 const cursorPosition = ref({ x: -200, y: -200 });
 
 const isHovered = ref(false);
@@ -32,8 +46,6 @@ onMounted(() => {
 		});
 	}
 });
-
-console.log(useLocalePath());
 </script>
 
 <template>
@@ -83,7 +95,7 @@ console.log(useLocalePath());
 
 			<div class="flex min-h-dvh flex-col justify-between">
 				<header
-					class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-8 pb-4 text-black backdrop-blur sm:px-12 md:mb-28 lg:mb-36 dark:bg-black/75 dark:text-white"
+					class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-4 pb-4 text-black backdrop-blur sm:px-12 sm:pt-8 md:mb-28 lg:mb-36 dark:bg-black/75 dark:text-white"
 				>
 					<nav class="flex items-center justify-between">
 						<NuxtLinkLocale to="/">
@@ -106,19 +118,19 @@ console.log(useLocalePath());
 						<div class="flex items-center gap-6 sm:gap-8">
 							<NuxtLinkLocale
 								to="/a-propos"
-								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+								class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 							>
 								{{ $t("about") }}
 							</NuxtLinkLocale>
 							<NuxtLinkLocale
 								to="/projets"
-								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+								class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 							>
 								{{ $t("projects") }}
 							</NuxtLinkLocale>
 							<NuxtLinkLocale
 								to="/contact"
-								class="relative before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 before:dark:bg-white"
+								class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 							>
 								{{ $t("contact") }}
 							</NuxtLinkLocale>
@@ -131,10 +143,10 @@ console.log(useLocalePath());
 									class="size-6"
 									:name="
 										colorMode.preference === 'system'
-											? 'i-lucide:sun-moon'
+											? 'lucide:sun-moon'
 											: colorMode.preference === 'light'
-												? 'i-lucide:sun'
-												: 'i-lucide:moon'
+												? 'lucide:sun'
+												: 'lucide:moon'
 									"
 								/>
 
@@ -148,11 +160,32 @@ console.log(useLocalePath());
 									}}
 								</span>
 							</button>
+							<button class="size-6" @click="openMenu()">
+								<Icon class="size-6" name="lucide:menu" />
+
+								<span class="sr-only">
+									{{ $t("openNavigationMenu") }}
+								</span>
+							</button>
 						</div>
 					</nav>
 				</header>
 
 				<main id="contenu" class="mx-4 sm:mx-12">
+					<dialog
+						ref="dialog"
+						closedby="any"
+						class="fixed inset-0 size-full max-h-dvh max-w-dvw"
+					>
+						<button class="size-6" @click="closeMenu()">
+							<Icon class="size-6" name="lucide:x" />
+
+							<span class="sr-only">
+								{{ $t("openNavigationMenu") }}
+							</span>
+						</button>
+						<nav>Test</nav>
+					</dialog>
 					<NuxtPage
 						@cursor-hovered="isHovered = true"
 						@cursor-left="isHovered = false"
@@ -176,7 +209,7 @@ console.log(useLocalePath());
 							}}
 						</span>
 						<Icon
-							name="i-lucide:move-right"
+							name="lucide:move-right"
 							class="animateSVG hidden size-6 sm:block"
 						/>
 					</NuxtLinkLocale>
@@ -185,11 +218,11 @@ console.log(useLocalePath());
 							class="size-6"
 							to="https://www.linkedin.com/in/wanicolas/"
 						>
-							<Icon name="i-lucide:linkedin" class="size-6" />
+							<Icon name="lucide:linkedin" class="size-6" />
 							<span class="sr-only">{{ $t("visitMyLinkedInProfile") }}</span>
 						</NuxtLink>
 						<NuxtLink class="size-6" to="https://github.com/wanicolas">
-							<Icon name="i-lucide:github" class="size-6" />
+							<Icon name="lucide:github" class="size-6" />
 							<span class="sr-only">{{ $t("visitMyGitHubProfile") }}</span>
 						</NuxtLink>
 					</div>
