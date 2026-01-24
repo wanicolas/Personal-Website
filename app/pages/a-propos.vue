@@ -32,10 +32,8 @@ useHead({
 					<div v-for="(info, index) in infos" :key="index" class="space-y-3">
 						<div class="-ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
 							<div
-								class="flex size-4 items-center justify-center rounded-full bg-black dark:bg-white"
-							>
-								<div class="size-3 rounded-full bg-white dark:bg-black" />
-							</div>
+								class="size-4 rounded-full border-2 border-black bg-white dark:border-white dark:bg-black"
+							/>
 							<h2 :id="info.id" class="text-lg font-semibold lg:text-xl">
 								{{ info.title }}
 							</h2>
