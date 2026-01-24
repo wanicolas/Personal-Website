@@ -20,11 +20,11 @@ useHead({
 		</div>
 
 		<div class="mx-auto max-w-xl">
-			<div class="mb-14 flex flex-wrap gap-4">
+			<div class="mb-14 flex items-center gap-4">
 				<h1 class="text-3xl font-black lg:text-4xl">
 					{{ $t("merciPage.h1") }}
 				</h1>
-				<Icon name="lucide:send" class="size-8 lg:size-12" />
+				<Icon name="lucide:send" class="size-8 shrink-0 lg:size-12" />
 			</div>
 			<p class="lg:text-lg">
 				{{ $t("merciPage.p") }}
