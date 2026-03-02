@@ -68,6 +68,7 @@ onMounted(() => {
 		</Head>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
+			:class="isMenuOpen ? 'overflow-hidden' : ''"
 		>
 			<!-- Custom cursor -->
 			<div
