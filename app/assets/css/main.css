@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-@source "../../../nuxt.config.ts";
-
-@custom-variant dark (&:where(.dark-mode, .dark-mode *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
 	font-family: "HankenGrotesk";

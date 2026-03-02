@@ -2,7 +2,6 @@ import withNuxt from "./.nuxt/eslint.config.mjs";
 import checkFile from "eslint-plugin-check-file";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
-import jsoncParser from "jsonc-eslint-parser";
 import vueI18n from "@intlify/eslint-plugin-vue-i18n";
 
 export default withNuxt(
@@ -76,9 +75,6 @@ export default withNuxt(
 	// Configuration spécifique aux fichiers de traduction JSON
 	{
 		files: ["i18n/locales/**/*.json"],
-		languageOptions: {
-			parser: jsoncParser,
-		},
 		plugins: {
 			jsonc: eslintPluginJsonc,
 		},

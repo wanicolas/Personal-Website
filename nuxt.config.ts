@@ -18,6 +18,7 @@ export default defineNuxtConfig({
 		"@nuxt/icon",
 	],
 	vite: {
+		// @ts-expect-error - https://github.com/tailwindlabs/tailwindcss/issues/18802
 		plugins: [tailwindcss()],
 	},
 	css: ["./app/assets/css/main.css"],
