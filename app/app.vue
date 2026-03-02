@@ -98,6 +98,7 @@ onMounted(() => {
 					class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-4 pb-4 text-black backdrop-blur sm:px-12 sm:pt-8 md:mb-28 lg:mb-36 dark:bg-black/75 dark:text-white"
 				>
 					<nav class="flex items-center justify-between">
+						<!-- Logo -->
 						<NuxtLinkLocale to="/">
 							<svg
 								aria-hidden="true"
@@ -115,6 +116,8 @@ onMounted(() => {
 							</svg>
 							<span class="sr-only">{{ $t("index") }}</span>
 						</NuxtLinkLocale>
+
+						<!-- Navigation links -->
 						<div class="flex items-center gap-6 sm:gap-8">
 							<NuxtLinkLocale
 								to="/a-propos"
@@ -134,13 +137,25 @@ onMounted(() => {
 							>
 								{{ $t("contact") }}
 							</NuxtLinkLocale>
-							<NuxtLink :to="$switchLocalePath(locale === 'en' ? 'fr' : 'en')">
-								<!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-								{{ locale === "en" ? "EN" : "FR" }}
+						</div>
+
+						<!-- Language and color mode switcher + mobile menu -->
+						<div class="flex items-center gap-3 sm:gap-4">
+							<NuxtLink
+								:to="$switchLocalePath(locale === 'en' ? 'fr' : 'en')"
+								class="rounded p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+							>
+								<span class="flex size-5 items-center justify-center">
+									<!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+									{{ locale === "en" ? "EN" : "FR" }}
+								</span>
 							</NuxtLink>
-							<button class="size-6" @click="toggleColorMode">
+							<button
+								class="flex rounded p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+								@click="toggleColorMode"
+							>
 								<Icon
-									class="size-6"
+									class="size-5"
 									:name="
 										colorMode.preference === 'system'
 											? 'lucide:sun-moon'
@@ -159,8 +174,11 @@ onMounted(() => {
 									}}
 								</span>
 							</button>
-							<button class="size-6" @click="openMenu()">
-								<Icon class="size-6" name="lucide:menu" />
+							<button
+								class="flex rounded p-1.5 hover:bg-neutral-100 sm:hidden dark:hover:bg-neutral-800"
+								@click="openMenu()"
+							>
+								<Icon class="size-5" name="lucide:menu" />
 								<span class="sr-only">
 									{{ $t("openNavigationMenu") }}
 								</span>
@@ -177,8 +195,11 @@ onMounted(() => {
 					>
 						<div class="flex h-full flex-col">
 							<div class="flex justify-end p-4">
-								<button class="size-6" @click="closeMenu()">
-									<Icon class="size-6" name="lucide:x" />
+								<button
+									class="flex rounded p-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+									@click="closeMenu()"
+								>
+									<Icon class="size-5" name="lucide:x" />
 									<span class="sr-only">
 										{{ $t("closeNavigationMenu") }}
 									</span>
