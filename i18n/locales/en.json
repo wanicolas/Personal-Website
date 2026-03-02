@@ -7,8 +7,17 @@
 		"title": "About me - Nicolas Walter, front-end web developer"
 	},
 	"backToHome": "Back to home",
+	"closeNavigationMenu": "Close navigation menu",
 	"contact": "Contact",
 	"contactMeByEmail": "Contact me by email.",
+	"contactPage": {
+		"bgText": "Contact.",
+		"description": "Feel free to contact me for any questions or opportunities.",
+		"h1": "Shall we talk?",
+		"title": "Contact - Nicolas Walter, front-end web developer"
+	},
+	"email": "Email",
+	"firstname": "First name",
 	"goToContent": "Skip to content",
 	"index": "Home",
 	"indexPage": {
@@ -18,8 +27,18 @@
 		"text": "Web developer of pixel-perfect and {accessible} interfaces.",
 		"title": "Nicolas Walter, front-end web developer"
 	},
+	"lastname": "Last name",
 	"learnMoreAboutMe": "Learn more about me",
 	"lookAtMyProjects": "View my projects",
+	"merciPage": {
+		"bgText": "Thank you.",
+		"description": "Thanks for your message! I'll get back to you as soon as possible.",
+		"h1": "Thank you for your message",
+		"p": "With a dash of luck and patience, I'll answer as soon as possible.",
+		"title": "Thank you - Nicolas Walter, front-end web developer"
+	},
+	"message": "Message",
+	"openNavigationMenu": "Open navigation menu",
 	"projects": "Projects",
 	"projectsPage": {
 		"bgText": "Projects.",
