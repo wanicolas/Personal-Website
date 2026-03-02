@@ -38,7 +38,7 @@ useHead({
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("projectsPage.h1") }}
 			</h1>
-			<div
+			<article
 				v-for="(project, index) in projects"
 				:key="index"
 				class="group/project peer mx-auto mb-16 grid max-w-lg grid-cols-1 items-center gap-4 md:mb-24 lg:mb-32 lg:max-w-none lg:grid-cols-2 lg:gap-8"
@@ -109,17 +109,18 @@ useHead({
 				</div>
 				<NuxtLink
 					aria-hidden="true"
+					tabindex="-1"
 					:to="project.link"
 					target="blank"
 					class="h-fit shrink-0"
 				>
 					<img
-						class="max-h-72 w-full rounded border border-neutral-200 object-cover transition xl:grayscale xl:group-hover/project:grayscale-0 dark:border-neutral-800"
+						class="max-h-72 w-full rounded border border-neutral-200 object-cover transition xl:grayscale xl:group-focus-within/project:grayscale-0 xl:group-hover/project:grayscale-0 dark:border-neutral-800"
 						:src="'/img/' + project.img"
 						alt=""
 					/>
 				</NuxtLink>
-			</div>
+			</article>
 		</div>
 	</div>
 </template>
