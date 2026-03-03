@@ -14,7 +14,7 @@
 	},
 	{
 		"title": "L'accessibilité, une nécessité.",
-		"id": "accessibilite",
+		"id": "accessibility",
 		"content": [
 			"Comme expliqué précédemment, je me suis découvert au fil de mes années d'études et de travail un véritable engouement pour l'accessibilité du web. Je m'attache donc à rendre mes projets accessibles : cela passe par une bonne sémantique, mais aussi par une utilisation adaptée des technologies. Par exemple, j'utilise en priorité des éléments HTML natifs et n'utilise le JavaScript que lorsque cela est nécessaire. Cela permet d'avoir un site web plus léger, plus rapide, et plus accessible. L'ajout ou le masquage d'informations pour les utilisateurs de lecteurs d'écran ainsi que l'ajout de propriété \"aria\" sont des aspects trop souvent négligés par les développeurs, mais qui sont pourtant essentiels pour une bonne accessibilité.",
 			"Lors de mes travaux personnels ou universitaires, je me suis auto-formé à l'accessibilité du web. J'ai aussi eu l'occasion de travailler sur des projets d'accessibilité professionnels, notamment la mise en conformité d'une Single Page Application complexe avec le RGAA. J'ai également eu l'occasion de vérifier officiellement mon niveau de compétences au travers de certifications reconnues."
