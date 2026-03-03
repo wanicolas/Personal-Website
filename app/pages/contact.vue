@@ -1,12 +1,9 @@
 <script setup lang="ts">
-useHead({
+useSeoMeta({
 	title: $t("contactPage.title"),
-	meta: [
-		{
-			name: "description",
-			content: $t("contactPage.description"),
-		},
-	],
+	ogTitle: $t("contactPage.title"),
+	description: $t("contactPage.description"),
+	ogDescription: $t("contactPage.description"),
 });
 
 const localePath = useLocalePath();

@@ -1,12 +1,9 @@
 <script setup lang="ts">
-useHead({
+useSeoMeta({
 	title: $t("merciPage.title"),
-	meta: [
-		{
-			name: "description",
-			content: $t("merciPage.description"),
-		},
-	],
+	ogTitle: $t("merciPage.title"),
+	description: $t("merciPage.description"),
+	ogDescription: $t("merciPage.description"),
 });
 </script>
 

@@ -10,14 +10,11 @@ const projects = computed(() => {
 	}));
 });
 
-useHead({
+useSeoMeta({
 	title: $t("projectsPage.title"),
-	meta: [
-		{
-			name: "description",
-			content: $t("projectsPage.description"),
-		},
-	],
+	ogTitle: $t("projectsPage.title"),
+	description: $t("projectsPage.description"),
+	ogDescription: $t("projectsPage.description"),
 });
 </script>
 

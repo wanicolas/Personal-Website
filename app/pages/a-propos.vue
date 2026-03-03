@@ -3,14 +3,11 @@ const { locale } = useI18n();
 const data = await import(`~/assets/data/about/${locale.value}.json`);
 const infos = computed(() => data.default);
 
-useHead({
+useSeoMeta({
 	title: $t("aboutPage.title"),
-	meta: [
-		{
-			name: "description",
-			content: $t("aboutPage.description"),
-		},
-	],
+	ogTitle: $t("aboutPage.title"),
+	description: $t("aboutPage.description"),
+	ogDescription: $t("aboutPage.description"),
 });
 </script>
 
