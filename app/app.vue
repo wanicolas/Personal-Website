@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+
+useSeoMeta({
+	ogImage: `${runtimeConfig.public.i18n.baseUrl}/og-image.jpg`,
+});
+
 const head = useLocaleHead();
 
 const route = useRoute();

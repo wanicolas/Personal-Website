@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 	},
 	css: ["./app/assets/css/main.css"],
 	i18n: {
-		baseUrl: "https://www.nicolaswalter.fr",
+		baseUrl: process.env.BASE_URL,
 		defaultLocale: "fr",
 		locales: [
 			{
