@@ -26,7 +26,7 @@ const runtimeConfig = useRuntimeConfig();
 			</h1>
 
 			<form
-				action="https://formsubmit.co/contact@nicolaswalter.fr"
+				action="https://formsubmit.co/86eb2118aa51923deba24b44f7e34fd1"
 				method="POST"
 				class="space-y-4"
 			>
