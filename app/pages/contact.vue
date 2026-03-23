@@ -7,6 +7,8 @@ useSeoMeta({
 });
 
 const localePath = useLocalePath();
+
+const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
@@ -52,7 +54,7 @@ const localePath = useLocalePath();
 				<input
 					type="hidden"
 					name="_next"
-					:value="'https://nicolaswalter.fr' + localePath('/merci')"
+					:value="runtimeConfig.public.i18n.baseUrl + localePath('/merci')"
 				/>
 				<!-- Permet d'éviter le spam -->
 				<input type="text" name="_honey" class="hidden" />
