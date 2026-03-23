@@ -43,13 +43,43 @@ const cursorPosition = ref({ x: -200, y: -200 });
 
 const isHovered = ref(false);
 
-onMounted(() => {
-	// Add an event listener for mousemove event
-	if (window.innerWidth > 1200) {
-		document.addEventListener("pointermove", (e) => {
-			cursorPosition.value = { x: e.clientX, y: e.clientY };
-		});
+let mediaQuery: MediaQueryList | null = null;
+
+const pointerMoveHandler = (e: PointerEvent) => {
+	cursorPosition.value = { x: e.clientX, y: e.clientY };
+};
+
+function updateCursorTracking() {
+	if (!mediaQuery) {
+		return;
 	}
+
+	const shouldTrackPointer = window.innerWidth > 1200 && !mediaQuery.matches;
+
+	if (shouldTrackPointer) {
+		document.addEventListener("pointermove", pointerMoveHandler);
+	} else {
+		document.removeEventListener("pointermove", pointerMoveHandler);
+		cursorPosition.value = { x: -200, y: -200 };
+	}
+}
+
+function handleReducedMotionChange() {
+	updateCursorTracking();
+}
+
+onMounted(() => {
+	mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+	updateCursorTracking();
+	window.addEventListener("resize", updateCursorTracking);
+	mediaQuery.addEventListener("change", handleReducedMotionChange);
+});
+
+onUnmounted(() => {
+	document.removeEventListener("pointermove", pointerMoveHandler);
+	window.removeEventListener("resize", updateCursorTracking);
+	mediaQuery?.removeEventListener("change", handleReducedMotionChange);
 });
 </script>
 
@@ -80,14 +110,14 @@ onMounted(() => {
 			<div
 				id="outerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-9999 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black transition-all duration-250 ease-out dark:border-white"
+				class="pointer-events-none fixed z-9999 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black transition-all duration-250 ease-out motion-reduce:hidden dark:border-white"
 				:class="{ 'size-32 bg-white mix-blend-difference': isHovered }"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 			<div
 				id="innerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-9998 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black dark:bg-white"
+				class="pointer-events-none fixed z-9998 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black motion-reduce:hidden dark:bg-white"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 
