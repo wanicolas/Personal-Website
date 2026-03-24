@@ -35,30 +35,13 @@ useSeoMeta({
 								{{ info.title }}
 							</h2>
 						</div>
-						<template v-if="info.cvLink">
-							<p
-								class="leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
-							>
-								{{ info.content[0] }}
-								<NuxtLink
-									:to="info.cvLink"
-									target="_blank"
-									class="underline underline-offset-4 hover:no-underline"
-								>
-									{{ info.content[1] }}
-								</NuxtLink>
-								{{ info.content[2] }}
-							</p>
-						</template>
-						<template v-else>
-							<p
-								v-for="(paragraph, pIndex) in info.content"
-								:key="pIndex"
-								class="leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
-							>
-								{{ paragraph }}
-							</p>
-						</template>
+						<p
+							v-for="(paragraph, pIndex) in info.content"
+							:key="pIndex"
+							class="leading-relaxed text-neutral-600 lg:text-lg dark:text-neutral-300"
+						>
+							{{ paragraph }}
+						</p>
 					</div>
 				</div>
 			</div>
