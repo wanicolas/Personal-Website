@@ -3,13 +3,16 @@ name: "Lint, Typecheck and Formatting"
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
-  push:
     branches:
-      - master
-      - develop
+      - main
+      - dev
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  Lint:
+  Quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,10 +27,10 @@ jobs:
           cache-dependency-path: "pnpm-lock.yaml"
       - name: Installing dependencies from lockfile
         run: pnpm install --frozen-lockfile
-      - name: Running Lint
-        run: pnpm lint
+      - name: Running quality checks
+        run: pnpm check-quality
 
-  Typecheck:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,23 +45,5 @@ jobs:
           cache-dependency-path: "pnpm-lock.yaml"
       - name: Installing dependencies from lockfile
         run: pnpm install --frozen-lockfile
-      - name: Running Typecheck
-        run: pnpm typecheck
-
-  Formatting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "pnpm"
-          cache-dependency-path: "pnpm-lock.yaml"
-      - name: Installing dependencies from lockfile
-        run: pnpm install --frozen-lockfile
-      - name: Running Formatting
-        run: pnpm format:check
+      - name: Running Build
+        run: pnpm build
