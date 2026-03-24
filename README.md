@@ -11,11 +11,11 @@ Yes, you can use my code for own projets! I love to share my work online and hav
 1. Install all dependencies
 
 ```sh
-npm install
+pnpm i
 ```
 
 2. Start the development server
 
 ```sh
-npm run dev
+pnpm dev
 ```
