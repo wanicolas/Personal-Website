@@ -3,10 +3,13 @@ name: "Unit tests"
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
-  push:
     branches:
-      - master
-      - develop
+      - main
+      - dev
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   UnitTests:
