@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/i18n",
 		"@nuxtjs/color-mode",
 		"@nuxt/icon",
+		"@nuxtjs/seo",
 	],
 	vite: {
 		// @ts-expect-error - https://github.com/tailwindlabs/tailwindcss/issues/18802
@@ -39,5 +40,12 @@ export default defineNuxtConfig({
 				file: "en.json",
 			},
 		],
+	},
+	sitemap: {
+		zeroRuntime: true,
+	},
+	robots: {
+		//  routes are auto-prefixed with i18n
+		disallow: ["/merci"],
 	},
 });
