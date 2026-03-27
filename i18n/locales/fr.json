@@ -4,7 +4,7 @@
 		"bgText": "A propos.",
 		"description": "Découvrez mon parcours, ma passion pour le web et l'accessibilité.",
 		"h1": "A propos de moi.",
-		"title": "A propos de moi - Nicolas Walter, développeur web front-end"
+		"title": "A propos de moi"
 	},
 	"backToHome": "Retourner à l'accueil",
 	"closeNavigationMenu": "Fermer le menu de navigation",
@@ -14,7 +14,7 @@
 		"bgText": "Contact.",
 		"description": "N'hésitez pas à me contacter pour toute question ou opportunité.",
 		"h1": "On discute ?",
-		"title": "Contact - Nicolas Walter, développeur web front-end"
+		"title": "Contact"
 	},
 	"email": "Email",
 	"firstname": "Prénom",
@@ -22,10 +22,9 @@
 	"index": "Accueil",
 	"indexPage": {
 		"accessible": "accessibles",
-		"description": "Nicolas Walter est un développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
+		"description": "Nicolas Walter, développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
 		"iAm": "Hey, je suis",
-		"text": "Développeur web d'interfaces pixel-perfect et {accessible}.",
-		"title": "Nicolas Walter, développeur web front-end"
+		"text": "Développeur web d'interfaces pixel-perfect et {accessible}."
 	},
 	"lastname": "Nom",
 	"learnMoreAboutMe": "En savoir plus sur moi",
@@ -35,9 +34,12 @@
 		"description": "Merci pour votre message ! Je vous répondrai dès que possible.",
 		"h1": "Merci pour votre message",
 		"p": "Avec un soupçon de chance et de patience, je vous répondrai dès que possible.",
-		"title": "Merci - Nicolas Walter, développeur web front-end"
+		"title": "Merci"
 	},
 	"message": "Message",
+	"nuxtSiteConfig": {
+		"name": "Nicolas Walter, développeur web front"
+	},
 	"openNavigationMenu": "Ouvrir le menu de navigation",
 	"projects": "Projets",
 	"projectsPage": {
@@ -45,7 +47,7 @@
 		"date": "Date :",
 		"description": "Mes projets personnels et universitaires.",
 		"h1": "Mes projets.",
-		"title": "Projets - Nicolas Walter, développeur web front-end"
+		"title": "Projets"
 	},
 	"somethingIsWrong": "On dirait que quelque chose ne va pas...",
 	"submit": "Envoyer",

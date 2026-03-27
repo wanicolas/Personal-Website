@@ -1,9 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-	title: $t("indexPage.title"),
-	ogTitle: $t("indexPage.title"),
 	description: $t("indexPage.description"),
-	ogDescription: $t("indexPage.description"),
 });
 
 const emit = defineEmits(["cursorLeft", "cursorHovered"]);

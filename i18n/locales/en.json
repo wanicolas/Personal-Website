@@ -4,7 +4,7 @@
 		"bgText": "About.",
 		"description": "Discover my journey, my passion for the web and accessibility.",
 		"h1": "About me.",
-		"title": "About me - Nicolas Walter, front-end web developer"
+		"title": "About me"
 	},
 	"backToHome": "Back to home",
 	"closeNavigationMenu": "Close navigation menu",
@@ -14,7 +14,7 @@
 		"bgText": "Contact.",
 		"description": "Feel free to contact me for any questions or opportunities.",
 		"h1": "Shall we talk?",
-		"title": "Contact - Nicolas Walter, front-end web developer"
+		"title": "Contact"
 	},
 	"email": "Email",
 	"firstname": "First name",
@@ -22,10 +22,9 @@
 	"index": "Home",
 	"indexPage": {
 		"accessible": "accessible",
-		"description": "Nicolas Walter is a web developer specializing in pixel-perfect and accessible interfaces, creator of inclusive products and digital experiences.",
+		"description": "Nicolas Walter, web developer specializing in pixel-perfect and accessible interfaces, creator of inclusive products and digital experiences.",
 		"iAm": "Hey, I'm",
-		"text": "Web developer of pixel-perfect and {accessible} interfaces.",
-		"title": "Nicolas Walter, front-end web developer"
+		"text": "Web developer of pixel-perfect and {accessible} interfaces."
 	},
 	"lastname": "Last name",
 	"learnMoreAboutMe": "Learn more about me",
@@ -35,9 +34,12 @@
 		"description": "Thanks for your message! I'll get back to you as soon as possible.",
 		"h1": "Thank you for your message",
 		"p": "With a dash of luck and patience, I'll answer as soon as possible.",
-		"title": "Thank you - Nicolas Walter, front-end web developer"
+		"title": "Thank you"
 	},
 	"message": "Message",
+	"nuxtSiteConfig": {
+		"name": "Nicolas Walter, front-end web developer"
+	},
 	"openNavigationMenu": "Open navigation menu",
 	"projects": "Projects",
 	"projectsPage": {
@@ -45,7 +47,7 @@
 		"date": "Date:",
 		"description": "My personal and academic projects.",
 		"h1": "My projects.",
-		"title": "Projects - Nicolas Walter, front-end web developer"
+		"title": "Projects"
 	},
 	"somethingIsWrong": "Looks like something went wrong...",
 	"submit": "Submit",

@@ -12,9 +12,7 @@ const projects = computed(() => {
 
 useSeoMeta({
 	title: $t("projectsPage.title"),
-	ogTitle: $t("projectsPage.title"),
 	description: $t("projectsPage.description"),
-	ogDescription: $t("projectsPage.description"),
 });
 </script>
 

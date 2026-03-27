@@ -1,9 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
 	title: $t("contactPage.title"),
-	ogTitle: $t("contactPage.title"),
 	description: $t("contactPage.description"),
-	ogDescription: $t("contactPage.description"),
 });
 
 const localePath = useLocalePath();

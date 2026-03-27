@@ -5,9 +5,7 @@ const infos = computed(() => data.default);
 
 useSeoMeta({
 	title: $t("aboutPage.title"),
-	ogTitle: $t("aboutPage.title"),
 	description: $t("aboutPage.description"),
-	ogDescription: $t("aboutPage.description"),
 });
 </script>
 

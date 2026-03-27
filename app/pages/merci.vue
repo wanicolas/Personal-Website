@@ -1,9 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
 	title: $t("merciPage.title"),
-	ogTitle: $t("merciPage.title"),
 	description: $t("merciPage.description"),
-	ogDescription: $t("merciPage.description"),
 });
 </script>
 
