@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
+	title: "",
 	description: $t("indexPage.description"),
 });
 
@@ -22,6 +23,7 @@ onUnmounted(() => {
 			<span class="md:ml-20">Nicolas Walter</span>
 		</h1>
 		<i18n-t
+			scope="global"
 			tag="h2"
 			keypath="indexPage.text"
 			class="text-xl font-medium sm:text-center"
