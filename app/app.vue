@@ -1,10 +1,8 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig();
-
 const { locale } = useI18n();
 
-useSeoMeta({
-	ogImage: `${runtimeConfig.public.i18n.baseUrl}/og-image-${locale.value}.jpg`,
+defineOgImage("Template", {
+	appLocale: locale.value,
 });
 
 const head = useLocaleHead();
