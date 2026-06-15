@@ -14,8 +14,8 @@ useSeoMeta({
 			{{ $t("merciPage.bgText") }}
 		</div>
 
-		<div class="mx-auto max-w-xl">
-			<div class="mb-14 flex items-center gap-4">
+		<div class="mx-auto max-w-2xl text-center">
+			<div class="mb-14 flex items-center justify-center gap-4">
 				<h1 class="text-3xl font-black lg:text-4xl">
 					{{ $t("merciPage.h1") }}
 				</h1>
@@ -24,6 +24,9 @@ useSeoMeta({
 			<p class="lg:text-lg">
 				{{ $t("merciPage.p") }}
 			</p>
+			<button class="mt-2 underline underline-offset-4 hover:no-underline">
+				<NuxtLinkLocale to="/">{{ $t("goBackToHomePage") }}</NuxtLinkLocale>
+			</button>
 		</div>
 	</div>
 </template>
