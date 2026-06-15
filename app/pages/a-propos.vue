@@ -11,12 +11,6 @@ useSeoMeta({
 
 <template>
 	<div>
-		<div
-			aria-hidden="true"
-			class="fixed bottom-12 -left-4 text-7xl font-black text-[#EDEDED] select-none sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem] dark:text-neutral-900"
-		>
-			{{ $t("aboutPage.bgText") }}
-		</div>
 		<section class="relative mx-auto mb-10 max-w-3xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("aboutPage.h1") }}

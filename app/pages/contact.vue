@@ -11,13 +11,6 @@ const runtimeConfig = useRuntimeConfig();
 
 <template>
 	<div>
-		<div
-			aria-hidden="true"
-			class="fixed bottom-0 -left-[8vmin] -z-10 hidden text-[22vmin] font-black text-[#EDEDED] select-none [writing-mode:vertical-lr] md:block dark:text-neutral-900"
-		>
-			{{ $t("contactPage.bgText") }}
-		</div>
-
 		<div class="mx-auto max-w-xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("contactPage.h1") }}

@@ -7,13 +7,6 @@ useSeoMeta({
 
 <template>
 	<div>
-		<div
-			aria-hidden="true"
-			class="fixed bottom-0 -left-[8vmin] -z-10 hidden text-[22vmin] font-black text-[#EDEDED] select-none [writing-mode:vertical-lr] md:block dark:text-neutral-900"
-		>
-			{{ $t("merciPage.bgText") }}
-		</div>
-
 		<div class="mx-auto max-w-2xl text-center">
 			<div class="mb-14 flex items-center justify-center gap-4">
 				<h1 class="text-3xl font-black lg:text-4xl">

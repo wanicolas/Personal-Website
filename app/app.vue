@@ -135,6 +135,51 @@ onUnmounted(() => {
 					@toggle-menu="toggleMenu"
 					@close-menu="closeMenu"
 				/>
+				<!-- Background rotated/pivot texts -->
+				<div
+					aria-hidden="true"
+					class="pointer-events-none -z-10 font-black text-[#EDEDED] select-none dark:text-neutral-900"
+				>
+					<Transition name="page" mode="out-in">
+						<!-- À Propos (horizontal) -->
+						<div
+							v-if="baseRouteNameString === 'a-propos'"
+							key="a-propos"
+							class="fixed bottom-12 -left-4 text-7xl sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem]"
+						>
+							{{ $t("aboutPage.bgText") }}
+						</div>
+						<!-- Projets (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'projets'"
+							key="projets"
+							class="fixed bottom-0 hidden [writing-mode:vertical-lr] md:block"
+							:class="
+								locale === 'fr'
+									? '-left-[9vmin] text-[26vmin]'
+									: '-left-[8vmin] text-[22vmin]'
+							"
+						>
+							{{ $t("projectsPage.bgText") }}
+						</div>
+						<!-- Contact (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'contact'"
+							key="contact"
+							class="fixed bottom-0 -left-[8vmin] hidden text-[22vmin] [writing-mode:vertical-lr] md:block"
+						>
+							{{ $t("contactPage.bgText") }}
+						</div>
+						<!-- Merci (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'merci'"
+							key="merci"
+							class="fixed bottom-0 -left-[8vmin] hidden text-[22vmin] [writing-mode:vertical-lr] md:block"
+						>
+							{{ $t("merciPage.bgText") }}
+						</div>
+					</Transition>
+				</div>
 
 				<main id="contenu" class="mx-4 sm:mx-12">
 					<dialog
