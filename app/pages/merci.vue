@@ -1,23 +1,16 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
-	title: $t("merciPage.title"),
-	ogTitle: $t("merciPage.title"),
-	description: $t("merciPage.description"),
-	ogDescription: $t("merciPage.description"),
+	title: t("merciPage.title"),
+	description: t("merciPage.description"),
 });
 </script>
 
 <template>
 	<div>
-		<div
-			aria-hidden="true"
-			class="fixed bottom-0 -left-[8vmin] -z-10 hidden text-[22vmin] font-black text-[#EDEDED] select-none [writing-mode:vertical-lr] md:block dark:text-neutral-900"
-		>
-			{{ $t("merciPage.bgText") }}
-		</div>
-
-		<div class="mx-auto max-w-xl">
-			<div class="mb-14 flex items-center gap-4">
+		<div class="mx-auto max-w-2xl text-center">
+			<div class="mb-14 flex items-center justify-center gap-4">
 				<h1 class="text-3xl font-black lg:text-4xl">
 					{{ $t("merciPage.h1") }}
 				</h1>
@@ -26,6 +19,9 @@ useSeoMeta({
 			<p class="lg:text-lg">
 				{{ $t("merciPage.p") }}
 			</p>
+			<button class="mt-2 underline underline-offset-4 hover:no-underline">
+				<NuxtLinkLocale to="/">{{ $t("goBackToHomePage") }}</NuxtLinkLocale>
+			</button>
 		</div>
 	</div>
 </template>

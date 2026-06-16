@@ -19,7 +19,7 @@ defineProps<{
 			:type="textarea ? undefined : type"
 			:name="id"
 			:rows="textarea ? 3 : undefined"
-			class="w-full rounded border px-2 py-1"
+			class="w-full appearance-none rounded border px-2 py-1 focus-visible:outline focus-visible:outline-black dark:focus-visible:outline-white"
 		/>
 	</div>
 </template>

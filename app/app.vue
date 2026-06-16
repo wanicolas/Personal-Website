@@ -1,13 +1,40 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig();
-
 const { locale } = useI18n();
 
+// Calcule l'URL de l'image en fonction de la langue active
+const ogImageUrl = computed(() => {
+	return locale.value === "fr" ? "/og-image/fr.png" : "/og-image/en.png";
+});
+
 useSeoMeta({
-	ogImage: `${runtimeConfig.public.i18n.baseUrl}/og-image-${locale.value}.jpg`,
+	ogImage: () => ogImageUrl.value,
+	twitterImage: () => ogImageUrl.value,
+	// Vous pouvez aussi définir le type d'image si besoin
+	ogImageType: "image/png",
+	ogImageWidth: 1200,
+	ogImageHeight: 630,
 });
 
 const head = useLocaleHead();
+
+useHead({
+	link: () => head.value.link,
+	meta: () => head.value.meta,
+});
+
+useSchemaOrg([
+	definePerson({
+		name: "Nicolas Walter",
+		image: "/og-image/fr.png",
+		sameAs: [
+			"https://github.com/wanicolas",
+			"https://www.linkedin.com/in/wanicolas/",
+		],
+	}),
+	defineWebSite({
+		name: "Nicolas Walter",
+	}),
+]);
 
 const route = useRoute();
 const routeBaseName = useRouteBaseName();
@@ -87,23 +114,6 @@ onUnmounted(() => {
 
 <template>
 	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-		<Head>
-			<template v-for="link in head.link" :key="link.key">
-				<Link
-					:id="link.key"
-					:rel="link.rel"
-					:href="link.href"
-					:hreflang="link.hreflang"
-				/>
-			</template>
-			<template v-for="meta in head.meta" :key="meta.key">
-				<Meta
-					:id="meta.key"
-					:property="meta.property"
-					:content="meta.content"
-				/>
-			</template>
-		</Head>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 			:class="isMenuOpen ? 'overflow-hidden' : ''"
@@ -137,6 +147,51 @@ onUnmounted(() => {
 					@toggle-menu="toggleMenu"
 					@close-menu="closeMenu"
 				/>
+				<!-- Background rotated/pivot texts -->
+				<div
+					aria-hidden="true"
+					class="pointer-events-none -z-10 font-black text-[#EDEDED] select-none dark:text-neutral-900"
+				>
+					<Transition name="page" mode="out-in">
+						<!-- À Propos (horizontal) -->
+						<div
+							v-if="baseRouteNameString === 'a-propos'"
+							key="a-propos"
+							class="fixed bottom-12 -left-4 text-7xl sm:text-[8rem] md:-left-8 md:text-[11rem] lg:-left-12 lg:text-[15rem] xl:text-[18rem]"
+						>
+							{{ $t("aboutPage.bgText") }}
+						</div>
+						<!-- Projets (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'projets'"
+							key="projets"
+							class="fixed bottom-0 hidden [writing-mode:vertical-lr] md:block"
+							:class="
+								locale === 'fr'
+									? '-left-[9vmin] text-[26vmin]'
+									: '-left-[8vmin] text-[22vmin]'
+							"
+						>
+							{{ $t("projectsPage.bgText") }}
+						</div>
+						<!-- Contact (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'contact'"
+							key="contact"
+							class="fixed bottom-0 -left-[8vmin] hidden text-[22vmin] [writing-mode:vertical-lr] md:block"
+						>
+							{{ $t("contactPage.bgText") }}
+						</div>
+						<!-- Merci (vertical) -->
+						<div
+							v-else-if="baseRouteNameString === 'merci'"
+							key="merci"
+							class="fixed bottom-0 -left-[8vmin] hidden text-[22vmin] [writing-mode:vertical-lr] md:block"
+						>
+							{{ $t("merciPage.bgText") }}
+						</div>
+					</Transition>
+				</div>
 
 				<main id="contenu" class="mx-4 sm:mx-12">
 					<dialog

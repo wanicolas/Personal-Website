@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import projectsData from "~/assets/data/projects.json";
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const projects = computed(() => {
 	return projectsData.map((project) => ({
@@ -11,26 +11,13 @@ const projects = computed(() => {
 });
 
 useSeoMeta({
-	title: $t("projectsPage.title"),
-	ogTitle: $t("projectsPage.title"),
-	description: $t("projectsPage.description"),
-	ogDescription: $t("projectsPage.description"),
+	title: t("projectsPage.title"),
+	description: t("projectsPage.description"),
 });
 </script>
 
 <template>
 	<div>
-		<div
-			aria-hidden="true"
-			class="fixed bottom-0 -z-10 hidden font-black text-[#EDEDED] select-none [writing-mode:vertical-lr] md:block dark:text-neutral-900"
-			:class="
-				locale === 'fr'
-					? '-left-[9vmin] text-[26vmin]'
-					: '-left-[8vmin] text-[22vmin]'
-			"
-		>
-			{{ $t("projectsPage.bgText") }}
-		</div>
 		<div class="mx-auto max-w-5xl">
 			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
 				{{ $t("projectsPage.h1") }}
