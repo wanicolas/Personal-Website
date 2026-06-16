@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const data = await import(`~/assets/data/about/${locale.value}.json`);
 const infos = computed(() => data.default);
 
 useSeoMeta({
-	title: $t("aboutPage.title"),
-	description: $t("aboutPage.description"),
+	title: t("aboutPage.title"),
+	description: t("aboutPage.description"),
 });
 </script>
 

@@ -1,7 +1,9 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
-	title: $t("merciPage.title"),
-	description: $t("merciPage.description"),
+	title: t("merciPage.title"),
+	description: t("merciPage.description"),
 });
 </script>
 

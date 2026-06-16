@@ -1,7 +1,9 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
-	title: $t("contactPage.title"),
-	description: $t("contactPage.description"),
+	title: t("contactPage.title"),
+	description: t("contactPage.description"),
 });
 
 const localePath = useLocalePath();

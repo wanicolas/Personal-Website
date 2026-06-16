@@ -1,7 +1,8 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
-	title: "",
-	description: $t("indexPage.description"),
+	description: t("indexPage.description"),
 });
 
 const emit = defineEmits(["cursorLeft", "cursorHovered"]);

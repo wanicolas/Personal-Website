@@ -19,12 +19,23 @@ export default defineNuxtConfig({
 		"@nuxtjs/seo",
 	],
 	vite: {
-		// @ts-expect-error - https://github.com/tailwindlabs/tailwindcss/issues/18802
 		plugins: [tailwindcss()],
+	},
+	site: {
+		url: "https://nicolaswalter.fr",
+		name: "Nicolas Walter",
+	},
+	routeRules: {
+		"/**": { prerender: true },
+	},
+	nitro: {
+		externals: {
+			inline: ["unhead"],
+		},
 	},
 	css: ["./app/assets/css/main.css"],
 	i18n: {
-		baseUrl: process.env.BASE_URL,
+		baseUrl: "https://nicolaswalter.fr",
 		defaultLocale: "fr",
 		locales: [
 			{

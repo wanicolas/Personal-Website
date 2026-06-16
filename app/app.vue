@@ -1,11 +1,40 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
-defineOgImage("Template", {
-	appLocale: locale.value,
+// Calcule l'URL de l'image en fonction de la langue active
+const ogImageUrl = computed(() => {
+	return locale.value === "fr" ? "/og-image/fr.png" : "/og-image/en.png";
+});
+
+useSeoMeta({
+	ogImage: () => ogImageUrl.value,
+	twitterImage: () => ogImageUrl.value,
+	// Vous pouvez aussi définir le type d'image si besoin
+	ogImageType: "image/png",
+	ogImageWidth: 1200,
+	ogImageHeight: 630,
 });
 
 const head = useLocaleHead();
+
+useHead({
+	link: () => head.value.link,
+	meta: () => head.value.meta,
+});
+
+useSchemaOrg([
+	definePerson({
+		name: "Nicolas Walter",
+		image: "/og-image/fr.png",
+		sameAs: [
+			"https://github.com/wanicolas",
+			"https://www.linkedin.com/in/wanicolas/",
+		],
+	}),
+	defineWebSite({
+		name: "Nicolas Walter",
+	}),
+]);
 
 const route = useRoute();
 const routeBaseName = useRouteBaseName();
@@ -85,23 +114,6 @@ onUnmounted(() => {
 
 <template>
 	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-		<Head>
-			<template v-for="link in head.link" :key="link.key">
-				<Link
-					:id="link.key"
-					:rel="link.rel"
-					:href="link.href"
-					:hreflang="link.hreflang"
-				/>
-			</template>
-			<template v-for="meta in head.meta" :key="meta.key">
-				<Meta
-					:id="meta.key"
-					:property="meta.property"
-					:content="meta.content"
-				/>
-			</template>
-		</Head>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 			:class="isMenuOpen ? 'overflow-hidden' : ''"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import projectsData from "~/assets/data/projects.json";
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const projects = computed(() => {
 	return projectsData.map((project) => ({
@@ -11,8 +11,8 @@ const projects = computed(() => {
 });
 
 useSeoMeta({
-	title: $t("projectsPage.title"),
-	description: $t("projectsPage.description"),
+	title: t("projectsPage.title"),
+	description: t("projectsPage.description"),
 });
 </script>
 
