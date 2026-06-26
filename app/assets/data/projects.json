@@ -1,5 +1,15 @@
 [
 	{
+		"date": "2026",
+		"fr_title": "TodoApp - Refactor cloud-native",
+		"en_title": "TodoApp - Cloud-native refactor",
+		"fr_description": "Refactor cloud-native de l'application getting-started-todo-app de Docker. Architecture micro-services,  CI/CD, tests, Docker, Helm et k8s, Azure et Terraform.",
+		"en_description": "Cloud-native refactor of Docker's getting-started-todo-app. Microservices architecture, CI/CD, tests, Docker, Helm and k8s, Azure and Terraform.",
+		"img": "todo.webp",
+		"github": "https://github.com/wanicolas/todo-app-cloud",
+		"technos": ["Helm", "TerraForm", "Kubernetes", "Docker"]
+	},
+	{
 		"date": "2023-2024",
 		"fr_title": "Mon Guichet - nouvelle version",
 		"en_title": "Mon Guichet - new version",
