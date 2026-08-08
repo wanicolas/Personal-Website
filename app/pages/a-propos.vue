@@ -1,7 +1,16 @@
 <script setup lang="ts">
+import { aboutData } from "~/assets/data/about";
+
 const { locale, t } = useI18n();
-const data = await import(`~/assets/data/about/${locale.value}.json`);
-const infos = computed(() => data.default);
+
+const infos = computed(() => {
+	const currentLocale = (locale.value as "fr" | "en") || "fr";
+	return aboutData.map((section) => ({
+		...section,
+		title: section.title[currentLocale],
+		content: section.content[currentLocale],
+	}));
+});
 
 useSeoMeta({
 	title: t("aboutPage.title"),

@@ -5,14 +5,26 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
 		head: {
-			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
+			link: [
+				{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+				{
+					rel: "icon",
+					type: "image/png",
+					sizes: "32x32",
+					href: "/favicon.png",
+				},
+				{
+					rel: "apple-touch-icon",
+					sizes: "180x180",
+					href: "/apple-touch-icon.png",
+				},
+			],
 		},
 	},
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
 	modules: [
 		"@nuxt/eslint",
-		"@nuxt/test-utils/module",
 		"@nuxtjs/i18n",
 		"@nuxtjs/color-mode",
 		"@nuxt/icon",
