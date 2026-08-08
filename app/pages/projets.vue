@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import projectsData from "~/assets/data/projects.json";
+import { projectsData } from "~/assets/data/projects";
 const { locale, t } = useI18n();
 
 const projects = computed(() => {
+	const currentLocale = (locale.value as "fr" | "en") || "fr";
 	return projectsData.map((project) => ({
 		...project,
-		title: project[`${locale.value}_title`],
-		description: project[`${locale.value}_description`],
+		title: project.title[currentLocale],
+		description: project.description[currentLocale],
 	}));
 });
 
