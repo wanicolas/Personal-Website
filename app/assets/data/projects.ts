@@ -1,12 +1,13 @@
-export interface Project {
+interface BaseProject {
 	date: string;
 	img: string;
-	link?: string;
-	github?: string;
 	technos: string[];
 	title: Record<"fr" | "en", string>;
 	description: Record<"fr" | "en", string>;
 }
+
+export type Project = BaseProject &
+	({ link: string; github?: string } | { link?: string; github: string });
 
 export const projectsData: Project[] = [
 	{

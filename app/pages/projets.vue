@@ -34,7 +34,7 @@ useSeoMeta({
 						{{ project.date }}
 					</div>
 					<NuxtLink
-						:to="project.link"
+						:to="project.link ?? project.github"
 						target="blank"
 						class="group/title mb-3 block"
 					>
@@ -75,7 +75,7 @@ useSeoMeta({
 				<NuxtLink
 					aria-hidden="true"
 					tabindex="-1"
-					:to="project.link"
+					:to="project.link ?? project.github"
 					target="blank"
 					class="h-fit shrink-0"
 				>
