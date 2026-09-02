@@ -112,7 +112,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+	<Html
+		:lang="head.htmlAttrs.lang"
+		:dir="head.htmlAttrs.dir"
+		class="scroll-pt-20 sm:scroll-pt-28"
+	>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 			:class="isMenuOpen ? 'overflow-hidden' : ''"
