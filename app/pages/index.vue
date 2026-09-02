@@ -13,7 +13,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<div class="mx-auto w-fit">
+	<div>
 		<h1
 			class="mx-auto mb-8 flex w-fit flex-col gap-4 text-5xl leading-none font-bold tracking-tight uppercase sm:text-7xl lg:mb-12 lg:p-4 lg:text-[6rem] xl:text-[8rem]"
 			@mouseover="emit('cursorHovered')"

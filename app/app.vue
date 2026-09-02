@@ -38,7 +38,6 @@ useSchemaOrg([
 
 const route = useRoute();
 const routeBaseName = useRouteBaseName();
-// Ensure route.name is defined before passing it to routeBaseName to satisfy TypeScript
 const baseRouteNameString = computed(() =>
 	route.name ? routeBaseName(route.name) : "",
 );
@@ -194,7 +193,15 @@ onUnmounted(() => {
 					@close-menu="closeMenu"
 				/>
 
-				<main id="contenu" class="mx-4 sm:mx-12">
+				<main
+					id="contenu"
+					class="mx-4 flex-1 sm:mx-12"
+					:class="{
+						'flex items-center justify-center': ['index', 'merci'].includes(
+							baseRouteNameString as string,
+						),
+					}"
+				>
 					<dialog
 						ref="dialog"
 						closedby="any"
