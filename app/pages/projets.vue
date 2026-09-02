@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { projectsData } from "~/assets/data/projects";
+
+import { NuxtLink } from "#components";
 const { locale, t } = useI18n();
 
 const projects = computed(() => {
-	const currentLocale = (locale.value as "fr" | "en") || "fr";
+	const currentLocale = locale.value;
 	return projectsData.map((project) => ({
 		...project,
 		title: project.title[currentLocale],
@@ -33,7 +35,8 @@ useSeoMeta({
 						<span class="sr-only">{{ $t("projectsPage.date") }}</span>
 						{{ project.date }}
 					</div>
-					<NuxtLink
+					<component
+						:is="(project.link ?? project.github) ? NuxtLink : 'div'"
 						:to="project.link ?? project.github"
 						target="blank"
 						class="group/title mb-3 block"
@@ -42,10 +45,11 @@ useSeoMeta({
 							{{ project.title }}
 						</h2>
 						<Icon
+							v-if="project.link ?? project.github"
 							name="lucide:move-up-right"
 							class="-mb-0.5 ml-2 stroke-2 transition motion-safe:group-hover/title:translate-x-1 motion-safe:group-hover/title:-translate-y-1"
 						/>
-					</NuxtLink>
+					</component>
 					<div class="mb-2 flex flex-wrap items-center gap-2">
 						<span
 							v-for="(techno, tIndex) in project.technos"
@@ -72,7 +76,8 @@ useSeoMeta({
 						<span class="text-base">{{ $t("visitGithubRepo") }}</span>
 					</NuxtLink>
 				</div>
-				<NuxtLink
+				<component
+					:is="(project.link ?? project.github) ? NuxtLink : 'div'"
 					aria-hidden="true"
 					tabindex="-1"
 					:to="project.link ?? project.github"
@@ -84,7 +89,7 @@ useSeoMeta({
 						:src="'/img/' + project.img"
 						alt=""
 					/>
-				</NuxtLink>
+				</component>
 			</article>
 		</div>
 	</div>

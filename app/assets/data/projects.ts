@@ -1,15 +1,27 @@
-interface BaseProject {
+interface Project {
 	date: string;
 	img: string;
 	technos: string[];
 	title: Record<"fr" | "en", string>;
 	description: Record<"fr" | "en", string>;
+	link?: string;
+	github?: string;
 }
 
-export type Project = BaseProject &
-	({ link: string; github?: string } | { link?: string; github: string });
-
 export const projectsData: Project[] = [
+	{
+		date: "2025-2026",
+		title: {
+			fr: "MG Shop - Aqua Mulhouse",
+			en: "MG Shop - Aqua Mulhouse",
+		},
+		description: {
+			fr: "Réalisé en alternance chez Logitud, j'ai eu l'occasion de mettre en place le frontend Nuxt usager et agent d'une plateforme e-commerce générique et son adaptation pour les piscines de Mulhouse. J'ai pu y intégrer la CI avec ses briques essentielles, à savoir : Eslint et sa configuration custom avancée, Prettier, TypeScript et Vitest. J'ai également pu créer et maintenir/améliorer les composants essentiels comme les drawers \"stackables\" ; les DataTable avec export intégré en CSV/PDF, sélecteur de colonne, recherche et tri (+ sauvegarde) ; un CommandPalette avancé, un visionneur type \"git-diff\" de code, un système d'achat et de panier générique réutilisable via l'administration et bien plus encore.",
+			en: "Completed as part of a work-study program at Logitud, I had the opportunity to build both the user- and agent-facing Nuxt frontends for a generic e-commerce platform and tailor it for the Mulhouse public pools. I set up the CI pipeline with its core building blocks: ESLint featuring an advanced custom configuration, Prettier, TypeScript, and Vitest. I also created, maintained, and improved key components such as stackable drawers; DataTables with integrated PDF/CSV exports, column selectors, search, and sorting (with state persistence); an advanced CommandPalette; a git-diff code viewer; a reusable, generic cart and checkout system configurable via the admin dashboard; and much more.",
+		},
+		img: "mg_shop.webp",
+		technos: ["Nuxt", "NuxtI18n", "TypeScript", "TailwindCSS"],
+	},
 	{
 		date: "2026",
 		title: {
@@ -27,20 +39,6 @@ export const projectsData: Project[] = [
 	{
 		date: "2023-2024",
 		title: {
-			fr: "Mon Guichet - nouvelle version",
-			en: "Mon Guichet - new version",
-		},
-		description: {
-			fr: 'La nouvelle version front du produit "Mon Guichet" est en cours de développement au sein de Logitud. Elle utilise notre librairie MG_UI pour ses composants principaux.',
-			en: 'The new front-end version of the "Mon Guichet" product is currently being developed at Logitud. It uses our MG_UI library for its main components.',
-		},
-		img: "mg.webp",
-		link: "https://mulhouse.staging.numesia.fr",
-		technos: ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"],
-	},
-	{
-		date: "2023-2024",
-		title: {
 			fr: "MG_UI - Librairie de composants Nuxt",
 			en: "MG_UI - Nuxt Component Library",
 		},
@@ -53,33 +51,18 @@ export const projectsData: Project[] = [
 		technos: ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"],
 	},
 	{
-		date: "2024",
+		date: "2024-Aujourd'hui",
 		title: {
 			fr: "Site personnel",
 			en: "Personal website",
 		},
 		description: {
-			fr: "Quoi de mieux qu'un site personnel pour se présenter et exposer ses projets et compétences ? Développé avec des technos que j'affectionne, il est open-source sous license MIT.",
-			en: "What better than a personal website to introduce myself and showcase my projects and skills? Developed with technologies I love, it is open-source under MIT license.",
+			fr: "Quoi de mieux qu'un site personnel pour se présenter, exposer ses projets et compétences ? Développé avec des technos que j'affectionne, il est open-source sous license MIT.",
+			en: "What better than a personal website to introduce myself, showcase my projects and skills? Developed with technologies I love, it is open-source under MIT license.",
 		},
 		img: "personal-website.webp",
 		link: "https://nicolaswalter.fr",
 		github: "https://github.com/wanicolas/Personal-Website",
-		technos: ["Nuxt", "TailwindCSS"],
-	},
-	{
-		date: "2024",
-		title: {
-			fr: "Bullet Ballet",
-			en: "Bullet Ballet",
-		},
-		description: {
-			fr: "Jeu platformer de tir en 2D en cours de développement avec Phaser. Le but des deux joueurs est d'éliminer l'autre avec des armes et inclut la possibilité de récupérer des objets.",
-			en: "A 2D shooting platformer game currently in development with Phaser. The goal for both players is to eliminate each other with weapons and includes the ability to pick up items.",
-		},
-		img: "bullet-ballet.webp",
-		link: "https://github.com/wanicolas/Bullet-Ballet",
-		github: "https://github.com/wanicolas/Bullet-Ballet",
-		technos: ["Phaser", "Vite", "TypeScript"],
+		technos: ["Nuxt", "NuxtSEO", "NuxtI18n", "TypeScript", "TailwindCSS"],
 	},
 ];
