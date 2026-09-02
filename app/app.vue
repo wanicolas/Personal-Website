@@ -25,7 +25,7 @@ useHead({
 useSchemaOrg([
 	definePerson({
 		name: "Nicolas Walter",
-		image: "/og-image/fr.png",
+		image: "/img/nicolas-walter.png",
 		sameAs: [
 			"https://github.com/wanicolas",
 			"https://www.linkedin.com/in/wanicolas/",
@@ -38,7 +38,6 @@ useSchemaOrg([
 
 const route = useRoute();
 const routeBaseName = useRouteBaseName();
-// Ensure route.name is defined before passing it to routeBaseName to satisfy TypeScript
 const baseRouteNameString = computed(() =>
 	route.name ? routeBaseName(route.name) : "",
 );
@@ -113,7 +112,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+	<Html
+		:lang="head.htmlAttrs.lang"
+		:dir="head.htmlAttrs.dir"
+		class="scroll-pt-20 sm:scroll-pt-28"
+	>
 		<Body
 			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
 			:class="isMenuOpen ? 'overflow-hidden' : ''"
@@ -194,7 +197,15 @@ onUnmounted(() => {
 					@close-menu="closeMenu"
 				/>
 
-				<main id="contenu" class="mx-4 sm:mx-12">
+				<main
+					id="contenu"
+					class="mx-4 flex-1 sm:mx-12"
+					:class="{
+						'flex items-center justify-center': ['index', 'merci'].includes(
+							baseRouteNameString as string,
+						),
+					}"
+				>
 					<dialog
 						ref="dialog"
 						closedby="any"

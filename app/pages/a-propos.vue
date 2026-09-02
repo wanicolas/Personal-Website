@@ -4,7 +4,7 @@ import { aboutData } from "~/assets/data/about";
 const { locale, t } = useI18n();
 
 const infos = computed(() => {
-	const currentLocale = (locale.value as "fr" | "en") || "fr";
+	const currentLocale = locale.value;
 	return aboutData.map((section) => ({
 		...section,
 		title: section.title[currentLocale],

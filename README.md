@@ -1,6 +1,7 @@
 # Nicolas Walter - Personal Website
 
-This is my personal website built with Nuxt v4, TailwindCSS v4 and Lucide Icons, hosted with Vercel.
+This is my personal website built with Nuxt, NuxtI18n, NuxtSEO, TailwindCSS and Lucide Icons.
+It is optimized to meet accesibility standards and have a high SEO score.
 
 ## Forking this repo and using my code
 
