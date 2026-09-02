@@ -71,4 +71,7 @@ export default defineNuxtConfig({
 		//  routes are auto-prefixed with i18n
 		disallow: ["/merci"],
 	},
+	ogImage: {
+		enabled: false,
+	},
 });

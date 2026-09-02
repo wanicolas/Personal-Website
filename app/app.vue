@@ -25,7 +25,7 @@ useHead({
 useSchemaOrg([
 	definePerson({
 		name: "Nicolas Walter",
-		image: "/og-image/fr.png",
+		image: "/img/nicolas-walter.png",
 		sameAs: [
 			"https://github.com/wanicolas",
 			"https://www.linkedin.com/in/wanicolas/",
