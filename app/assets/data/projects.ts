@@ -6,6 +6,7 @@ interface Project {
 	description: Record<"fr" | "en", string>;
 	link?: string;
 	github?: string;
+	slug?: string;
 }
 
 export const projectsData: Project[] = [
@@ -16,11 +17,12 @@ export const projectsData: Project[] = [
 			en: "MG Shop - Aqua Mulhouse",
 		},
 		description: {
-			fr: "Réalisé en alternance chez Logitud, j'ai eu l'occasion de mettre en place le frontend Nuxt usager et agent d'une plateforme e-commerce générique et son adaptation pour les piscines de Mulhouse. J'ai pu y intégrer la CI avec ses briques essentielles, à savoir : Eslint et sa configuration custom avancée, Prettier, TypeScript et Vitest. J'ai également pu créer et maintenir/améliorer les composants essentiels comme les drawers \"stackables\" ; les DataTable avec export intégré en CSV/PDF, sélecteur de colonne, recherche et tri (+ sauvegarde) ; un CommandPalette avancé, un visionneur type \"git-diff\" de code, un système d'achat et de panier générique réutilisable via l'administration et bien plus encore.",
-			en: "Completed as part of a work-study program at Logitud, I had the opportunity to build both the user- and agent-facing Nuxt frontends for a generic e-commerce platform and tailor it for the Mulhouse public pools. I set up the CI pipeline with its core building blocks: ESLint featuring an advanced custom configuration, Prettier, TypeScript, and Vitest. I also created, maintained, and improved key components such as stackable drawers; DataTables with integrated PDF/CSV exports, column selectors, search, and sorting (with state persistence); an advanced CommandPalette; a git-diff code viewer; a reusable, generic cart and checkout system configurable via the admin dashboard; and much more.",
+			fr: "Refonte complète du tunnel d'achat et des interfaces d'administration pour une plateforme e-commerce SaaS en Vue/Nuxt. Mise en place des standards de qualité (CI/CD, tests, typage strict) et conception de composants UI avancés.",
+			en: "Complete redesign of the checkout funnel and admin interfaces for a SaaS e-commerce platform using Vue/Nuxt. Implemented quality standards (CI/CD, testing, strict typing) and designed advanced UI components.",
 		},
 		img: "mg_shop.webp",
 		technos: ["Nuxt", "NuxtI18n", "TypeScript", "TailwindCSS"],
+		slug: "mg-shop",
 	},
 	{
 		date: "2026",

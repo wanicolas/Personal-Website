@@ -3,6 +3,7 @@ import { projectsData } from "~/assets/data/projects";
 
 import { NuxtLink } from "#components";
 const { locale, t } = useI18n();
+const localePath = useLocalePath();
 
 const projects = computed(() => {
 	const currentLocale = locale.value;
@@ -36,16 +37,22 @@ useSeoMeta({
 						{{ project.date }}
 					</div>
 					<component
-						:is="(project.link ?? project.github) ? NuxtLink : 'div'"
-						:to="project.link ?? project.github"
-						target="blank"
+						:is="
+							project.slug || project.link || project.github ? NuxtLink : 'div'
+						"
+						:to="
+							project.slug
+								? localePath(`/projets/${project.slug}`)
+								: (project.link ?? project.github)
+						"
+						:target="project.slug ? undefined : '_blank'"
 						class="group/title mb-3 block"
 					>
 						<h2 class="inline text-lg font-semibold lg:text-xl">
 							{{ project.title }}
 						</h2>
 						<Icon
-							v-if="project.link ?? project.github"
+							v-if="project.slug || project.link || project.github"
 							name="lucide:move-up-right"
 							class="-mb-0.5 ml-2 stroke-2 transition motion-safe:group-hover/title:translate-x-1 motion-safe:group-hover/title:-translate-y-1"
 						/>
@@ -77,11 +84,17 @@ useSeoMeta({
 					</NuxtLink>
 				</div>
 				<component
-					:is="(project.link ?? project.github) ? NuxtLink : 'div'"
+					:is="
+						project.slug || project.link || project.github ? NuxtLink : 'div'
+					"
 					aria-hidden="true"
 					tabindex="-1"
-					:to="project.link ?? project.github"
-					target="blank"
+					:to="
+						project.slug
+							? localePath(`/projets/${project.slug}`)
+							: (project.link ?? project.github)
+					"
+					:target="project.slug ? undefined : '_blank'"
 					class="h-fit shrink-0"
 				>
 					<img
