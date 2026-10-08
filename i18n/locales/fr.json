@@ -42,6 +42,14 @@
 		"name": "Nicolas Walter, développeur web front"
 	},
 	"openNavigationMenu": "Ouvrir le menu de navigation",
+	"projectMeta": {
+		"date": "Date",
+		"entity": "Entité",
+		"impact": "Impact",
+		"role": "Rôle",
+		"viewCode": "Voir le code",
+		"visitSite": "Visiter le site"
+	},
 	"projects": "Projets",
 	"projectsPage": {
 		"bgText": "Projets.",

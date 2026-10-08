@@ -27,14 +27,14 @@ const emit = defineEmits<Emits>();
 
 <template>
 	<header
-		class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-4 pb-4 text-black backdrop-blur sm:px-12 sm:pt-8 md:mb-28 lg:mb-36 dark:bg-black/75 dark:text-white"
+		class="sticky top-0 z-10 mx-auto mb-16 w-full max-w-6xl bg-white/75 px-4 pt-4 pb-4 text-neutral-900 backdrop-blur sm:px-12 sm:pt-8 md:mb-28 lg:mb-36 dark:bg-neutral-900/75 dark:text-white"
 	>
 		<nav class="flex items-center justify-between">
 			<!-- Logo -->
 			<NuxtLinkLocale to="/" @click="emit('closeMenu')">
 				<svg
 					aria-hidden="true"
-					class="h-8 w-auto fill-black dark:fill-white"
+					class="h-8 w-auto fill-neutral-900 dark:fill-white"
 					width="101"
 					height="54"
 					viewBox="0 0 101 54"
@@ -53,19 +53,19 @@ const emit = defineEmits<Emits>();
 			<div class="flex items-center gap-6 sm:gap-8">
 				<NuxtLinkLocale
 					to="/a-propos"
-					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
+					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-neutral-900 before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 				>
 					{{ $t("about") }}
 				</NuxtLinkLocale>
 				<NuxtLinkLocale
 					to="/projets"
-					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
+					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-neutral-900 before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 				>
 					{{ $t("projects") }}
 				</NuxtLinkLocale>
 				<NuxtLinkLocale
 					to="/contact"
-					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
+					class="relative hidden before:absolute before:top-6 before:left-0 before:block before:h-px before:w-full before:scale-x-0 before:bg-neutral-900 before:transition-transform before:duration-300 before:content-[''] hover:before:scale-x-100 sm:inline before:dark:bg-white"
 				>
 					{{ $t("contact") }}
 				</NuxtLinkLocale>

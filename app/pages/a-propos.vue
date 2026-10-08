@@ -25,12 +25,12 @@ useSeoMeta({
 				{{ $t("aboutPage.h1") }}
 			</h1>
 			<div class="flex gap-4 sm:gap-8">
-				<div class="w-px shrink-0 bg-black dark:bg-white" />
+				<div class="w-px shrink-0 bg-neutral-900 dark:bg-white" />
 				<div class="space-y-12">
 					<div v-for="(info, index) in infos" :key="index" class="space-y-3">
 						<div class="-ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">
 							<div
-								class="size-4 rounded-full border-2 border-black bg-white dark:border-white dark:bg-black"
+								class="size-4 rounded-full border-2 border-neutral-900 bg-white dark:border-white dark:bg-neutral-900"
 							/>
 							<h2 :id="info.id" class="text-lg font-semibold lg:text-xl">
 								{{ info.title }}

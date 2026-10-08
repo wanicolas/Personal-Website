@@ -1,16 +1,21 @@
-interface Project {
+export interface Project {
+	slug: string;
 	date: string;
 	img: string;
 	technos: string[];
-	title: Record<"fr" | "en", string>;
-	description: Record<"fr" | "en", string>;
+	title: Record<LocaleCode, string>;
+	description: Record<LocaleCode, string>;
 	link?: string;
 	github?: string;
-	slug?: string;
+	role: Record<LocaleCode, string>;
+	company: string;
+	client: string;
+	keyFigures: Record<LocaleCode, string[]>;
 }
 
 export const projectsData: Project[] = [
 	{
+		slug: "mg-shop",
 		date: "2025-2026",
 		title: {
 			fr: "MG Shop - Aqua Mulhouse",
@@ -22,9 +27,19 @@ export const projectsData: Project[] = [
 		},
 		img: "mg_shop.webp",
 		technos: ["Nuxt", "NuxtI18n", "TypeScript", "TailwindCSS"],
-		slug: "mg-shop",
+		role: {
+			fr: "Lead Front-End",
+			en: "Lead Front-End",
+		},
+		company: "Logitud Solutions",
+		client: "Ville de Mulhouse",
+		keyFigures: {
+			fr: ["> 600 k€ traités", "90% de dématérialisation"],
+			en: ["> €600k processed", "90% dematerialization"],
+		},
 	},
 	{
+		slug: "todo-app",
 		date: "2026",
 		title: {
 			fr: "TodoApp - Refactor cloud-native",
@@ -37,8 +52,13 @@ export const projectsData: Project[] = [
 		img: "todo.webp",
 		github: "https://github.com/wanicolas/todo-app-cloud",
 		technos: ["Helm", "TerraForm", "Kubernetes", "Docker"],
+		role: { fr: "blabla", en: "blabla" },
+		company: "blabla",
+		client: "blabla",
+		keyFigures: { fr: ["blabla"], en: ["blabla"] },
 	},
 	{
+		slug: "mg-ui",
 		date: "2023-2024",
 		title: {
 			fr: "MG_UI - Librairie de composants Nuxt",
@@ -51,8 +71,13 @@ export const projectsData: Project[] = [
 		img: "mg_ui.webp",
 		link: "https://www.npmjs.com/package/@numesia/mg_ui",
 		technos: ["Nuxt", "HeadlessUI", "TailwindCSS", "Flowbite"],
+		role: { fr: "blabla", en: "blabla" },
+		company: "blabla",
+		client: "blabla",
+		keyFigures: { fr: ["blabla"], en: ["blabla"] },
 	},
 	{
+		slug: "personal-website",
 		date: "2024-Aujourd'hui",
 		title: {
 			fr: "Site personnel",
@@ -66,5 +91,9 @@ export const projectsData: Project[] = [
 		link: "https://nicolaswalter.fr",
 		github: "https://github.com/wanicolas/Personal-Website",
 		technos: ["Nuxt", "NuxtSEO", "NuxtI18n", "TypeScript", "TailwindCSS"],
+		role: { fr: "blabla", en: "blabla" },
+		company: "blabla",
+		client: "blabla",
+		keyFigures: { fr: ["blabla"], en: ["blabla"] },
 	},
 ];

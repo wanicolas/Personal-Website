@@ -118,28 +118,28 @@ onUnmounted(() => {
 		class="scroll-pt-20 sm:scroll-pt-28"
 	>
 		<Body
-			class="bg-white text-black selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black"
+			class="bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white dark:bg-neutral-900 dark:text-white dark:selection:bg-white dark:selection:text-neutral-900"
 			:class="isMenuOpen ? 'overflow-hidden' : ''"
 		>
 			<!-- Custom cursor -->
 			<div
 				id="outerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-9999 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black transition-all duration-250 ease-out motion-reduce:hidden dark:border-white"
+				class="pointer-events-none fixed z-9999 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-neutral-900 transition-all duration-250 ease-out motion-reduce:hidden dark:border-white"
 				:class="{ 'size-32 bg-white mix-blend-difference': isHovered }"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 			<div
 				id="innerCursor"
 				aria-hidden="true"
-				class="pointer-events-none fixed z-9998 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black motion-reduce:hidden dark:bg-white"
+				class="pointer-events-none fixed z-9998 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-900 motion-reduce:hidden dark:bg-white"
 				:style="{ left: cursorPosition.x + 'px', top: cursorPosition.y + 'px' }"
 			/>
 
 			<!-- Accessible link to go to the content -->
 			<a
 				href="#contenu"
-				class="absolute -top-80 -left-80 rounded-b-md bg-black p-1 text-white focus:top-0 focus:left-4"
+				class="absolute -top-80 -left-80 rounded-b-md bg-neutral-900 p-1 text-white focus:top-0 focus:left-4"
 			>
 				{{ $t("goToContent") }}
 			</a>

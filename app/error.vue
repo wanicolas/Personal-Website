@@ -9,7 +9,7 @@
 			</div>
 			<NuxtLink
 				to="/"
-				class="rounded-sm bg-black px-4 py-2 text-lg font-medium text-white"
+				class="rounded-sm bg-neutral-900 px-4 py-2 text-lg font-medium text-white"
 			>
 				{{ $t("backToHome") }}
 			</NuxtLink>

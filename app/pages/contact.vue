@@ -54,7 +54,7 @@ const runtimeConfig = useRuntimeConfig();
 
 				<button
 					type="submit"
-					class="mt-2 rounded bg-black px-3 py-1 font-bold text-white dark:bg-white dark:text-black"
+					class="mt-2 rounded bg-neutral-900 px-3 py-1 font-bold text-white dark:bg-white dark:text-neutral-900"
 				>
 					{{ $t("submit") }}
 				</button>
