@@ -93,7 +93,13 @@ useSeoMeta({
 						{{ $t("projectMeta.entity") }}
 					</h3>
 					<p class="font-medium text-neutral-900 dark:text-neutral-100">
-						{{ project.client }}
+						{{
+							project.client &&
+							project.company &&
+							project.client !== project.company
+								? `${project.client} (${project.company})`
+								: project.client || project.company
+						}}
 					</p>
 				</div>
 				<div v-if="project.date">
