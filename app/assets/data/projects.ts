@@ -22,18 +22,11 @@ export const projectsData: Project[] = [
 			en: "MG Shop — SaaS Ticketing & E-commerce",
 		},
 		description: {
-			fr: "Refonte complète du moteur de vente en ligne et de billetterie modulaire pour les piscines de Mulhouse. Architecture Nuxt 4, résilience transactionnelle PayFIP, composants d'administration avancés et dashboards de fréquentation.",
-			en: "Complete redesign of the online sales and modular ticketing engine for Mulhouse public pools. Nuxt 4 architecture, PayFIP transaction resilience, advanced admin components, and attendance dashboards.",
+			fr: "Refonte complète du tunnel d'achat et des interfaces d'administration pour les piscines de Mulhouse. Architecture front-end Nuxt 4, gestion réactive du panier avec Pinia, composants d'administration avancés et dashboards de fréquentation.",
+			en: "Complete redesign of the checkout funnel and admin interfaces for Mulhouse public pools. Front-end Nuxt 4 architecture, reactive cart management with Pinia, advanced admin components, and attendance dashboards.",
 		},
 		img: "mg-shop.webp",
-		technos: [
-			"Nuxt 4",
-			"TypeScript",
-			"TailwindCSS",
-			"Pinia",
-			"PayFIP",
-			"ECharts",
-		],
+		technos: ["Nuxt 4", "TypeScript", "TailwindCSS", "Pinia", "ECharts"],
 		role: {
 			fr: "Lead Front-End & Architecture",
 			en: "Lead Front-End & Architecture",
@@ -41,16 +34,8 @@ export const projectsData: Project[] = [
 		company: "Logitud Solutions",
 		client: "Ville de Mulhouse",
 		keyFigures: {
-			fr: [
-				"> 600 k€ traités",
-				"90% dématérialisation",
-				"0 anomalie transactionnelle",
-			],
-			en: [
-				"> €600k processed",
-				"90% dematerialization",
-				"0 transaction anomaly",
-			],
+			fr: ["> 600 k€ traités", "90% dématérialisation"],
+			en: ["> €600k processed", "90% dematerialization"],
 		},
 	},
 	{
@@ -61,14 +46,13 @@ export const projectsData: Project[] = [
 			en: "PopQueue — Connected Queue & Touch Kiosk",
 		},
 		description: {
-			fr: "Solution d'accueil citoyen temps réel synchronisant borne tactile interactive, console agent et affichage dynamique en salle d'attente via WebSockets (Laravel Reverb). Clavier virtuel autonome et synthèse vocale RGAA.",
-			en: "Real-time citizen reception system synchronizing interactive touch kiosk, staff console, and dynamic waiting room display via WebSockets (Laravel Reverb). Custom virtual keyboard and RGAA speech synthesis.",
+			fr: "Solution d'accueil citoyen temps réel : développement intégral de l'interface de la borne tactile (clavier virtuel autonome, synthèse vocale RGAA) et des consoles d'administration synchronisées en WebSockets.",
+			en: "Real-time citizen reception system: full development of the touch kiosk interface (custom virtual keyboard, RGAA speech synthesis) and admin consoles synchronized via WebSockets.",
 		},
 		img: "popqueue.jpg",
 		technos: [
 			"Nuxt 4",
 			"WebSockets",
-			"Laravel Reverb",
 			"TypeScript",
 			"TailwindCSS",
 			"Web Speech API",
@@ -109,6 +93,7 @@ export const projectsData: Project[] = [
 			"Vue 3",
 			"Nuxt",
 			"TailwindCSS",
+			"Flowbite",
 			"HeadlessUI",
 			"VueUse",
 			"TypeScript",

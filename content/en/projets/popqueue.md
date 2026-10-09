@@ -1,57 +1,55 @@
 ## Context & Business Challenges
 
-Citizen reception in municipal town halls is a decisive touchpoint for local public services. Poorly managed queues create citizen friction and overwhelm front-desk staff.
+Citizen reception in municipal town halls is a decisive touchpoint for local public services. Poorly managed queues create visitor friction and overwhelm front-desk staff.
 
-To tackle this challenge, Logitud Solutions developed **PopQueue**, a real-time modular application suite designed to equip local governments without locking them into cumbersome, proprietary hardware ecosystems.
+To modernize this process without requiring expensive proprietary hardware, Logitud Solutions built **PopQueue**, a real-time modular web solution. My mission encompassed designing and developing **the complete touch kiosk user interface** as well as **major parts of the administration back-office**, built in synergy with our [**MG_UI**](/en/projets/mg-ui) component library.
 
 ![Interactive touch kiosk interface on the reception terminal](/works-and-projects/alternance-logitud/popqueue/choix_demarche.jpg)
 
-## Architecture & Real-Time Ecosystem
+## Front-End Architecture & Real-Time Ecosystem
 
-The system synchronizes three distinct interfaces bidirectionally via **WebSockets** powered by **Laravel Reverb**:
+The ecosystem synchronizes three distinct front-end applications via **WebSockets**:
 
-1. **Interactive Touch Kiosk:** Enables citizens to select their administrative procedure, collect a ticket, or check in for scheduled appointments.
-2. **Staff Console:** A reactive web interface allowing desk officers to call the next citizen, manage no-shows, or reassign cases across desks.
-3. **Dynamic Waiting Room Display:** Broadcasts queue status, emits visual and acoustic call alerts, and directs visitors to the designated service desk.
+- **Touch Kiosk Application (Citizens):** Fully developed for standalone tablet use (procedure selection, appointment scan/check-in, and ticket printing/display).
+- **Staff Console & Back-Office Screens:** Desk officer and management screens crafted using our reusable [**MG_UI**](/en/projets/mg-ui) components, allowing staff to process tickets and supervisors to monitor live flow metrics.
+- **Dynamic Waiting Room Display:** Instant broadcast of calls with visual number highlights and desk routing.
 
-The WebSocket pipeline transmits lightweight events (`TicketCreated`, `TicketCalled`) with **under 100 ms latency**, backed by a custom composable (`usePopQueueSocket`) featuring exponential backoff auto-reconnection.
+On the front-end, a dedicated composable (`usePopQueueSocket`) listens to events broadcast by the WebSocket server (`TicketCreated`, `TicketCalled`), delivering **sub-100 ms responsiveness** with automated exponential reconnection on network hiccups.
 
 ![Real-time global supervision dashboard](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.jpg)
 
 ## Technical Challenges & Solutions
 
-### Custom On-Screen Touch Keyboard
+### Full Kiosk Development & Custom Virtual Keyboard
 
-In kiosk mode on touch tablets, native OS virtual keyboards introduced severe UX breakdowns: violent viewport shifts, unwanted browser accessory bars, and intrusive autocorrection.
+To ensure rock-solid stability in kiosk tablet environments, complete control over touch interaction was essential:
 
-I engineered a **standalone on-screen virtual keyboard** mounted directly within the application DOM:
-
-- Tailored specifically to administrative inputs (numeric keypad for file IDs, clean alphabetical layout for names).
-- Fully decoupled from underlying Android, Windows, or iPadOS system quirks.
-- Designed with generous touch targets (> 48x48 px) to drastically reduce typing mistakes.
+- **Streamlined Citizen Flow:** Clear administrative decision trees, oversized buttons, and high contrast for effortless navigation.
+- **Custom Virtual Keyboard:** Because native mobile OS keyboards caused disruptive viewport displacement and unwanted browser bars, I built a standalone on-screen touch keyboard component. Mounted directly into the application DOM, it is restricted to valid inputs (digits, letters) and decoupled from OS-specific quirks.
 
 ![Custom on-screen virtual keyboard](/works-and-projects/alternance-logitud/popqueue/clavier.jpg)
 
-### Inclusive Accessibility & Speech Synthesis (RGAA 4.1.2)
+### Synergy with MG_UI & Back-Office Administration
 
-Public administrative counters legally mandate accessibility for everyone:
+The development of the PopQueue back-office leveraged our modular [**MG_UI**](/en/projets/mg-ui) library:
 
-- **Native Speech Synthesis:** Integrated the browser's **Web Speech API** to automatically vocalize ticket call-outs in waiting rooms (_"Ticket number A42 to Desk 3"_), ensuring autonomy for visually impaired visitors.
-- **Accessible Touch UI:** High contrast ratios, clear visual hierarchies, and ergonomic touch areas accommodating users with motor impairments.
+- **Reactive Staff Console:** Single-click call actions (next ticket, hold, re-routing to another counter).
+- **Multi-Counter Supervision:** Live summary views tracking active queues and desk operator availability.
+- **Speech Synthesis (RGAA 4.1.2):** Integration of the browser's **Web Speech API** to dynamically vocalize ticket calls in waiting rooms (_"Ticket number A42 to Desk 3"_), ensuring full accessibility for visually impaired citizens.
 
-![Staff desk console and waiting room screen](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
+![Staff desk console at the counter](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
 
 ## Impact & Key Results
 
-- **< 100 ms latency** for real-time synchronization between desk call actions and waiting room screens.
-- **Zero proprietary hardware lock-in:** Deployed directly on consumer tablets and standard TV displays via standard modern web browsers.
-- **100% accessible:** Full compliance with French **RGAA 4.1.2** and WCAG AA standards.
-- **Improved user experience:** Tangible reduction in perceived waiting times and smoother day-to-day operations for municipal receptionists.
+- **< 100 ms latency** for real-time synchronization between desk call actions and waiting room displays.
+- **Universal deployment:** Runs seamlessly on consumer tablets and standard TV displays via standard modern web browsers.
+- **Exemplary accessibility:** Full adherence to **RGAA 4.1.2** requirements (large touch targets, high contrast, audio announcements).
+- **Operational efficiency:** Noticeable reduction in perceived waiting times and smoother workflow for reception staff.
 
 ---
 
 ### Documentation & Resources
 
-To inspect event flow architectures and comprehensive technical documentation:
+For detailed interaction diagrams and technical specifications:
 
 - [Read the software engineering experience report (PDF)](/works-and-projects/alternance-logitud/rapport-experience-pro.pdf)

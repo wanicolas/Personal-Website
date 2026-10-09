@@ -1,57 +1,55 @@
 ## Contexte & Enjeux Métier
 
-L'accueil physique des citoyens en mairie est une étape critique de la relation usager. Des files d'attente mal gérées créent de la frustration chez les administrés et désorganisent les agents au guichet.
+L'accueil physique des citoyens en mairie est une étape clé du service public territorial. Des files d'attente mal régulées créent de l'inconfort chez les usagers et perturbent le travail des agents au guichet.
 
-Pour répondre à cet enjeu, Logitud Solutions a initié le développement de **PopQueue**, une suite applicative modulaire synchronisée en temps réel pour équiper les collectivités sans les contraindre à acheter du matériel propriétaire lourd et onéreux.
+Pour moderniser cette gestion sans imposer de matériel propriétaire coûteux, Logitud Solutions a créé **PopQueue**, une solution web modulaire temps réel. Ma mission a consisté à concevoir et développer **l'intégralité de l'interface usager sur borne tactile** ainsi que **de larges pans du back-office d'administration**, en synergie avec les composants de [**MG_UI**](/projets/mg-ui).
 
 ![Interface tactile de sélection de démarche sur la borne d'accueil](/works-and-projects/alternance-logitud/popqueue/choix_demarche.jpg)
 
-## Architecture & Écosystème Temps Réel
+## Architecture Front-End & Écosystème Temps Réel
 
-Le système s'articule autour de trois interfaces synchronisées de manière bidirectionnelle via des **WebSockets** animés par **Laravel Reverb** :
+L'écosystème synchronise instantanément trois applications front-end distinctes via des flux **WebSockets** :
 
-1. **La borne tactile usager :** Permet la sélection de démarches, la distribution de tickets et le check-in de rendez-vous préalables.
-2. **La console agent :** Interface web réactive permettant aux agents d'appeler le ticket suivant, de gérer les absences ou de réassigner un dossier à un autre guichet.
-3. **L'écran de diffusion en salle d'attente :** Affiche le statut des files, le rappel sonore et visuel des numéros appelés et l'orientation vers le guichet dédié.
+- **L'application Borne Tactile (Usager) :** Développée intégralement pour un usage autonome sur tablette (choix de démarches, scan de convocation, distribution de tickets et check-in express).
+- **La console Agent & les écrans Back-Office :** Écrans d'appel et de supervision conçus avec nos composants réutilisables [**MG_UI**](/projets/mg-ui), permettant aux agents de traiter les tickets et aux coordinateurs de superviser les flux en temps réel.
+- **L'affichage dynamique en salle d'attente :** Diffusion instantanée des appels avec rappel visuel du numéro et orientation vers le bon guichet.
 
-Le protocole WebSocket émet des événements légers (`TicketCreated`, `TicketCalled`) capturés en **moins de 100 ms**, avec un composable sur-mesure (`usePopQueueSocket`) gérant la reconnexion automatique en backoff exponentiel en cas de coupure réseau.
+Côté front-end, un composable dédié (`usePopQueueSocket`) écoute les événements diffusés par le serveur WebSocket (`TicketCreated`, `TicketCalled`), assurant une réactivité sous les **100 ms** avec reconnexion automatique en cas d'aléa réseau.
 
 ![Tableau de bord de supervision globale des flux en temps réel](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.jpg)
 
 ## Défis Techniques & Solutions
 
-### Clavier virtuel autonome sur mesure
+### Conception intégrale de la borne & Clavier virtuel autonome
 
-Sur tablette tactile en mode kiosque, l'utilisation du clavier virtuel natif du système d'exploitation posait d'importants problèmes : décalage violent du viewport, apparition de barres d'outils parasites et autocomplétion inappropriée.
+Pour garantir la robustesse de la borne en mode kiosque, il était indispensable de maîtriser entièrement le comportement tactile :
 
-J'ai conçu un composant de **clavier virtuel tactile autonome**, directement intégré à l'arbre DOM de l'application :
-
-- Restreint strictement aux caractères utiles aux démarches (numérique pour les numéros de dossiers, alphabétique pour les noms).
-- Entièrement découplé des spécificités d'Android, Windows ou iPadOS.
-- Ergonomie étudiée avec cibles de frappe de grandes dimensions (> 48x48 px) pour minimiser les erreurs de saisie.
+- **Parcours usager épuré :** Arborescence de démarches claire, boutons surdimensionnés et contrastés pour une navigation sans friction.
+- **Clavier virtuel sur-mesure :** L'usage du clavier virtuel natif des OS mobiles provoquant des décalages d'écran inesthétiques et l'apparition de barres d'outils parasites, j'ai développé un composant de clavier tactile virtuel autonome. Directement intégré au DOM, il est restreint aux caractères utiles (chiffres, lettres) et découplé du système sous-jacent.
 
 ![Clavier virtuel tactile sur mesure](/works-and-projects/alternance-logitud/popqueue/clavier.jpg)
 
-### Accessibilité inclusive & Synthèse vocale (RGAA 4.1.2)
+### Synergie avec MG_UI & Back-Office d'Administration
 
-L'accueil public impose une accessibilité irréprochable pour tous les publics :
+Le développement du back-office de PopQueue s'est appuyé sur les composants de notre bibliothèque [**MG_UI**](/projets/mg-ui) conçue en parallèle :
 
-- **Synthèse vocale native :** Exploitation de la **Web Speech API** pour vocaliser dynamiquement les appels de tickets en salle d'attente (_« Ticket numéro A42 au guichet 3 »_), garantissant l'autonomie des usagers malvoyants.
-- **Conformité PMR :** Contrastes renforcés, hiérarchie visuelle épurée et zones tactiles larges adaptées aux personnes à mobilité réduite.
+- **Console agent réactive :** Gestion des actions en un clic (appel suivant, mise en attente, réorientation vers un autre guichet).
+- **Supervision multi-guichets :** Vues de synthèse en temps réel affichant les files d'attente actives et le statut de chaque agent présent.
+- **Synthèse vocale (RGAA 4.1.2) :** Intégration de la **Web Speech API** pour vocaliser dynamiquement les appels en salle d'attente (_« Ticket numéro A42 au guichet 3 »_), offrant une accessibilité totale aux personnes malvoyantes.
 
-![Console agent et écran de salle d'attente](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
+![Console agent au guichet](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
 
 ## Impact & Résultats
 
-- **< 100 ms de latence** de synchronisation entre l'appel au guichet et l'affichage en salle d'attente.
-- **Suppression du matériel propriétaire :** Déploiement direct sur tablettes et écrans TV standards via de simples navigateurs.
-- **100 % accessible :** Respect rigoureux des critères du **RGAA 4.1.2**.
-- **Amélioration continue :** Réduction constatée du temps d'attente ressenti et meilleure sérénité pour les agents d'accueil.
+- **< 100 ms de latence** de synchronisation entre l'action d'appel de l'agent et la notification visuelle/sonore en salle.
+- **Déploiement universel :** Fonctionnement direct sur tablettes et écrans du commerce sans investissement matériel lourd.
+- **Accessibilité exemplaire :** Respect rigoureux des critères du **RGAA 4.1.2** (zones tactiles larges, contrastes, vocalisation).
+- **Gain de productivité :** Réduction des temps d'attente ressentis et confort d'organisation pour les agents d'accueil.
 
 ---
 
 ### Documentation & Ressources
 
-Pour consulter les flux d'événements et l'analyse complète de PopQueue :
+Pour consulter les flux d'échanges et les spécifications ergonomiques :
 
 - [Consulter le rapport d'expérience d'ingénierie logicielle (PDF)](/works-and-projects/alternance-logitud/rapport-experience-pro.pdf)

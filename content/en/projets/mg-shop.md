@@ -1,59 +1,61 @@
 ## Context & Business Challenges
 
-As part of the modernization of its municipal public services, the **City of Mulhouse** partnered with Logitud Solutions to completely overhaul the online ticketing and purchasing engine for its aquatic and sports facilities (**Aqua Mulhouse**). The main challenge was to replace a legacy system with a modern, scalable SaaS transaction platform integrated into the territorial citizen portal Mon-Guichet.
+As part of the modernization of its municipal public services, the **City of Mulhouse** partnered with Logitud Solutions to completely overhaul the online ticketing and purchasing engine for its aquatic and sports facilities (**Aqua Mulhouse**). The main challenge was to replace a legacy tool with a modern, ergonomic SaaS front-end integrated into the territorial citizen portal Mon-Guichet.
 
-The platform needed to withstand high summer traffic peaks while handling diverse offerings: single-entry tickets, nominative annual season passes, and collective classes with real-time limited capacities (aquagym, swimming lessons).
+The front-end needed to withstand heavy summer traffic spikes while easily guiding citizens through a diverse product catalog: single-entry tickets, nominative season passes, and collective classes with real-time limited capacities (aquagym, swimming lessons).
 
 ![Checkout flow and time slot selection](/works-and-projects/alternance-logitud/mg-shop/user_buy.png)
 
 ## Architecture & Technical Decisions
 
-I designed the front-end architecture using **Nuxt 4**, **strict TypeScript**, and **TailwindCSS / Nuxt UI** components, ensuring long-term maintainability and high rendering performance.
+I designed and built the front-end architecture using **Nuxt 4**, **strict TypeScript**, and **TailwindCSS**, ensuring optimal usability and high maintainability.
 
-The application follows a clean layered architecture:
+The application relies on a modular front-end architecture:
 
-- **Presentation & UI:** Modular auto-imported components, fine-grained interaction states, and real-time user feedback via toasts.
-- **State & Business Logic:** Reactive **Pinia** stores decoupled from views, and modular composables orchestrating cart persistence and slot reservation.
-- **Network & API Contracts:** Resilient API interceptor (`useApiFetch`) wrapping `ofetch`, handling token refresh automatically and enforcing strict DTO contracts with the NestJS back-end.
+- **Presentation & Layout:** Modular auto-imported components, responsive layouts, and immediate interactive feedback via toast notifications.
+- **State & Business Logic:** Reactive **Pinia** stores decoupled from views, and custom composables orchestrating cart persistence and booking schedules.
+- **Network & API Contracts:** Resilient API interceptor (`useApiFetch`) wrapping `ofetch`, guaranteeing strict DTO typing and smooth session lifecycle management.
+
+![Interactive cart and checkout review](/works-and-projects/alternance-logitud/mg-shop/user_cart.png)
 
 ## Technical Challenges & Solutions
 
-### PayFIP Payment Resilience & Idempotency
+### Seamless Checkout Funnel & Reactive Multi-Product Cart
 
-Connecting to the French public sector payment gateway (**PayFIP / DGFiP**) required zero tolerance for financial discrepancies:
+The citizen experience was engineered to minimize any purchasing friction:
 
-- **Redis Temporary Locks (10 min TTL):** Real-time booking locks on limited capacity slots to eliminate overbooking, automatically released upon cart abandonment.
-- **Unique SHA-256 Idempotency Key:** Protects against duplicate bank debits caused by repeated user checkout clicks.
-- **Dual-Channel Validation:** Immediate synchronous web redirection for positive user UX combined with an asynchronous server-to-server webhook (HMAC SHA-256 signature verification), which serves as the authoritative trigger for official pass generation.
+- **Real-Time Booking:** Interactive calendar interface with immediate validation of available time slot quotas prior to cart addition.
+- **Reactive Cart (Pinia):** Dynamic calculations of tiered pricing and discounts (residents, families, students), with local persistence to prevent any state loss during inadvertent page refreshes.
+- **Graceful Network Error Handling:** Intuitive recovery prompts in case of session timeouts or recently filled capacities, without losing the user's booking flow.
 
 ![Stackable lateral drawers](/works-and-projects/alternance-logitud/mg-shop/drawer_multi_panel.png)
 
 ### High-Productivity Admin Components
 
-To enhance daily workflows for municipal administrators, I developed reusable infrastructure components:
+To empower municipal staff managing schedules and registrations, I engineered reusable UI components:
 
 - **Dual-Mode High-Performance DataTable:** Instant in-memory search, multi-column sorting, and pagination (< 30 ms) on the client side, seamlessly switching to server-side mode for massive datasets, with native CSV and PDF exports.
-- **Stackable Drawers System:** Multi-panel lateral sliding stack (LIFO) with RGAA-compliant focus trapping, preventing disruptive modal proliferation during multi-tier file reviews.
+- **Stackable Drawers System:** Multi-panel lateral sliding stack (LIFO) with RGAA-compliant focus trapping, enabling deep file inspection without losing the working background context.
 - **JSON Diff Viewer & Dashboards:** Visual Git-like split/unified diff comparator for pricing audit trails, and interactive **Apache ECharts** dashboards for real-time sales and attendance analytics.
 
 ![DataTable with column picker and export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.png)
 
 ## Quality, Performance & Accessibility
 
-- **Strict CI/CD Pipelines:** Automated Pull Request checks including ESLint, strict TypeScript compiler verification, and **Vitest** unit test suites reaching 85% code coverage.
-- **Accessibility & UX:** Universal keyboard shortcuts (`Ctrl+K` command palette), WCAG AA contrast compliance, and managed ARIA dialog lifecycles.
+- **Automated CI/CD Pipelines:** Pull Request checks including ESLint, strict TypeScript compiler verification, and **Vitest** unit test suites reaching 85% code coverage.
+- **Ergonomics & Accessibility:** Universal keyboard shortcuts (`Ctrl+K` command palette), WCAG AA contrast compliance, and managed ARIA dialog lifecycles.
 
 ## Impact & Key Results
 
-- **> €600,000 in transactions** securely processed online.
-- **90% dematerialization** of ticket and pass purchases from the very first months.
-- **0 accounting discrepancies** or double debits due to the idempotency architecture.
-- **40% time saved** by developers when rolling out subsequent back-office modules.
+- **> €600,000 in transactions** securely processed through the new online purchasing funnel.
+- **90% dematerialization** of pass and ticket purchases from the very first months.
+- **40% time saved** by the engineering team when developing new back-office screens.
+- **Smooth and responsive user journey**, acclaimed by facility managers for its intuitive design.
 
 ---
 
 ### Documentation & Resources
 
-For comprehensive architectural diagrams and technical specifications:
+For comprehensive front-end architectural diagrams and technical specifications:
 
 - [Read the software engineering experience report (PDF)](/works-and-projects/alternance-logitud/rapport-experience-pro.pdf)
