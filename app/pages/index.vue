@@ -32,7 +32,7 @@ onUnmounted(() => {
 			<template #accessible>
 				<NuxtLinkLocale
 					to="/a-propos#accessibility"
-					class="group relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-neutral-900 after:transition-[height] hover:after:h-full dark:after:bg-white"
+					class="group relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-neutral-900 after:transition-[height] hover:after:h-full dark:after:bg-neutral-100"
 				>
 					<span
 						class="relative z-10 group-hover:text-white dark:group-hover:text-neutral-900"

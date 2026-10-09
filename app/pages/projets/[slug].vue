@@ -54,7 +54,7 @@ useSeoMeta({
 	<div class="mx-auto max-w-4xl">
 		<NuxtLinkLocale
 			to="/projets"
-			class="mb-12 inline-flex items-center gap-2 text-neutral-600 underline-offset-4 transition-colors hover:text-neutral-900 hover:underline sm:no-underline dark:text-neutral-400 hover:dark:text-white"
+			class="mb-12 inline-flex items-center gap-2 text-neutral-600 underline-offset-4 transition-colors hover:text-neutral-900 hover:underline sm:no-underline dark:text-neutral-400 hover:dark:text-neutral-100"
 		>
 			<Icon name="lucide:arrow-left" class="size-5" />
 			<span>{{ $t("projects") }}</span>
@@ -84,7 +84,7 @@ useSeoMeta({
 					<h3 class="mb-1 text-xs tracking-wider text-neutral-500 uppercase">
 						{{ $t("projectMeta.role") }}
 					</h3>
-					<p class="font-medium text-neutral-900 dark:text-white">
+					<p class="font-medium text-neutral-900 dark:text-neutral-100">
 						{{ project.role }}
 					</p>
 				</div>
@@ -92,7 +92,7 @@ useSeoMeta({
 					<h3 class="mb-1 text-xs tracking-wider text-neutral-500 uppercase">
 						{{ $t("projectMeta.entity") }}
 					</h3>
-					<p class="font-medium text-neutral-900 dark:text-white">
+					<p class="font-medium text-neutral-900 dark:text-neutral-100">
 						{{ project.client }}
 					</p>
 				</div>
@@ -100,7 +100,7 @@ useSeoMeta({
 					<h3 class="mb-1 text-xs tracking-wider text-neutral-500 uppercase">
 						{{ $t("projectMeta.date") }}
 					</h3>
-					<p class="font-medium text-neutral-900 dark:text-white">
+					<p class="font-medium text-neutral-900 dark:text-neutral-100">
 						{{ project.date }}
 					</p>
 				</div>
@@ -108,7 +108,7 @@ useSeoMeta({
 					<h3 class="mb-1 text-xs tracking-wider text-neutral-500 uppercase">
 						{{ $t("projectMeta.impact") }}
 					</h3>
-					<ul class="font-medium text-neutral-900 dark:text-white">
+					<ul class="font-medium text-neutral-900 dark:text-neutral-100">
 						<li v-for="fig in project.keyFigures" :key="fig">{{ fig }}</li>
 					</ul>
 				</div>
@@ -123,7 +123,7 @@ useSeoMeta({
 					v-if="project.link"
 					:to="project.link"
 					target="_blank"
-					class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+					class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
 				>
 					{{ $t("projectMeta.visitSite") }}
 					<Icon name="lucide:arrow-up-right" class="size-4" />
@@ -132,7 +132,7 @@ useSeoMeta({
 					v-if="project.github"
 					:to="project.github"
 					target="_blank"
-					class="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-900"
+					class="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-900"
 				>
 					<Icon name="lucide:github" class="size-4" />
 					{{ $t("projectMeta.viewCode") }}

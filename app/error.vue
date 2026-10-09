@@ -5,7 +5,9 @@
 			class="flex min-h-dvh flex-col items-center justify-center gap-12"
 		>
 			<div>
-				<h1 class="mb-3 text-3xl">{{ $t("somethingIsWrong") }}</h1>
+				<h1 class="mb-3 text-4xl font-black lg:text-5xl">
+					{{ $t("somethingIsWrong") }}
+				</h1>
 			</div>
 			<NuxtLink
 				to="/"

@@ -22,7 +22,7 @@ useSeoMeta({
 <template>
 	<div>
 		<div class="mx-auto max-w-5xl">
-			<h1 class="mb-14 text-3xl font-black lg:text-4xl">
+			<h1 class="mb-14 text-4xl font-black lg:text-5xl">
 				{{ $t("projectsPage.h1") }}
 			</h1>
 			<article

@@ -11,7 +11,7 @@ useSeoMeta({
 	<div>
 		<div class="mx-auto max-w-2xl text-center">
 			<div class="mb-14 flex items-center justify-center gap-4">
-				<h1 class="text-3xl font-black lg:text-4xl">
+				<h1 class="text-4xl font-black lg:text-5xl">
 					{{ $t("merciPage.h1") }}
 				</h1>
 				<Icon name="lucide:send" class="size-8 shrink-0 lg:size-12" />
