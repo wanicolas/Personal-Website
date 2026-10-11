@@ -40,6 +40,10 @@ Pour équiper efficacement les régisseurs municipaux dans la gestion des planni
 
 ![DataTable avec sélecteur de colonnes et export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.png)
 
+### Coordination technique & Pilotage Agile (25 sprints)
+
+Au-delà de l'architecture front-end, j'ai assuré la coordination technique et l'industrialisation logicielle du projet sur 25 sprints Scrum : définition des standards de code, gouvernance qualité (CI/CD), résolutions d'architecture par POCs et animation des boucles de feedback avec la Ville de Mulhouse. Ce retour d'expérience a fait l'objet d'une [**soutenance dédiée disponible sur Slidev**](https://ynov-bloc3.vercel.app/) dans le cadre de ma certification RNCP 7.
+
 ## Qualité, Performance & Accessibilité
 
 - **Pipelines CI/CD automatisés :** Contrôle de chaque Pull Request avec linting ESLint, vérification stricte du typage TypeScript et tests unitaires sous **Vitest** atteignant 85 % de couverture.
@@ -56,6 +60,8 @@ Pour équiper efficacement les régisseurs municipaux dans la gestion des planni
 
 ### Documentation & Ressources
 
-Pour approfondir les détails d'implémentation et les schémas d'architecture front-end :
+Pour approfondir les détails d'implémentation et les démarches de pilotage :
 
 - [Consulter le rapport d'expérience d'ingénierie logicielle (PDF)](/works-and-projects/alternance-logitud/rapport-experience-pro.pdf)
+- [Consulter la présentation de soutenance sur le pilotage du projet (Slidev)](https://ynov-bloc3.vercel.app/)
+- [Code source de la présentation sur GitHub](https://github.com/wanicolas/ynov-bloc3)

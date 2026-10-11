@@ -40,6 +40,10 @@ To empower municipal staff managing schedules and registrations, I engineered re
 
 ![DataTable with column picker and export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.png)
 
+### Technical Coordination & Agile Management (25 sprints)
+
+Beyond the front-end architecture, I led technical coordination and software industrialization across 25 Scrum sprints: defining quality standards, CI/CD governance, architecture resolution through POCs, and driving feedback loops with the City of Mulhouse. This management experience was formally presented in a [**dedicated Slidev defense presentation**](https://ynov-bloc3.vercel.app/) for RNCP Level 7 certification.
+
 ## Quality, Performance & Accessibility
 
 - **Automated CI/CD Pipelines:** Pull Request checks including ESLint, strict TypeScript compiler verification, and **Vitest** unit test suites reaching 85% code coverage.
@@ -56,6 +60,8 @@ To empower municipal staff managing schedules and registrations, I engineered re
 
 ### Documentation & Resources
 
-For comprehensive front-end architectural diagrams and technical specifications:
+To delve deeper into implementation details and project governance:
 
 - [Read the software engineering experience report (PDF)](/works-and-projects/alternance-logitud/rapport-experience-pro.pdf)
+- [View the project governance defense presentation (Slidev)](https://ynov-bloc3.vercel.app/)
+- [Presentation source code on GitHub](https://github.com/wanicolas/ynov-bloc3)
