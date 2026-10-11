@@ -22,9 +22,24 @@ const runtimeConfig = useRuntimeConfig();
 			method="POST"
 			class="space-y-4"
 		>
-			<FormInput id="NomPrenom" :label="$t('name')" type="text" />
-			<FormInput id="Email" :label="$t('email')" type="email" />
-			<FormInput id="Message" :label="$t('message')" textarea />
+			<FormInput
+				id="NomPrenom"
+				:label="$t('name')"
+				type="text"
+				placeholder="Jean Dupont"
+			/>
+			<FormInput
+				id="Email"
+				:label="$t('email')"
+				type="email"
+				placeholder="jeandupont@mail.com"
+			/>
+			<FormInput
+				id="Message"
+				:label="$t('message')"
+				textarea
+				:placeholder="$t('contactPage.textareaPlaceholder')"
+			/>
 
 			<!-- Utilisation du template "box" pour le mail de soumission -->
 			<input type="hidden" name="_template" value="box" />
@@ -41,7 +56,7 @@ const runtimeConfig = useRuntimeConfig();
 				type="submit"
 				trailing-icon="lucide:send"
 				:label="$t('submit')"
-				class="mt-2"
+				class="mt-8"
 			/>
 		</form>
 	</div>

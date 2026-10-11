@@ -14,6 +14,7 @@
 		"bgText": "Contact.",
 		"description": "N'hésitez pas à me contacter pour toute question ou opportunité.",
 		"h1": "On discute ?",
+		"textareaPlaceholder": "Salut, ton profil m'a interpellé et j'aimerais discuter avec toi d'une opportunité !",
 		"title": "Contact"
 	},
 	"cv": "CV",
@@ -37,7 +38,7 @@
 	"lookAtMyProjects": "Voir mes projets",
 	"merciPage": {
 		"bgText": "Merci.",
-		"description": "Merci pour votre message ! Je vous répondrai dès que possible.",
+		"description": "Merci pour votre message ! Je vous répondrai dès que possible.",
 		"h1": "Merci pour votre message",
 		"p": "Avec un soupçon de chance et de patience, je vous répondrai dès que possible.",
 		"title": "Merci"
@@ -59,7 +60,7 @@
 	"projects": "Projets",
 	"projectsPage": {
 		"bgText": "Projets.",
-		"date": "Date :",
+		"date": "Date :",
 		"description": "Études de cas et projets d'ingénierie logicielle, SaaS et Cloud-Native.",
 		"h1": "Mes projets.",
 		"title": "Projets"

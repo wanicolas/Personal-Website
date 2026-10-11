@@ -4,6 +4,7 @@ defineProps<{
 	label: string;
 	id: string;
 	textarea?: boolean;
+	placeholder?: string;
 }>();
 </script>
 
@@ -19,6 +20,7 @@ defineProps<{
 			:type="textarea ? undefined : type"
 			:name="id"
 			:rows="textarea ? 3 : undefined"
+			:placeholder
 			class="w-full appearance-none rounded border px-2 py-1 focus-visible:outline focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100"
 		/>
 	</div>
