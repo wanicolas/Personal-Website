@@ -22,16 +22,7 @@ const runtimeConfig = useRuntimeConfig();
 			method="POST"
 			class="space-y-4"
 		>
-			<div class="flex flex-col gap-4 md:flex-row">
-				<FormInput id="Nom" :label="$t('firstname')" type="text" class="grow" />
-				<FormInput
-					id="Prenom"
-					:label="$t('lastname')"
-					type="text"
-					class="grow"
-				/>
-			</div>
-
+			<FormInput id="NomPrenom" :label="$t('name')" type="text" />
 			<FormInput id="Email" :label="$t('email')" type="email" />
 			<FormInput id="Message" :label="$t('message')" textarea />
 
@@ -46,12 +37,12 @@ const runtimeConfig = useRuntimeConfig();
 			<!-- Permet d'éviter le spam -->
 			<input type="text" name="_honey" class="hidden" />
 
-			<button
+			<AppButton
 				type="submit"
-				class="mt-2 rounded bg-neutral-900 px-3 py-1 font-bold text-white dark:bg-neutral-100 dark:text-neutral-900"
-			>
-				{{ $t("submit") }}
-			</button>
+				trailing-icon="lucide:send"
+				:label="$t('submit')"
+				class="mt-2"
+			/>
 		</form>
 	</div>
 </template>

@@ -16,16 +16,21 @@
 		"h1": "Shall we talk?",
 		"title": "Contact"
 	},
+	"cv": "Resume",
 	"email": "Email",
-	"firstname": "First name",
 	"goBackToHomePage": "Go back to home page",
 	"goToContent": "Skip to content",
 	"index": "Home",
 	"indexPage": {
-		"accessible": "accessible",
-		"description": "Nicolas Walter, web developer specializing in pixel-perfect and accessible interfaces, creator of inclusive products and digital experiences.",
+		"cta": "Explore my {projects}, discover my {about}, check my {cv}, or {contact} to discuss opportunities.",
+		"ctaAbout": "background",
+		"ctaContact": "get in touch",
+		"ctaCv": "resume",
+		"ctaProjects": "projects",
+		"description": "Nicolas Walter, Front-End Software Engineer — DevSecOps, A11y and SEO mindset.",
 		"iAm": "Hey, I'm",
-		"text": "Web developer of pixel-perfect and {accessible} interfaces."
+		"pitch": "Specializing in modular architectures, native digital accessibility, and Cloud-Native infrastructures.",
+		"title": "Front-End Software Engineer with DevSecOps, A11y & SEO mindset."
 	},
 	"lastname": "Last name",
 	"learnMoreAboutMe": "Learn more about me",
@@ -38,8 +43,9 @@
 		"title": "Thank you"
 	},
 	"message": "Message",
+	"name": "Name",
 	"nuxtSiteConfig": {
-		"name": "Nicolas Walter, front-end web developer"
+		"name": "Nicolas Walter — Front-End Software Engineer"
 	},
 	"openNavigationMenu": "Open navigation menu",
 	"projectMeta": {
@@ -63,6 +69,7 @@
 	"toggleDarkMode": "Enable dark mode",
 	"toggleLightMode": "Enable light mode",
 	"toggleSystemMode": "Make the theme follow system preferences",
+	"viewMyCv": "View my resume",
 	"visitGithubRepo": "Visit the GitHub repository",
 	"visitMyGitHubProfile": "Visit my GitHub profile.",
 	"visitMyLinkedInProfile": "Visit my LinkedIn profile."

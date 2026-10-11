@@ -21,11 +21,29 @@ useSeoMeta({
 <template>
 	<div>
 		<section class="relative mx-auto mb-10 max-w-3xl">
-			<h1 class="mb-14 text-4xl font-black lg:text-5xl">
-				{{ $t("aboutPage.h1") }}
-			</h1>
+			<div class="mb-14 flex flex-wrap items-end justify-between gap-6">
+				<h1 class="text-4xl font-black lg:text-5xl">
+					{{ $t("aboutPage.h1") }}
+				</h1>
+
+				<AppButton
+					to="/CV_Nicolas-WALTER.pdf"
+					target="_blank"
+					external
+					color="neutral"
+					:label="$t('viewMyCv')"
+					icon="lucide:file-text"
+				/>
+			</div>
+
 			<div class="flex gap-4 sm:gap-8">
-				<div class="w-px shrink-0 bg-neutral-900 dark:bg-neutral-100" />
+				<!-- left border -->
+				<div
+					aria-hidden="true"
+					class="w-px shrink-0 bg-neutral-900 dark:bg-neutral-100"
+				/>
+
+				<!-- contenu -->
 				<div class="space-y-12">
 					<div v-for="(info, index) in infos" :key="index" class="space-y-3">
 						<div class="-ml-6 flex items-center gap-3 sm:-ml-10 sm:gap-6">

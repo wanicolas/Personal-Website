@@ -125,24 +125,21 @@ useSeoMeta({
 				v-if="project.link || project.github"
 				class="mb-12 flex flex-wrap gap-4"
 			>
-				<NuxtLink
+				<AppButton
 					v-if="project.link"
 					:to="project.link"
 					target="_blank"
-					class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
-				>
-					{{ $t("projectMeta.visitSite") }}
-					<Icon name="lucide:arrow-up-right" class="size-4" />
-				</NuxtLink>
-				<NuxtLink
+					icon="lucide:arrow-up-right"
+					:label="$t('projectMeta.visitSite')"
+				/>
+				<AppButton
 					v-if="project.github"
+					color="neutral"
 					:to="project.github"
 					target="_blank"
-					class="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-900"
-				>
-					<Icon name="lucide:github" class="size-4" />
-					{{ $t("projectMeta.viewCode") }}
-				</NuxtLink>
+					icon="lucide:github"
+					:label="$t('projectMeta.viewCode')"
+				/>
 			</div>
 
 			<!-- Cover Image -->

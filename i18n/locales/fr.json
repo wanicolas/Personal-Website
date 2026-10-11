@@ -16,16 +16,21 @@
 		"h1": "On discute ?",
 		"title": "Contact"
 	},
+	"cv": "CV",
 	"email": "Email",
-	"firstname": "Prénom",
 	"goBackToHomePage": "Retourner à l'accueil",
 	"goToContent": "Aller au contenu",
 	"index": "Accueil",
 	"indexPage": {
-		"accessible": "accessibles",
-		"description": "Nicolas Walter, développeur web d'interfaces pixel-perfect et accessibles, créateur de produits inclusifs et d'expériences digitales.",
+		"cta": "Explorez mes {projects}, découvrez mon {about}, consultez mon {cv} ou {contact} pour échanger sur vos opportunités.",
+		"ctaAbout": "parcours",
+		"ctaContact": "contactez-moi",
+		"ctaCv": "CV",
+		"ctaProjects": "projets",
+		"description": "Nicolas Walter, Ingénieur Web Frontend — Sensibilité DevSecOps, A11y et SEO.",
 		"iAm": "Hey, je suis",
-		"text": "Développeur web d'interfaces pixel-perfect et {accessible}."
+		"pitch": "Spécialiste des architectures modulaires, de l'accessibilité native et des infrastructures Cloud-Native.",
+		"title": "Ingénieur Web Frontend avec sensibilité DevSecOps, A11y & SEO."
 	},
 	"lastname": "Nom",
 	"learnMoreAboutMe": "En savoir plus sur moi",
@@ -38,8 +43,9 @@
 		"title": "Merci"
 	},
 	"message": "Message",
+	"name": "Nom complet",
 	"nuxtSiteConfig": {
-		"name": "Nicolas Walter, développeur web front"
+		"name": "Nicolas Walter — Ingénieur Web Frontend"
 	},
 	"openNavigationMenu": "Ouvrir le menu de navigation",
 	"projectMeta": {
@@ -63,6 +69,7 @@
 	"toggleDarkMode": "Activer le mode sombre",
 	"toggleLightMode": "Activer le mode clair",
 	"toggleSystemMode": "Faire en sorte que le thème suive les préférences système",
+	"viewMyCv": "Consulter mon CV",
 	"visitGithubRepo": "Visiter le dépôt GitHub",
 	"visitMyGitHubProfile": "Accédez à mon profil GitHub.",
 	"visitMyLinkedInProfile": "Accédez à mon profil LinkedIn."

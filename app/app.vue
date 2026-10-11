@@ -230,6 +230,14 @@ onUnmounted(() => {
 								<NuxtLinkLocale to="/contact" @click="closeMenu()">
 									{{ $t("contact") }}
 								</NuxtLinkLocale>
+								<NuxtLink
+									to="/CV_Nicolas-WALTER.pdf"
+									target="_blank"
+									external
+									@click="closeMenu()"
+								>
+									{{ $t("cv") }}
+								</NuxtLink>
 							</nav>
 						</div>
 					</dialog>
@@ -260,7 +268,7 @@ onUnmounted(() => {
 							class="animateSVG hidden size-6 sm:block"
 						/>
 					</NuxtLinkLocale>
-					<div class="flex items-center gap-8">
+					<div class="flex items-center gap-6 sm:gap-8">
 						<NuxtLink
 							class="size-6"
 							to="https://www.linkedin.com/in/wanicolas/"
@@ -271,6 +279,17 @@ onUnmounted(() => {
 						<NuxtLink class="size-6" to="https://github.com/wanicolas">
 							<Icon name="lucide:github" class="size-6" />
 							<span class="sr-only">{{ $t("visitMyGitHubProfile") }}</span>
+						</NuxtLink>
+						<NuxtLink
+							to="/CV_Nicolas-WALTER.pdf"
+							target="_blank"
+							external
+							class="size-6"
+						>
+							<Icon name="lucide:file-text" class="size-6" />
+							<span class="sr-only">
+								{{ $t("cv") }}
+							</span>
 						</NuxtLink>
 					</div>
 				</footer>
