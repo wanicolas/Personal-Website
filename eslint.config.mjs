@@ -189,7 +189,7 @@ export default withNuxt(
 				{
 					"app/services/**/*.!(test|spec).*": "*.service",
 					"app/stores/**/*.!(test|spec).*": "*.store",
-					"app/types/**/*.!(test|spec).*": "*.type",
+					"app/types/**/*.!(test|spec).*": "*.d",
 				},
 			],
 		},

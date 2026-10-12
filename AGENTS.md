@@ -19,3 +19,12 @@ For essential informations, read the [README](./README.md).
 - **Composants**: Named after their path in `components/`
 - **Stores**: `usePinia`, `defineStore`, `storeToRefs`, `acceptHMRUpdate`, `use*Store` from `stores/`
 - **Utils**: From `utils/`
+
+## Documentation
+
+Some MCP servers are configured in the repo and some llms.txt are listed below. You MUST use at least one of them if your internal data on the tool/framework/library you're working on is older than 4 months. This ensures that all code respects the tools documentation and best practices to make it work perfectly, especially when debugging and fixing issues with style, layout, seo, content, etc.
+
+llms.txt available :
+
+- https://nuxt.com/llms.txt
+- https://nuxtseo.com/llms.txt.

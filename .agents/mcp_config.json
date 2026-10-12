@@ -1,0 +1,10 @@
+{
+	"mcpServers": {
+		"nuxt": {
+			"serverUrl": "https://nuxt.com/mcp"
+		},
+		"nuxt-seo": {
+			"serverUrl": "https://nuxtseo.com/mcp"
+		}
+	}
+}

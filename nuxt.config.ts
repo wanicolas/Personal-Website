@@ -29,6 +29,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/color-mode",
 		"@nuxt/icon",
 		"@nuxtjs/seo",
+		"@nuxt/content",
 	],
 	vite: {
 		plugins: [tailwindcss()],
@@ -45,7 +46,7 @@ export default defineNuxtConfig({
 			inline: ["unhead"],
 		},
 	},
-	css: ["./app/assets/css/main.css"],
+	css: ["~/assets/css/main.css"],
 	i18n: {
 		baseUrl: "https://nicolaswalter.fr",
 		defaultLocale: "fr",

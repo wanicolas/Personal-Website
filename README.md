@@ -20,3 +20,7 @@ pnpm i
 ```sh
 pnpm dev
 ```
+
+## Development
+
+Make sure tu validate your work (or the CI will yell at you) with the scripts to lint, typecheck and format (available in [package.json](./package.json)).
