@@ -5,12 +5,20 @@ const { locale, t } = useI18n();
 
 const projects = computed(() => {
 	const currentLocale = locale.value as LocaleCode;
-	return projectsData.map((p) => ({
-		...p,
-		title: p.title[currentLocale],
-		description: p.description[currentLocale],
-		path: `/${p.slug}`,
-	}));
+	return projectsData.map((p) => {
+		const fullTitle = p.title[currentLocale];
+		const lastSpaceIndex = fullTitle.lastIndexOf(" ");
+		return {
+			...p,
+			title: fullTitle,
+			titlePrefix:
+				lastSpaceIndex === -1 ? "" : fullTitle.slice(0, lastSpaceIndex),
+			titleLastWord:
+				lastSpaceIndex === -1 ? fullTitle : fullTitle.slice(lastSpaceIndex + 1),
+			description: p.description[currentLocale],
+			path: `/${p.slug}`,
+		};
+	});
 });
 
 useSeoMeta({
@@ -42,12 +50,15 @@ useSeoMeta({
 						class="group/title mb-3 block"
 					>
 						<h2 class="inline text-lg font-semibold lg:text-xl">
-							{{ project.title }}
+							<span v-if="project.titlePrefix">{{ project.titlePrefix }}</span>
+							<span class="inline-flex items-center gap-1 whitespace-nowrap">
+								{{ project.titleLastWord }}
+								<Icon
+									name="lucide:arrow-right"
+									class="transition motion-safe:group-hover/title:translate-x-1"
+								/>
+							</span>
 						</h2>
-						<Icon
-							name="lucide:arrow-right"
-							class="ml-2 transition motion-safe:group-hover/title:translate-x-1"
-						/>
 					</NuxtLinkLocale>
 					<AppBadge :items="project.technos" class="mb-2" />
 					<p class="text-neutral-600 lg:text-lg dark:text-neutral-300">
