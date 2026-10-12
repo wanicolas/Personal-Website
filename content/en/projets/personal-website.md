@@ -4,8 +4,6 @@ A web engineer's portfolio should never be just a static showcase: it is the ide
 
 I designed this personal website as a real-world demonstrator of modern software craft: modern **Nuxt 4** architecture, declarative content management via **Nuxt Content v3**, seamless bilingual internationalization (**Nuxt I18n**), strict legal digital accessibility (**RGAA / Advanced Opquast**), and cutting-edge SEO optimization.
 
-![Portfolio overview in dark and light themes](/img/personal-website.webp)
-
 ## Architecture & Technical Decisions
 
 The project leverages the latest capabilities of the Vue and Nuxt ecosystem:

@@ -4,8 +4,6 @@ Un portfolio d'ingénieur web ne doit pas être une simple vitrine statique : c'
 
 J'ai conçu ce site personnel comme un démonstrateur de bonnes pratiques logicielles modernes : architecture **Nuxt 4**, génération de contenu avec **Nuxt Content v3**, internationalisation fluide (**Nuxt I18n**), conformité légale d'accessibilité (**RGAA / Opquast Avancé**) et optimisation SEO de pointe.
 
-![Aperçu du portfolio en thème sombre et clair](/img/personal-website.webp)
-
 ## Architecture & Choix Techniques
 
 Le projet s'appuie sur les dernières avancées de l'écosystème Vue et Nuxt :
