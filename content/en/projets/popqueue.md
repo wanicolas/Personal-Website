@@ -4,7 +4,7 @@ Citizen reception in municipal town halls is a decisive touchpoint for local pub
 
 To modernize this process without requiring expensive proprietary hardware, Logitud Solutions built **PopQueue**, a real-time modular web solution. My mission encompassed designing and developing **the complete touch kiosk user interface** as well as **major parts of the administration back-office**, built in synergy with our [**MG_UI**](/en/projets/mg-ui) component library.
 
-![Interactive touch kiosk interface on the reception terminal](/works-and-projects/alternance-logitud/popqueue/choix_demarche.jpg)
+![Interactive touch kiosk interface on the reception terminal](/works-and-projects/alternance-logitud/popqueue/choix_demarche.webp)
 
 ## Front-End Architecture & Real-Time Ecosystem
 
@@ -16,7 +16,7 @@ The ecosystem synchronizes three distinct front-end applications via **WebSocket
 
 On the front-end, a dedicated composable (`usePopQueueSocket`) listens to events broadcast by the WebSocket server (`TicketCreated`, `TicketCalled`), delivering **sub-100 ms responsiveness** with automated exponential reconnection on network hiccups.
 
-![Real-time global supervision dashboard](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.jpg)
+![Real-time global supervision dashboard](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.webp)
 
 ## Technical Challenges & Solutions
 
@@ -27,7 +27,7 @@ To ensure rock-solid stability in kiosk tablet environments, complete control ov
 - **Streamlined Citizen Flow:** Clear administrative decision trees, oversized buttons, and high contrast for effortless navigation.
 - **Custom Virtual Keyboard:** Because native mobile OS keyboards caused disruptive viewport displacement and unwanted browser bars, I built a standalone on-screen touch keyboard component. Mounted directly into the application DOM, it is restricted to valid inputs (digits, letters) and decoupled from OS-specific quirks.
 
-![Custom on-screen virtual keyboard](/works-and-projects/alternance-logitud/popqueue/clavier.jpg)
+![Custom on-screen virtual keyboard](/works-and-projects/alternance-logitud/popqueue/clavier.webp)
 
 ### Synergy with MG_UI & Back-Office Administration
 
@@ -37,7 +37,7 @@ The development of the PopQueue back-office leveraged our modular [**MG_UI**](/e
 - **Multi-Counter Supervision:** Live summary views tracking active queues and desk operator availability.
 - **Speech Synthesis (RGAA 4.1.2):** Integration of the browser's **Web Speech API** to dynamically vocalize ticket calls in waiting rooms (_"Ticket number A42 to Desk 3"_), ensuring full accessibility for visually impaired citizens.
 
-![Staff desk console at the counter](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
+![Staff desk console at the counter](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.webp)
 
 ## Impact & Key Results
 

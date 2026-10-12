@@ -4,7 +4,7 @@ As part of earning my **Master's degree in Software Engineering (Bac+5 / French 
 
 The goal was to demonstrate mastery across the modern software engineering lifecycle: designing a modular microservices architecture, automating cloud infrastructure via Infrastructure as Code, enforcing Zero-Trust security principles, and managing operational reliability (MCO).
 
-![Task management interface of the application](/works-and-projects/mastere-ynov/todo-app-cloud/images/notes_added.png)
+![Task management interface of the application](/works-and-projects/mastere-ynov/todo-app-cloud/images/notes_added.webp)
 
 ## Cloud-Native Architecture & Infrastructure as Code (IaC)
 
@@ -14,7 +14,7 @@ The application infrastructure is declared and provisioned entirely through **Te
 - **Isolated Virtual Network & Zero-Trust:** Deployed within a segregated private **VNet**, eliminating public internet exposure for the database tier.
 - **Secure Secret Ingestion:** Secrets injected directly into container memory via the **Azure Key Vault Secrets Store CSI Driver**, eliminating plain-text credentials in config files or application code.
 
-![Account management and security space](/works-and-projects/mastere-ynov/todo-app-cloud/images/account.png)
+![Account management and security space](/works-and-projects/mastere-ynov/todo-app-cloud/images/account.webp)
 
 ## DevSecOps Pipeline & Operational Reliability
 

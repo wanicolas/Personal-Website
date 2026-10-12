@@ -4,7 +4,7 @@ L'accueil physique des citoyens en mairie est une étape clé du service public 
 
 Pour moderniser cette gestion sans imposer de matériel propriétaire coûteux, Logitud Solutions a créé **PopQueue**, une solution web modulaire temps réel. Ma mission a consisté à concevoir et développer **l'intégralité de l'interface usager sur borne tactile** ainsi que **de larges pans du back-office d'administration**, en synergie avec les composants de [**MG_UI**](/projets/mg-ui).
 
-![Interface tactile de sélection de démarche sur la borne d'accueil](/works-and-projects/alternance-logitud/popqueue/choix_demarche.jpg)
+![Interface tactile de sélection de démarche sur la borne d'accueil](/works-and-projects/alternance-logitud/popqueue/choix_demarche.webp)
 
 ## Architecture Front-End & Écosystème Temps Réel
 
@@ -16,7 +16,7 @@ L'écosystème synchronise instantanément trois applications front-end distinct
 
 Côté front-end, un composable dédié (`usePopQueueSocket`) écoute les événements diffusés par le serveur WebSocket (`TicketCreated`, `TicketCalled`), assurant une réactivité sous les **100 ms** avec reconnexion automatique en cas d'aléa réseau.
 
-![Tableau de bord de supervision globale des flux en temps réel](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.jpg)
+![Tableau de bord de supervision globale des flux en temps réel](/works-and-projects/alternance-logitud/popqueue/supervision_globale_bo.webp)
 
 ## Défis Techniques & Solutions
 
@@ -27,7 +27,7 @@ Pour garantir la robustesse de la borne en mode kiosque, il était indispensable
 - **Parcours usager épuré :** Arborescence de démarches claire, boutons surdimensionnés et contrastés pour une navigation sans friction.
 - **Clavier virtuel sur-mesure :** L'usage du clavier virtuel natif des OS mobiles provoquant des décalages d'écran inesthétiques et l'apparition de barres d'outils parasites, j'ai développé un composant de clavier tactile virtuel autonome. Directement intégré au DOM, il est restreint aux caractères utiles (chiffres, lettres) et découplé du système sous-jacent.
 
-![Clavier virtuel tactile sur mesure](/works-and-projects/alternance-logitud/popqueue/clavier.jpg)
+![Clavier virtuel tactile sur mesure](/works-and-projects/alternance-logitud/popqueue/clavier.webp)
 
 ### Synergie avec MG_UI & Back-Office d'Administration
 
@@ -37,7 +37,7 @@ Le développement du back-office de PopQueue s'est appuyé sur les composants de
 - **Supervision multi-guichets :** Vues de synthèse en temps réel affichant les files d'attente actives et le statut de chaque agent présent.
 - **Synthèse vocale (RGAA 4.1.2) :** Intégration de la **Web Speech API** pour vocaliser dynamiquement les appels en salle d'attente (_« Ticket numéro A42 au guichet 3 »_), offrant une accessibilité totale aux personnes malvoyantes.
 
-![Console agent au guichet](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.jpg)
+![Console agent au guichet](/works-and-projects/alternance-logitud/popqueue/console_agent_guichet.webp)
 
 ## Impact & Résultats
 

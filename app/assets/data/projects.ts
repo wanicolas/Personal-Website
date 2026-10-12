@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
 			fr: "Solution d'accueil citoyen temps réel : développement intégral de l'interface de la borne tactile (clavier virtuel autonome, synthèse vocale RGAA) et des consoles d'administration synchronisées en WebSockets.",
 			en: "Real-time citizen reception system: full development of the touch kiosk interface (custom virtual keyboard, RGAA speech synthesis) and admin consoles synchronized via WebSockets.",
 		},
-		img: "popqueue.jpg",
+		img: "popqueue.webp",
 		technos: [
 			"Nuxt 4",
 			"WebSockets",
@@ -169,7 +169,7 @@ export const projectsData: Project[] = [
 			fr: "Site personnel et portfolio conçu avec Nuxt 4 et Nuxt Content v3. Vitrine d'ingénierie front démontrant un typage strict TypeScript, une accessibilité soignée (RGAA / Opquast Avancé), un score SEO optimal et un workflow CI/CD automatisé.",
 			en: "Personal website and portfolio built with Nuxt 4 and Nuxt Content v3. Front engineering showcase demonstrating strict TypeScript typing, thoughtful accessibility (RGAA / Advanced Opquast), optimal SEO score, and automated CI/CD workflow.",
 		},
-		img: "personal-website.png",
+		img: "personal-website.webp",
 		link: "https://nicolaswalter.fr",
 		github: "https://github.com/wanicolas/Personal-Website",
 		technos: [

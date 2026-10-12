@@ -4,7 +4,7 @@ Au sein de Logitud Solutions (éditeur GovTech pour les collectivités territori
 
 Pour fédérer l'ensemble des développements et harmoniser l'expérience usager, j'ai initié et conçu **MG_UI**, une bibliothèque de composants Vue 3 / Nuxt packagée et distribuée en interne puis sur NPM ([`@numesia/mg_ui`](https://www.npmjs.com/package/@numesia/mg_ui)), s'appuyant sur les bases ergonomiques de **Flowbite**.
 
-![Exemple du design system : composants de formulaires et champs accessibles](/works-and-projects/alternance-logitud/mg-ui/flowbite-forms.png)
+![Exemple du design system : composants de formulaires et champs accessibles](/works-and-projects/alternance-logitud/mg-ui/flowbite-forms.webp)
 
 ## Architecture & Thématisation Dynamique
 
@@ -14,7 +14,7 @@ Bâtie sur le socle de **Flowbite**, **Vue 3**, **TailwindCSS**, **Headless UI**
 - **Socle Flowbite & Approche Headless :** Exploitation des motifs d'interface de Flowbite enrichis d'une gestion stricte de l'accessibilité (états ARIA, pièges de focus, navigation au clavier intégrale).
 - **Composables d'accessibilité réutilisables :** Standardisation des formulaires administratifs complexes avec des composables dédiés (`useAccessibleField`), liant automatiquement `aria-invalid` et messages d'erreurs `aria-live`.
 
-![Exemple du design system : variantes de boutons et états interactifs](/works-and-projects/alternance-logitud/mg-ui/flowbite-buttons.png)
+![Exemple du design system : variantes de boutons et états interactifs](/works-and-projects/alternance-logitud/mg-ui/flowbite-buttons.webp)
 
 ## Performance & Optimisation Web Vitals
 

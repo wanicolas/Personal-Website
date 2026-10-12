@@ -4,7 +4,7 @@ Dans le cadre de la modernisation de ses services publics, la **Ville de Mulhous
 
 Le front-end devait absorber de forts pics d'affluence estivaux tout en guidant facilement les usagers à travers une grande variété d'offres : entrées unitaires, abonnements annuels nominatifs et cours collectifs à jauges limitées (aquagym, natation).
 
-![Tunnel d'achat et sélection des créneaux](/works-and-projects/alternance-logitud/mg-shop/user_buy.png)
+![Tunnel d'achat et sélection des créneaux](/works-and-projects/alternance-logitud/mg-shop/user_buy.webp)
 
 ## Architecture & Choix Techniques
 
@@ -16,7 +16,7 @@ L'application repose sur un découpage front-end modulaire :
 - **État & Logique Métier :** Stores **Pinia** réactifs découplés de la vue et composables sur-mesure pour orchestrer le panier d'achat et le calendrier de réservation.
 - **Communication Réseau & DTOs :** Composable d'interception d'API résilient (`useApiFetch`) encapsulant `ofetch`, assurant le typage strict des retours et la gestion fluide des sessions usagers.
 
-![Panier d'achat et récapitulatif des commandes](/works-and-projects/alternance-logitud/mg-shop/user_cart.png)
+![Panier d'achat et récapitulatif des commandes](/works-and-projects/alternance-logitud/mg-shop/user_cart.webp)
 
 ## Défis Techniques & Solutions
 
@@ -28,7 +28,7 @@ L'expérience citoyenne a été pensée pour éliminer toute friction lors du pa
 - **Panier réactif (Pinia) :** Calcul instantané des tarifs dégressifs et des réductions spécifiques (résidents municipaux, familles, étudiants), avec persistance locale pour prévenir toute perte de panier en cas d'actualisation involontaire.
 - **Gestion fine des erreurs réseau :** Guidage transparent en cas de déconnexion ou de créneau devenu indisponible, avec modales de reprise adaptées sans rupture du tunnel.
 
-![Système de tiroirs latéraux empilables](/works-and-projects/alternance-logitud/mg-shop/drawer_multi_panel.png)
+![Système de tiroirs latéraux empilables](/works-and-projects/alternance-logitud/mg-shop/drawer_multi_panel.webp)
 
 ### Composants d'infrastructure avancés pour l'administration
 
@@ -38,7 +38,7 @@ Pour équiper efficacement les régisseurs municipaux dans la gestion des planni
 - **Tiroirs empilables (Stackable Drawers) :** Gestion d'une pile de panneaux latéraux superposables (LIFO) avec piégeage du focus conforme RGAA, permettant d'inspecter un dossier usager sans perdre le contexte de travail.
 - **Visualiseur de différences JSON & Tableaux de bord :** Comparateur visuel (mode scindé ou unifié) pour l'audit des grilles tarifaires et intégration d'**Apache ECharts** pour le suivi des ventes et de la fréquentation.
 
-![DataTable avec sélecteur de colonnes et export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.png)
+![DataTable avec sélecteur de colonnes et export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.webp)
 
 ### Coordination technique & Pilotage Agile (25 sprints)
 

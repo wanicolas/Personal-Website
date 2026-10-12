@@ -4,7 +4,7 @@ Dans le cadre de l'obtention de mon titre d'**Expert en développement logiciel 
 
 L'objectif était de prouver la maîtrise d'une chaîne logicielle d'ingénierie moderne : conception d'une architecture microservices modulaire, provisionnement automatisé d'infrastructure cloud, sécurisation Zero-Trust et maintien en condition opérationnelle (MCO).
 
-![Interface de gestion de tâches de l'application](/works-and-projects/mastere-ynov/todo-app-cloud/images/notes_added.png)
+![Interface de gestion de tâches de l'application](/works-and-projects/mastere-ynov/todo-app-cloud/images/notes_added.webp)
 
 ## Architecture Cloud-Native & Infrastructure as Code (IaC)
 
@@ -14,7 +14,7 @@ L'infrastructure applicative est entièrement déclarée et déployée sous form
 - **Réseau isolé & Zero-Trust :** Déploiement dans un réseau virtuel privé (**VNet**) étanche, sans exposition publique de la base de données.
 - **Gestion sécurisée des secrets :** Montage direct des secrets en mémoire des conteneurs via **Azure Key Vault Provider for Secrets Store CSI Driver**, interdisant tout secret en clair dans les fichiers de configuration ou le code.
 
-![Espace de gestion de compte et sécurité](/works-and-projects/mastere-ynov/todo-app-cloud/images/account.png)
+![Espace de gestion de compte et sécurité](/works-and-projects/mastere-ynov/todo-app-cloud/images/account.webp)
 
 ## Pipeline DevSecOps & Maintien Opérationnel (MCO)
 

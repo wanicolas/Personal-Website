@@ -39,7 +39,7 @@ useSeoMeta({
 					</div>
 					<NuxtLinkLocale
 						:to="`/projets/${project.slug}`"
-						class="group/title mb-3"
+						class="group/title mb-3 block"
 					>
 						<h2 class="inline text-lg font-semibold lg:text-xl">
 							{{ project.title }}

@@ -4,7 +4,7 @@ As part of the modernization of its municipal public services, the **City of Mul
 
 The front-end needed to withstand heavy summer traffic spikes while easily guiding citizens through a diverse product catalog: single-entry tickets, nominative season passes, and collective classes with real-time limited capacities (aquagym, swimming lessons).
 
-![Checkout flow and time slot selection](/works-and-projects/alternance-logitud/mg-shop/user_buy.png)
+![Checkout flow and time slot selection](/works-and-projects/alternance-logitud/mg-shop/user_buy.webp)
 
 ## Architecture & Technical Decisions
 
@@ -16,7 +16,7 @@ The application relies on a modular front-end architecture:
 - **State & Business Logic:** Reactive **Pinia** stores decoupled from views, and custom composables orchestrating cart persistence and booking schedules.
 - **Network & API Contracts:** Resilient API interceptor (`useApiFetch`) wrapping `ofetch`, guaranteeing strict DTO typing and smooth session lifecycle management.
 
-![Interactive cart and checkout review](/works-and-projects/alternance-logitud/mg-shop/user_cart.png)
+![Interactive cart and checkout review](/works-and-projects/alternance-logitud/mg-shop/user_cart.webp)
 
 ## Technical Challenges & Solutions
 
@@ -28,7 +28,7 @@ The citizen experience was engineered to minimize any purchasing friction:
 - **Reactive Cart (Pinia):** Dynamic calculations of tiered pricing and discounts (residents, families, students), with local persistence to prevent any state loss during inadvertent page refreshes.
 - **Graceful Network Error Handling:** Intuitive recovery prompts in case of session timeouts or recently filled capacities, without losing the user's booking flow.
 
-![Stackable lateral drawers](/works-and-projects/alternance-logitud/mg-shop/drawer_multi_panel.png)
+![Stackable lateral drawers](/works-and-projects/alternance-logitud/mg-shop/drawer_multi_panel.webp)
 
 ### High-Productivity Admin Components
 
@@ -38,7 +38,7 @@ To empower municipal staff managing schedules and registrations, I engineered re
 - **Stackable Drawers System:** Multi-panel lateral sliding stack (LIFO) with RGAA-compliant focus trapping, enabling deep file inspection without losing the working background context.
 - **JSON Diff Viewer & Dashboards:** Visual Git-like split/unified diff comparator for pricing audit trails, and interactive **Apache ECharts** dashboards for real-time sales and attendance analytics.
 
-![DataTable with column picker and export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.png)
+![DataTable with column picker and export](/works-and-projects/alternance-logitud/mg-shop/datatable_export.webp)
 
 ### Technical Coordination & Agile Management (25 sprints)
 

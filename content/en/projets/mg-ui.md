@@ -4,7 +4,7 @@ At Logitud Solutions (a GovTech software vendor serving local authorities), the 
 
 To unify front-end developments and deliver a seamless user experience, I architected and built **MG_UI**, a reusable Vue 3 / Nuxt component library packaged and distributed internally and published on NPM ([`@numesia/mg_ui`](https://www.npmjs.com/package/@numesia/mg_ui)), built on top of **Flowbite**'s UI patterns.
 
-![Design system example: accessible form components and fields](/works-and-projects/alternance-logitud/mg-ui/flowbite-forms.png)
+![Design system example: accessible form components and fields](/works-and-projects/alternance-logitud/mg-ui/flowbite-forms.webp)
 
 ## Architecture & Dynamic Theming
 
@@ -14,7 +14,7 @@ Built on the foundations of **Flowbite**, **Vue 3**, **TailwindCSS**, **Headless
 - **Flowbite Foundation & Headless Approach:** Leveraging Flowbite's proven design patterns reinforced with strict digital accessibility management (ARIA state machines, focus traps, full keyboard navigation).
 - **Reusable Accessibility Composables:** Standardized administrative form handling via dedicated composables (`useAccessibleField`), binding input validity to `aria-invalid` and announcement alerts via `aria-live` automatically.
 
-![Design system example: button variants and interactive states](/works-and-projects/alternance-logitud/mg-ui/flowbite-buttons.png)
+![Design system example: button variants and interactive states](/works-and-projects/alternance-logitud/mg-ui/flowbite-buttons.webp)
 
 ## Performance & Core Web Vitals Optimization
 
